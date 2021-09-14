@@ -28,7 +28,7 @@ class Client(models.Model):
         max_length = 50, blank = True, null = True)
 
     observation = models.TextField(blank = True, null = True)
-    user_id = models.OneToOneField(User, on_delete=models.CASCADE)
+    #user_id = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
     class Meta:

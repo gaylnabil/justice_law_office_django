@@ -25,6 +25,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>Justice Law {{ title }}</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{% static 'dist/css/app.css' %}" />
+        <link rel="stylesheet" href="{% static 'dist/css/style.css' %}" />
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
@@ -40,10 +41,19 @@ License: You must have a valid license purchased only from themeforest(the above
             <ul class="border-t border-theme-29 py-5 hidden">
                 <li class="menu__devider my-6"></li>
                 <li>
-                    <a href="javascript:;.html" class="menu menu--active">
-                        <div class="menu__title"> {{ trans_clients }} <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
+                    <a href="{% url 'home' %}" class="menu {% if active_page == 'home' %} menu--active {% endif %}">
+                        <div class="menu__title"> home
+                        <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
                     </a>
                    
+                </li>
+                
+                <li>
+                    <a href="{% url 'justice_clients' %}" class="menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
+                        <div class="menu__title"> {{ trans_clients|title }}
+                        <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
+                    </a>
+                
                 </li>
             </ul>
         </div>
@@ -58,7 +68,16 @@ License: You must have a valid license purchased only from themeforest(the above
                 <ul>
                     <li class="side-nav__devider my-6"></li>
                     <li>
-                        <a href="javascript:;.html" class="side-menu side-menu--active">
+                        <a href="{% url 'home' %}" class="side-menu {% if active_page == 'home' %} side-menu--active {% endif %}">
+                            <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
+                            <div class="side-menu__title">
+                                home
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{% url 'justice_clients' %}" class="side-menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                             <div class="side-menu__title">
                                 {{ trans_clients|title }}
@@ -73,7 +92,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN: Top Bar -->
                 <div class="top-bar">
                     <!-- BEGIN: Breadcrumb -->
-                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Dashboard</a> </div>
+                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="">{{ trans_justice|title }}</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">{{ active_page|title }}</a> </div>
                     <!-- END: Breadcrumb -->
                     <!-- BEGIN: Search -->
                     <div class="intro-x relative mr-3 sm:mr-6">
@@ -264,31 +283,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- END: Account Menu -->
                 </div>
                 <!-- END: Top Bar -->
-                <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
-                    <h2 class="text-lg font-medium mr-auto">
-                        Tabulator
-                    </h2>
-                    <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-                        <button class="btn btn-primary shadow-md mr-2">Add New Product</button>
-                        <div class="dropdown ml-auto sm:ml-0">
-                            <button class="dropdown-toggle btn px-2 box text-gray-700 dark:text-gray-300" aria-expanded="false">
-                                <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4" data-feather="plus"></i> </span>
-                            </button>
-                            <div class="dropdown-menu w-40">
-                                <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="file-plus" class="w-4 h-4 mr-2"></i> New Category </a>
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"> <i data-feather="users" class="w-4 h-4 mr-2"></i> New Group </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- BEGIN: HTML Table Data -->
+                
+                <!-- BEGIN: HTML Content -->
                 {% block content %}
                 
                 {% endblock content %}
-               
-                <!-- END: HTML Table Data -->
+                
+                <!-- END: HTML Content -->
             </div>
             <!-- END: Content -->
         </div>

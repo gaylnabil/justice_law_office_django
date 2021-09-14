@@ -27,7 +27,8 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = i18n_patterns(
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
-    path('', include('clients.urls')),
+    # path('', include('clients.urls')),
+    path('', include('justice.urls')),
     path('admin/', admin.site.urls),
     #path('accounts/avocats/', include('accounts.urls')),
     #path('accounts/clients/', include('clients.urls')),
