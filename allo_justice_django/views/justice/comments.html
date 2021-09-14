@@ -1,0 +1,328 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load i18n %} 
+{% load tags %}
+{% load humanize %}
+{% load crispy_forms_tags %} 
+{% block container_main %}
+{% load tz %}
+
+{% block css %}
+    <style>
+        textarea{
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+{% endblock css %}
+    
+
+<!-- <div style="margin-bottom: 90px;"></div> -->
+<!-- Section: inner-header -->
+
+{% trans 'publié par' as postBy %}
+{% trans "marque" as tags %}
+{% trans "Laissez un commentaire" as leaveComment %}
+{% trans "Laissez une réponse" as leaveAnswer %}
+{% trans "Commentaire" as commentName %}
+{% trans "Réponse" as answer %}
+{% trans "Posez" as post %}
+{% trans "Fermer" as close %}
+{% trans "Nouvelle question" as newPost %}
+{% trans "Supprimer" as delete %}
+{% trans "Réponse" as reply %}
+{% trans "Tous" as all %}
+
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{% if messages.tags != 'info' %}danger {% else %}{{messages.tags}} {% endif %} " role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+    <!-- Section: Question => Comments -->
+    
+    <section>
+        <div class="container mt-30 mb-30 pt-30 pb-30">
+            <!-- <button class="btn btn-danger" id="confirmed"> confirmed </button>
+            <div id="gayl" >
+                
+            </div> -->
+          <div class="row">
+            <div class="col-md-9">
+              <div class="blog-posts single-post">
+                <article class="post clearfix mb-0">
+                  <div class="entry-header">
+                    <div class="clearfix"></div>
+                    <h3><a href="#">{{ qst.title }}</a></h3>
+                    <div class="entry-meta">
+                      <span>
+                          <!-- <i class="fa fa-user text-theme-colored"></i>  -->
+                            {% if qst.client %}
+                                <i class="fa fa-user fa-lg text-theme-colored"></i>
+                            {% else %}
+                                <i class="fa fa-graduation-cap fa-lg text-theme-colored"></i>
+                            {% endif %} 
+                          {{ postBy }} <a href="#" class="text-theme-colored"> {% firstof qst.client qst.attorney %}</a></span>
+                      <span><i class="fa fa-comments text-theme-colored"></i> <a href="#">{{ qst.comments__count|add:qst.subcomments__count }}</a></span>
+                      <span><i class="fa fa-calendar text-theme-colored"></i> {{ qst.created_at|naturaltime }}</span>
+                      {% if qst.client.username == user.username or qst.attorney.username == user.username %}
+                        {% with model_name=qst|class_name %}
+                            <a class="replay-icon pull-right text-theme-colored" href="{% url 'justice_delete' qst.id model_name  %}"> <i class="fa fa-trash-o text-theme-colored"></i> {{ delete }}</a>
+                            
+                        {% endwith %}
+                      {% endif %}
+                    </div>
+                  </div>
+                  <div class="entry-content mt-40">
+                    <p class="mb-15">
+                        {{ qst.text }}
+                    </p>
+                  </div>
+                </article>
+                <div class="tagline p-0 pt-20 mt-30">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="tags">
+                        <p class="mb-0"><i class="fa fa-tags text-theme-colored"></i> <span>{{ tags }}:</span> {{ qst.tags }}</p>
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-4">
+                      <div class="share text-right">
+                        <p><i class="fa fa-share-alt text-theme-colored"></i> Share</p>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+                <article>
+                </article> 
+                <div class="comments-area">
+                  <h5 class="comments-title">Comments</h5>
+                  <ul class="comment-list">
+
+                    {% for cmt in  qst.comments.all %}
+                    <li>
+                        <div class="media comment-author"> 
+                            <a class="media-left" href="#"><img class="img-thumbnail" alt=""></a>
+                            <div class="media-body">
+                                <h5 class="media-heading comment-heading text-theme-colored"> 
+                                    {% if cmt.client %}
+                                        <i class="fa fa-user fa-lg text-theme-colored"></i>
+                                    {% else %}
+                                        <i class="fa fa-graduation-cap fa-lg text-theme-colored"></i>
+                                    {% endif %} 
+                               
+                                    {% firstof cmt.attorney cmt.client %}:
+                                </h5>
+                                <div class="comment-date mb-5"><span><i class="fa fa-calendar text-theme-colored"></i> {{ cmt.created_at|naturaltime }}</span></div>
+                                <p>{{ cmt.text|linebreaks }}</p>
+                                
+                                {% if cmt.client.username == user.username or cmt.attorney.username == user.username %}
+                                    {% with model_name=cmt|class_name %}
+                                   
+                                        <form class="form-delete" action="{% url 'justice_delete' cmt.id model_name  %}" method="GET" >
+                                            <a class="replay-icon pull-right text-theme-colored link-delete ml-15" href=""> <i class="fa fa-trash-o text-theme-colored"></i> {{ delete }}</a>
+                                        </form>
+                                        {% if cmt.subcomments.all %}
+                                            <div class="clearfix"></div>
+                                        {% endif %}
+                                            
+                                    {% endwith %}
+                                {% endif %}
+                                
+                                {% for sub in  cmt.subcomments.all %}
+                                    
+                                    <div class="media comment-author nested-comment"> <a href="#" class="media-left pt-20"><img alt="" class="img-thumbnail"></a>
+                                        <div class="media-body p-20 bg-lighter">
+                                            <h5 class="media-heading comment-heading text-theme-colored">
+                                                {% if sub.client %}
+                                                    <i class="fa fa-user fa-lg text-theme-colored"></i>
+                                                {% else %}
+                                                    <i class="fa fa-graduation-cap fa-lg text-theme-colored"></i>
+                                                {% endif %} 
+
+                                                {% firstof sub.attorney sub.client %}:
+                                            </h5>
+                                            <div class="comment-date mb-5"><span><i class="fa fa-calendar text-theme-colored"></i> {{ sub.created_at|naturaltime }}</span></div>
+                                            <p>{{ sub.text|linebreaks }}</p>
+                                            
+                                            {% if sub.client.username == user.username or sub.attorney.username == user.username %}
+                                                {% with model_name=sub|class_name %}
+                                                    <form class="form-delete" action="{% url 'justice_delete' sub.id model_name  %}" method="GET" >
+                                                        <a class="replay-icon pull-right text-theme-colored link-delete ml-15" href=""> <i class="fa fa-trash-o text-theme-colored"></i> {{ delete }}</a>
+                                                    </form>
+                                                {% endwith %}
+                                            {% endif %}
+
+                                            {% if forloop.last %}
+                                                <!-- <a id="last-reply-{{ cmt.id }}" class="replay-icon pull-right text-theme-colored link-reply" href="" data-id="{{ cmt.id }}" > <i class="fa fa-commenting-o text-theme-colored"></i> {{ reply }} {{ cmt.id }}</a> -->
+                                                <a id="last-reply-{{ cmt.id }}" class="replay-icon pull-right text-theme-colored link-reply" href="" data-id="{{ cmt.id }}" > <i class="fa fa-commenting-o text-theme-colored"></i> {{ reply }}</a>
+                                                <div class="clearfix"></div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                        {% if forloop.last %}
+                                            <!-- <a class="replay-icon pull-right text-theme-colored btn-delete link-reply" data-id="sub-{{ sub.id }}" href=""> <i class="fa fa-commenting-o text-theme-colored"></i>{{ reply }} </a>
+                                            <div class="clearfix"></div> -->
+                                        <div id="new-subcomment-{{ cmt.id }}"></div>
+                                        {% include 'justice/subcomment.html' with id=cmt.id %}
+
+                                        {% endif %}
+
+                                    {% empty %}
+
+                                    <a id="last-reply-{{ cmt.id }}" class="replay-icon pull-right text-theme-colored btn-delete link-reply"  href="" data-id="{{ cmt.id }}" > <i class="fa fa-commenting-o text-theme-colored"></i> {{ reply }} {{ cmt.id }}</a>
+                                    <div class="clearfix"></div>
+                                    <div id="new-subcomment-{{ cmt.id }}"></div>
+                                    {% include 'justice/subcomment.html' with id=cmt.id %}
+                                    
+                                {% endfor %}          
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    </li> 
+                    {% endfor %}
+                  </ul>
+                </div>
+
+                <div class="comment-box">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h5>{{ leaveComment }} :</h5>
+                      <div class="row">
+                        <form role="form" id="comment-form" method="post" action="{% url 'justice_comments' qst.id %}">
+                            {% csrf_token %}
+                          <div class="col-sm-12 pt-0 pb-0">
+                            <div class="form-group">
+                                {{ form.text|as_crispy_field }}
+                                {% if form.text.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ form.text.errors }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                              <button id="btn-comment" type="submit" class="btn btn-dark btn-flat pull-right m-0" data-loading-text="Please wait...">{{ commentName }}</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="sidebar sidebar-right mt-sm-30">
+                <div class="widget">
+                  <h5 class="widget-title line-bottom">Search box</h5>
+                  <div class="search-form">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" placeholder="Click to Search" class="form-control search-input">
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget">
+                  <h5 class="widget-title line-bottom">Categories</h5>
+                  <div class="categories">
+                    <ul class="list list-border angle-double-right">
+                        <li><a href="#">{{ all }}  <span>(100)</span></a></li>
+                        {% for cat in categories %}
+                            <li><a href="#">{{ cat.name }} <span>(19)</span></a></li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="widget">
+                  <h5 class="widget-title line-bottom">Latest News</h5>
+                  <div class="latest-posts">
+                    <article class="post media-post clearfix pb-0 mb-10">
+                      <a class="post-thumb" href="#"><img src="https://placehold.it/75x75" alt=""></a>
+                      <div class="post-right">
+                        <h5 class="post-title mt-0"><a href="#">Sustainable Construction</a></h5>
+                        <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                      </div>
+                    </article>
+                    <article class="post media-post clearfix pb-0 mb-10">
+                      <a class="post-thumb" href="#"><img src="https://placehold.it/75x75" alt=""></a>
+                      <div class="post-right">
+                        <h5 class="post-title mt-0"><a href="#">Industrial Coatings</a></h5>
+                        <p>Lorem ipsum dolor sit amet adipisicing elit.. .</p>
+                      </div>
+                    </article>
+                    <article class="post media-post clearfix pb-0 mb-10">
+                      <a class="post-thumb" href="#"><img src="https://placehold.it/75x75" alt=""></a>
+                      <div class="post-right">
+                        <h5 class="post-title mt-0"><a href="#">Storefront Installations</a></h5>
+                        <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div class="widget">
+                  <h5 class="widget-title line-bottom">Photos from Flickr</h5>
+                  <div id="flickr-feed" class="clearfix">
+                    <!-- Flickr Link -->
+                    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=52617155@N08">
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        // jQuery document ready
+        $(document).ready(function() {
+
+            $('textarea').each(function () {
+                this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;');
+              }).on('input', function () {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+            
+            $(document).on('click', '.link-delete', function(e) {
+                e.preventDefault();
+                $link= $(this);
+                
+                $.confirm({
+                    closeIcon: true,
+                    closeIconClass: 'fa fa-close',
+                    icon: 'fa fa-warning',
+                    title: 'Question',
+                    content: 'Voulez vous supprimer ?',
+                    type: 'red',
+                    typeAnimated: true,
+                    buttons: {
+                            yes: {
+                                text: 'Oui',
+                                btnClass: 'btn-danger',
+                                action: function(){
+                                    // alert($btn.closest('.form-delete').attr('class'));
+                                    $link.closest('.form-delete').submit();
+                                }
+                            },
+                            no: {
+                                text: 'Non',
+                                btnClass: 'btn-default',
+                                action: function(){
+                                }
+                            },
+                    },
+                });
+            });
+        });
+
+      </script>
+
+{% endblock container_main %}

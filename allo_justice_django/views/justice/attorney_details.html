@@ -1,0 +1,151 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load i18n %} 
+{% load crispy_forms_tags %} 
+{% load embed_video_tags %}
+{% block container_main %}
+<!-- <div style="margin-bottom: 90px;"></div> -->
+<!-- Section: inner-header -->
+
+<section>
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8 pull-right pl-60">
+              <div class="attorney-info">
+                 <h3 class="mt-0 mb-0">{% if attorney.sex|upper == 'H' %} Mr. {% else %} Mlle / Mmme {% endif %}{{ attorney }}</h3>
+                 <h5 class="mt-0 text-gray">{% trans 'Avocat' %}</h5>
+                 <ul class="social-icons small square list-inline">
+                    {% if attorney.facebook %}  <li><a class="bg-theme-colored" href="{{ attorney.facebook }}" title="{{ attorney.facebook }}" target="_blank" ><i class="fa fa-facebook text-white"></i></a></li> {% endif %}
+                    {% if attorney.instagram %} <li><a class="bg-theme-colored" href="{{ attorney.instagram }}" title="{{ attorney.instagram }}" target="_blank" ><i class="fa fa-instagram text-white"></i></a></li> {% endif %}
+                    {% if attorney.youtube %}   <li><a class="bg-theme-colored" href="{{ attorney.youtube }}"  title="{{ attorney.youtube }}" target="_blank" ><i class="fa fa-youtube text-white"></i></a></li> {% endif %}
+                 </ul>
+                 <!-- <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p><br>
+                 <p>One Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, iste, architecto ullam tenetur quia nemo ratione tempora consectetur quos minus ut quo nulla ipsa aliquid neque molestias et qui sunt. Odit, molestiae.</p><br> -->
+              </div>
+              <div class="mt-30">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#presentation" aria-expanded="false">{% trans 'Presentation' %}</a></li>
+                  <li class=""><a data-toggle="tab" href="#formation" aria-expanded="true">{% trans 'Formation' %}</a></li>
+                  {# <li class=""><a data-toggle="tab" href="#experience" aria-expanded="true">Experience</a></li> #}
+                </ul>
+                <div class="tab-content">
+                  <div id="presentation" class="tab-pane fade active in">
+                    <h5>{% trans 'Presentation' %}:</h5>
+                    <ul class="list angle-double-right">
+                      <li class="wrap-info">{% if attorney.presentation %} {{ attorney.presentation }} {% endif %}<</li>
+                    </ul>
+                  </div>
+                  <div id="formation" class="tab-pane fade">
+                    <h5>{% trans 'formation'%}:</h5>
+                    <ul class="list angle-double-right">
+                      <li class="wrap-info">{% if attorney.education %} {{ attorney.education }} {% endif %}</li>
+                    </ul>
+                  </div>
+                  {# <div id="experience" class="tab-pane fade">
+                    <h5>{% trans 'Expérience' %}:</h5>
+                     <ul class="list angle-double-right">
+                      <li class="wrap-info">{% if attorney.experience %} {{ attorney.experience }} {% endif %}</li>
+                    </ul>
+                  </div> #}
+                </div>
+              </div>
+              <div class="row multi-row-clearfix mt-30">
+                <div class="col-md-12">
+                    <div class="small-title mb-30">
+                        <i class="icon_book pull-left ml-1"></i>
+                        <h4 class="title">{% trans 'Expérience et Compétence' %}</h4>
+                    </div>
+                    <div class="panel-group toggle">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title"> <a data-toggle="collapse" href="#toggle-experience" class="ative"><span class="open-sub"></span> {% trans 'Expérience' %} </a> </div>
+                            </div>
+                            <div id="toggle-experience" class="panel-collapse collapse">
+                                <div class="panel-content">
+                                    <p class="wrap-info">{% if attorney.experience %} {{ attorney.experience }} {% endif %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title"> <a data-toggle="collapse" href="#toggle-competence"><span class="open-sub"></span> {% trans 'Compétence' %} </a> </div>
+                            </div>
+                            <div id="toggle-competence" class="panel-collapse collapse">
+                                <div class="panel-content">
+                                    <p class="wrap-info">{% if attorney.skill %} {{ attorney.skill }} {% endif %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title"> <a data-toggle="collapse" href="#toggle-video"><span class="open-sub"></span> {% trans "Ma Vidéo" %} </a> </div>
+                            </div>
+                            <div id="toggle-video" class="panel-collapse collapse">
+                                <div class="panel-content">
+                                        {% video attorney.video 'tiny' %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+              </div>
+            </div>
+            <div class="col-sx-12 col-sm-4 col-md-4 sidebar pull-left">
+                
+              <div class="attorney-thumb">
+                {% if attorney.profile_image %} 
+                    <img class="img-fullwidth" src="{{ attorney.profile_image.url }}" alt="">
+                {% else %}
+                    <img class="img-fullwidth" src="/2020/01/01/default.png" alt=""></div>
+                {% endif %} 
+              </div>
+              <div class="attorney-address mt-30">
+                <ul>
+                  <li> 
+                    <div class="media">
+                      <div class="media-left">
+                        <i class="fa fa-map-marker"></i>
+                      </div>
+                      <div class="media-body">
+                        <p><span> {% trans "Adresse" %}:</span></p>
+                        <p> {% if attorney.address %} {{ attorney.address }}, {% endif %}
+                            {% if attorney.building %} {{ attorney.building }}, {% endif %}
+                            {% if attorney.neighborhood %} {{ attorney.neighborhood }}, {% endif %}
+                            {% if attorney.city %}</i>{{ attorney.city }}</p>  {% endif %}</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <i class="fa fa-phone"></i>
+                      </div>
+                      <div class="media-body">
+                        <p><span>{% trans "Téléphone" %}:</span></p>
+                        <p> {% trans "GSM" %}: {% if attorney.gsm %} {{ attorney.tel }} {% endif %}</p>
+                        <p> {% trans "Téléphone" %}: {% if attorney.gsm %} {{ attorney.gsm }} {% endif %}</p>
+                       
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <i class="fa fa-envelope-o"></i>
+                      </div>
+                      <div class="media-body">
+                        <p><span>Email:</span></p>
+                         <p>{% if attorney.email %} {{ attorney.email }} {% endif %}</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock container_main %}

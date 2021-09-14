@@ -1,0 +1,187 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load i18n %} 
+{% load embed_video_tags %}
+{% load crispy_forms_tags %} 
+
+{% block container_main %}
+<!-- <div style="margin-bottom: 90px;"></div> -->
+<!-- Section: inner-header -->
+<section>
+    <div class="container">
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+       
+
+        <form name="login-form" class="clearfix" action="{% url 'user_profile' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+           
+            <div class="row">
+                <ul id="myTab" class="nav nav-tabs boot-tabs">
+                    <li class="active"><a href="#info" data-toggle="tab">{% trans 'Mes informations' %}</a></li>
+                    <li><a href="#presentation" data-toggle="tab"> {% trans 'Présentation et Formation' %} </a></li>
+                    <li><a href="#formation" data-toggle="tab"> {% trans 'Expérience et Compétence' %} </a></li>
+                    <li><a href="#media" data-toggle="tab"> {% trans 'Sociale média' %} </a></li>
+                    <li><a href="#rib" data-toggle="tab"> {% trans 'RIB' %} </a></li>
+                </ul>
+                <div id="tab_content" class="tab-content">
+                    <div class="tab-pane fade in active" id="info">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
+                            booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente
+                            labore stumptown.
+                        </p>
+                         <div class="row">
+                            <div class="form-group col-md-3">
+                                <div class="attorney-thumb">
+                                {% if user.profile_image %}
+                                    <img class="img-responsive" src="{{ user.profile_image.url }}" alt="" width="256" height="255" style="object-fit: contain; border: 1px solid #ddd;">
+                                {% else %}
+                                    <img class="img-responsive" src="/media/uploads/default.png" alt="" width="256" height="255" style="object-fit: contain; border: 1px solid #ddd;">
+                                {% endif %}
+                                    
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="row form-group col-md-9">
+                                <div class="form-group">
+                                    <ul class="list-icon theme-colored rounded">
+                                       <li><i class="fa fa-info-circle"></i> {% trans "Information :" %}</li>
+                                       <li>
+                                        <ul class="list-icon theme-colored">
+                                            <li><i class="fa fa-hand-o-right"></i> {% trans "La taille fixe de photo est 471 x 470 pixels" %}</li>
+                                            <li><i class="fa fa-hand-o-right"></i> {% trans "Extension (*.jpg, *.jpeg, *.png)" %}</li>
+                                        </ul>
+                                       </li>
+                                   </ul>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.profile_image|as_crispy_field }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.last_name|as_crispy_field }} 
+                                {{ form.last_name.errors }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.first_name|as_crispy_field }} 
+                                {{ form.first_name.errors }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.sex|as_crispy_field }} 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.address|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.building|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.neighborhood|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.city|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.indication|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.zip_code|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                {{ form.tel|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form.gsm|as_crispy_field }}
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="presentation">
+                        <p>Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                {{ form.presentation|as_crispy_field }} {{ form.last_name.errors }}
+                            </div>
+                            <div class="form-group col-md-12">
+                                    {{ form.education|as_crispy_field }} {{ form.last_name.errors }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="formation">
+                        <p>Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                {{ form.experience|as_crispy_field }} {{ form.first_name.errors }}
+                            </div>
+                            <div class="form-group col-md-12">
+                                {{ form.skill|as_crispy_field }} {{ form.last_name.errors }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="media">
+                        <p>Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.youtube|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.facebook|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.instagram|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                {{ form.web|as_crispy_field }}
+                            </div>
+                             <div class="form-group col-md-6">
+                                {{ form.video|as_crispy_field }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="rib">
+                        <p>{% trans 'Le RIB permet de communiquer sa domiciliation bancaire pour recevoir des virements et /ou régler des factures par avis de prélèvement ou titre interbancaire de paiement (TIP). Si vous changez d’agence tout en conservant le même compte, certaines banques vous permettent de garder les mêmes références bancaires.'%}</p>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                {{ form.rib|as_crispy_field }} {{ form.last_name.errors }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="clear text-left pt-10">
+                    <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5 hvr-float-shadow">{% trans 'Enregister' %}</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+{% endblock container_main %}

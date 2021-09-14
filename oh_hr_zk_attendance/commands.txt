@@ -1,0 +1,36 @@
+No.     Time           Source                Destination           Protocol Length Info                                                            Data
+    123 4.716571       10.160.101.21         10.220.1.5            TCP      73     quailnet(5464) → elpro-tunnel(4370) [PSH, ACK] Seq=67 Ack=1009 Win=261120 Len=19 aa01080b000507010203040506070000b1d155
+
+Frame 123: 73 bytes on wire (584 bits), 73 bytes captured (584 bits) on interface \Device\NPF_{FF29AD5F-6992-4256-A818-01BF245099B8}, id 0
+Ethernet II, Src: Dell_45:28:55 (64:00:6a:45:28:55), Dst: Fortinet_06:fc:39 (e8:1c:ba:06:fc:39)
+Internet Protocol Version 4, Src: 10.160.101.21 (10.160.101.21), Dst: 10.220.1.5 (10.220.1.5)
+Transmission Control Protocol, Src Port: quailnet (5464), Dst Port: elpro-tunnel (4370), Seq: 67, Ack: 1009, Len: 19
+    Source Port: quailnet (5464)
+    Destination Port: elpro-tunnel (4370)
+    [Stream index: 2]
+    [TCP Segment Len: 19]
+    Sequence Number: 67    (relative sequence number)
+    Sequence Number (raw): 1909984125
+    [Next Sequence Number: 86    (relative sequence number)]
+    Acknowledgment Number: 1009    (relative ack number)
+    Acknowledgment number (raw): 2188638286
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+    Window: 1020
+    [Calculated window size: 261120]
+    [Window size scaling factor: 256]
+    Checksum: 0x45b2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+    TCP payload (19 bytes)
+Data (19 bytes)
+    Data: aa01080b000507010203040506070000b1d155
+    [Length: 19]
+
+0000  e8 1c ba 06 fc 39 64 00 6a 45 28 55 08 00 45 00   .....9d.jE(U..E.
+0010  00 3b 16 f9 40 00 40 06 a8 2e 0a a0 65 15 0a dc   .;..@.@.....e...
+0020  01 05 15 58 11 12 71 d8 0b 7d 82 73 f8 4e 50 18   ...X..q..}.s.NP.
+0030  03 fc 45 b2 00 00 aa 01 08 0b 00 05 07 01 02 03   ..E.............
+0040  04 05 06 07 00 00 b1 d1 55                        ........U

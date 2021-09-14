@@ -1,0 +1,876 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-27 13:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\accounts\forms.py:33
+msgid "Le prénom est obligatoire"
+msgstr ""
+
+#: .\accounts\forms.py:41
+msgid "le nom est obligatoire"
+msgstr ""
+
+#: .\accounts\forms.py:67
+msgid "Choisir photo de profile"
+msgstr ""
+
+#: .\accounts\forms.py:106 .\clients\forms.py:59
+msgid "Sexe"
+msgstr ""
+
+#: .\accounts\forms.py:107 .\clients\forms.py:60
+msgid "Numéro et rue du cabinet"
+msgstr ""
+
+#: .\accounts\forms.py:108 .\clients\forms.py:61
+msgid "Appartement / Immeuble"
+msgstr ""
+
+#: .\accounts\forms.py:109 .\clients\forms.py:62
+msgid "Quartier"
+msgstr ""
+
+#: .\accounts\forms.py:110 .\clients\forms.py:63
+msgid "Indication"
+msgstr ""
+
+#: .\accounts\forms.py:111 .\clients\forms.py:64
+msgid "Ville"
+msgstr ""
+
+#: .\accounts\forms.py:112 .\clients\forms.py:65
+msgid "Code Postale"
+msgstr ""
+
+#: .\accounts\forms.py:113 .\clients\forms.py:66
+#: .\views\justice\attorney_details.html:125
+#: .\views\justice\attorney_details.html:127
+msgid "Téléphone"
+msgstr ""
+
+#: .\accounts\forms.py:114 .\clients\forms.py:67
+#: .\views\justice\attorney_details.html:126
+msgid "GSM"
+msgstr ""
+
+#: .\accounts\forms.py:115
+msgid "Présentation"
+msgstr ""
+
+#: .\accounts\forms.py:116
+msgid "Formations"
+msgstr ""
+
+#: .\accounts\forms.py:117
+msgid "Expériences"
+msgstr ""
+
+#: .\accounts\forms.py:118 .\views\justice\attorney_details.html:72
+msgid "Compétence"
+msgstr ""
+
+#: .\accounts\forms.py:119
+msgid "Site Web"
+msgstr ""
+
+#: .\accounts\forms.py:120
+msgid "Facebook"
+msgstr ""
+
+#: .\accounts\forms.py:121
+msgid "Instagram"
+msgstr ""
+
+#: .\accounts\forms.py:122
+msgid "YouTube"
+msgstr ""
+
+#: .\accounts\forms.py:123 .\views\justice\attorney_details.html:82
+msgid "Ma Vidéo"
+msgstr ""
+
+#: .\accounts\forms.py:124 .\views\accounts\profile.html:32
+msgid "RIB"
+msgstr ""
+
+#: .\accounts\forms.py:154 .\justice\forms.py:63
+msgid "Jour"
+msgstr ""
+
+#: .\accounts\forms.py:155 .\justice\forms.py:64
+msgid "De"
+msgstr ""
+
+#: .\accounts\forms.py:156 .\justice\forms.py:65
+msgid "à"
+msgstr ""
+
+#: .\accounts\models.py:34
+msgid "Homme"
+msgstr ""
+
+#: .\accounts\models.py:35
+msgid "Femme"
+msgstr ""
+
+#: .\accounts\models.py:40
+msgid "Type"
+msgstr ""
+
+#: .\accounts\utils.py:10
+msgid "Lundi"
+msgstr ""
+
+#: .\accounts\utils.py:11
+msgid "Mardi"
+msgstr ""
+
+#: .\accounts\utils.py:12
+msgid "Mercredi"
+msgstr ""
+
+#: .\accounts\utils.py:13
+msgid "Jeudi"
+msgstr ""
+
+#: .\accounts\utils.py:14
+msgid "Vendredi"
+msgstr ""
+
+#: .\accounts\utils.py:15
+msgid "Samedi"
+msgstr ""
+
+#: .\accounts\utils.py:16
+msgid "Dimanche"
+msgstr ""
+
+#: .\accounts\utils.py:20
+msgid "Agadir"
+msgstr ""
+
+#: .\accounts\utils.py:21
+msgid "Arfoud"
+msgstr ""
+
+#: .\accounts\utils.py:22
+msgid "Azrou"
+msgstr ""
+
+#: .\accounts\utils.py:23
+msgid "Benguérir"
+msgstr ""
+
+#: .\accounts\utils.py:24
+msgid "Beni Mellal"
+msgstr ""
+
+#: .\accounts\utils.py:25
+msgid "Benslimane"
+msgstr ""
+
+#: .\accounts\utils.py:26
+msgid "Berkane"
+msgstr ""
+
+#: .\accounts\utils.py:27
+msgid "Berrechid"
+msgstr ""
+
+#: .\accounts\utils.py:28
+msgid "Casablanca"
+msgstr ""
+
+#: .\accounts\utils.py:29
+msgid "Dakhla"
+msgstr ""
+
+#: .\accounts\utils.py:30
+msgid "Dar Bouazza"
+msgstr ""
+
+#: .\accounts\utils.py:31
+msgid "El Jadida"
+msgstr ""
+
+#: .\accounts\utils.py:32
+msgid "Errachidia"
+msgstr ""
+
+#: .\accounts\utils.py:33
+msgid "Essaouira"
+msgstr ""
+
+#: .\accounts\utils.py:34
+msgid "Fkih Ben Saleh"
+msgstr ""
+
+#: .\accounts\utils.py:35
+msgid "Fés"
+msgstr ""
+
+#: .\accounts\utils.py:36
+msgid "Inezgane"
+msgstr ""
+
+#: .\accounts\utils.py:37
+msgid "Khemisset"
+msgstr ""
+
+#: .\accounts\utils.py:38
+msgid "Khouribga"
+msgstr ""
+
+#: .\accounts\utils.py:39
+msgid "Khénifra"
+msgstr ""
+
+#: .\accounts\utils.py:40
+msgid "Kénitra"
+msgstr ""
+
+#: .\accounts\utils.py:41
+msgid "Larache"
+msgstr ""
+
+#: .\accounts\utils.py:42
+msgid "Laâyoune"
+msgstr ""
+
+#: .\accounts\utils.py:43
+msgid "Marrakech"
+msgstr ""
+
+#: .\accounts\utils.py:44
+msgid "Mechra Bel Ksiri"
+msgstr ""
+
+#: .\accounts\utils.py:45
+msgid "Meknés"
+msgstr ""
+
+#: .\accounts\utils.py:46
+msgid "Mohammedia"
+msgstr ""
+
+#: .\accounts\utils.py:47
+msgid "Nador"
+msgstr ""
+
+#: .\accounts\utils.py:48
+msgid "Ouarzazate"
+msgstr ""
+
+#: .\accounts\utils.py:49
+msgid "Oujda"
+msgstr ""
+
+#: .\accounts\utils.py:50
+msgid "Rabat"
+msgstr ""
+
+#: .\accounts\utils.py:51
+msgid "Safi"
+msgstr ""
+
+#: .\accounts\utils.py:52
+msgid "Salé"
+msgstr ""
+
+#: .\accounts\utils.py:53
+msgid "Settat"
+msgstr ""
+
+#: .\accounts\utils.py:54
+msgid "Sidi Bennour"
+msgstr ""
+
+#: .\accounts\utils.py:55
+msgid "Sidi Kacem"
+msgstr ""
+
+#: .\accounts\utils.py:56
+msgid "Skhirat"
+msgstr ""
+
+#: .\accounts\utils.py:57
+msgid "Tanger"
+msgstr ""
+
+#: .\accounts\utils.py:58
+msgid "Taroudant"
+msgstr ""
+
+#: .\accounts\utils.py:59
+msgid "Tata"
+msgstr ""
+
+#: .\accounts\utils.py:60
+msgid "Taza"
+msgstr ""
+
+#: .\accounts\utils.py:61
+msgid "Temara"
+msgstr ""
+
+#: .\accounts\utils.py:62
+msgid "Tétouan"
+msgstr ""
+
+#: .\accounts\views.py:86
+msgid "Authentification d'avocat"
+msgstr ""
+
+#: .\accounts\views.py:117 .\clients\views.py:101
+#: .\views\accounts\activate.html:16 .\views\clients\activate.html:16
+msgid "Confirmez votre compte"
+msgstr ""
+
+#: .\accounts\views.py:150
+msgid "Inscription d'avocat"
+msgstr ""
+
+#: .\accounts\views.py:163 .\accounts\views.py:164 .\accounts\views.py:165
+#: .\clients\views.py:147 .\clients\views.py:148 .\clients\views.py:149
+msgid "Vérification"
+msgstr ""
+
+#: .\accounts\views.py:185 .\accounts\views.py:186 .\accounts\views.py:187
+msgid "Activation"
+msgstr ""
+
+#: .\accounts\views.py:208 .\accounts\views.py:247 .\clients\views.py:193
+msgid "Enregistrement est réussite !!"
+msgstr ""
+
+#: .\accounts\views.py:215 .\clients\views.py:200 .\templates\base.html:109
+#: .\templates\base.html:113
+msgid "Profile"
+msgstr ""
+
+#: .\accounts\views.py:216 .\clients\views.py:201
+msgid "Mes informtation"
+msgstr ""
+
+#: .\accounts\views.py:217 .\clients\views.py:202
+msgid "INformation d'avocat"
+msgstr ""
+
+#: .\accounts\views.py:272 .\accounts\views.py:273 .\templates\base.html:110
+msgid "Paramétres"
+msgstr ""
+
+#: .\accounts\views.py:274
+msgid "Paramétres d'avocat"
+msgstr ""
+
+#: .\allo_justice_django\settings.py:159
+msgid "English"
+msgstr ""
+
+#: .\allo_justice_django\settings.py:160
+msgid "Arabic"
+msgstr ""
+
+#: .\allo_justice_django\settings.py:161
+msgid "French"
+msgstr ""
+
+#: .\clients\forms.py:26
+msgid "Mot de passe"
+msgstr ""
+
+#: .\clients\forms.py:27
+msgid "Confirmez"
+msgstr ""
+
+#: .\clients\forms.py:57
+msgid "Prénom"
+msgstr ""
+
+#: .\clients\forms.py:58
+msgid "Nom"
+msgstr ""
+
+#: .\clients\views.py:71 .\clients\views.py:72 .\clients\views.py:73
+msgid "Client Login"
+msgstr ""
+
+#: .\clients\views.py:134
+msgid "Inscription de client"
+msgstr ""
+
+#: .\clients\views.py:168
+msgid "Activation Invalide"
+msgstr ""
+
+#: .\justice\forms.py:12
+msgid "Choisissez le catégorie"
+msgstr ""
+
+#: .\justice\forms.py:24 .\views\justice\questions.html:16
+msgid "Titre"
+msgstr ""
+
+#: .\justice\forms.py:25
+msgid "Posez une Question"
+msgstr ""
+
+#: .\justice\forms.py:26
+msgid "Catégorie"
+msgstr ""
+
+#: .\justice\models.py:29
+msgid "Tags"
+msgstr ""
+
+#: .\justice\views.py:33
+msgid "page d'acceuil"
+msgstr ""
+
+#: .\justice\views.py:61
+msgid "List des avocats"
+msgstr ""
+
+#: .\justice\views.py:66
+msgid "Consultation"
+msgstr ""
+
+#: .\justice\views.py:84
+msgid "Information d'avocat"
+msgstr ""
+
+#: .\justice\views.py:85
+msgid "Details d'avocat"
+msgstr ""
+
+#: .\justice\views.py:86
+msgid "Details"
+msgstr ""
+
+#: .\justice\views.py:95
+msgid "Contacts"
+msgstr ""
+
+#: .\justice\views.py:98
+msgid "Details Contacts"
+msgstr ""
+
+#: .\justice\views.py:107 .\templates\base.html:102
+msgid "FAQ"
+msgstr ""
+
+#: .\justice\views.py:111
+msgid "Details FAQ"
+msgstr ""
+
+#: .\justice\views.py:162 .\templates\base.html:100
+msgid "Questions"
+msgstr ""
+
+#: .\justice\views.py:166
+msgid "Details Questions"
+msgstr ""
+
+#: .\justice\views.py:248
+msgid "Details Question"
+msgstr ""
+
+#: .\templates\base.html:97
+msgid "Acceuil"
+msgstr ""
+
+#: .\templates\base.html:98
+msgid "Nous avocats"
+msgstr ""
+
+#: .\templates\base.html:103
+msgid "Contact"
+msgstr ""
+
+#: .\templates\base.html:106 .\views\justice\attorney_details.html:17
+#: .\views\justice\attorneys_list.html:83
+#: .\views\justice\attorneys_list.html:113
+msgid "Avocat"
+msgstr ""
+
+#: .\templates\base.html:115
+msgid "Déconnexion"
+msgstr ""
+
+#: .\templates\base.html:119
+msgid "S'identifier"
+msgstr ""
+
+#: .\templates\base.html:121
+msgid "en tant qu'avocat"
+msgstr ""
+
+#: .\templates\base.html:122
+msgid "en tant que client"
+msgstr ""
+
+#: .\templates\base.html:125
+msgid "S'inscrire"
+msgstr ""
+
+#: .\templates\base.html:127
+msgid "en tant qu'avocat "
+msgstr ""
+
+#: .\templates\base.html:128
+msgid "en tant que Client"
+msgstr ""
+
+#: .\views\accounts\activate.html:14 .\views\clients\activate.html:14
+msgid "Bienvenue"
+msgstr ""
+
+#: .\views\accounts\activate.html:15 .\views\clients\activate.html:15
+msgid ""
+"Cliquez sur le bouton ci-dessous pour confirmer votre compte sur Allo-ostad. "
+"Ce lien ne peut être utilisé qu'une seule fois."
+msgstr ""
+
+#: .\views\accounts\login.html:13 .\views\accounts\login.html:64
+#: .\views\clients\login.html:57
+msgid "Login"
+msgstr ""
+
+#: .\views\accounts\login.html:15
+msgid "Commencez à utiliser Allo-ostad immédiatement"
+msgstr ""
+
+#: .\views\accounts\profile.html:28 .\views\clients\profile.html:28
+msgid "Mes informations"
+msgstr ""
+
+#: .\views\accounts\profile.html:29
+msgid "Présentation et Formation"
+msgstr ""
+
+#: .\views\accounts\profile.html:30 .\views\justice\attorney_details.html:57
+msgid "Expérience et Compétence"
+msgstr ""
+
+#: .\views\accounts\profile.html:31
+msgid "Sociale média"
+msgstr ""
+
+#: .\views\accounts\profile.html:56
+msgid "Information :"
+msgstr ""
+
+#: .\views\accounts\profile.html:59
+msgid "La taille fixe de photo est 471 x 470 pixels"
+msgstr ""
+
+#: .\views\accounts\profile.html:60
+msgid "Extension (*.jpg, *.jpeg, *.png)"
+msgstr ""
+
+#: .\views\accounts\profile.html:165
+msgid ""
+"Le RIB permet de communiquer sa domiciliation bancaire pour recevoir des "
+"virements et /ou régler des factures par avis de prélèvement ou titre "
+"interbancaire de paiement (TIP). Si vous changez d’agence tout en conservant "
+"le même compte, certaines banques vous permettent de garder les mêmes "
+"références bancaires."
+msgstr ""
+
+#: .\views\accounts\profile.html:179 .\views\clients\profile.html:89
+msgid "Enregister"
+msgstr ""
+
+#: .\views\accounts\register.html:10 .\views\clients\register.html:10
+msgid "S'inscrire et Commencez à utiliser Allo-ostad immédiatement"
+msgstr ""
+
+#: .\views\accounts\settings.html:50 .\views\clients\settings.html:50
+msgid "Agenda"
+msgstr ""
+
+#: .\views\accounts\settings.html:78 .\views\accounts\settings.html:100
+#: .\views\clients\settings.html:78 .\views\clients\settings.html:100
+msgid "Sauvegarder"
+msgstr ""
+
+#: .\views\accounts\verification.html:16 .\views\clients\verification.html:16
+msgid "votre compte a été créé,"
+msgstr ""
+
+#: .\views\accounts\verification.html:17 .\views\clients\verification.html:17
+msgid ""
+"veuillez le vérifier en cliquant sur le lien d'activation qui a été envoyé à "
+"votre adresse e-mail"
+msgstr ""
+
+#: .\views\justice\attorney_details.html:28
+#: .\views\justice\attorney_details.html:34
+msgid "Presentation"
+msgstr ""
+
+#: .\views\justice\attorney_details.html:29
+msgid "Formation"
+msgstr ""
+
+#: .\views\justice\attorney_details.html:40
+msgid "formation"
+msgstr ""
+
+#: .\views\justice\attorney_details.html:46
+#: .\views\justice\attorney_details.html:62
+msgid "Expérience"
+msgstr ""
+
+#: .\views\justice\attorney_details.html:111
+msgid "Adresse"
+msgstr ""
+
+#: .\views\justice\attorneys_list.html:26
+msgid "Rechercher un avocat"
+msgstr ""
+
+#: .\views\justice\attorneys_list.html:29
+msgid "Choisir une ville"
+msgstr ""
+
+#: .\views\justice\attorneys_list.html:35
+msgid "Rechercher"
+msgstr ""
+
+#: .\views\justice\attorneys_list.html:147
+msgid "il n'y a pas d'avocat pour votre recherche"
+msgstr ""
+
+#: .\views\justice\comments.html:23 .\views\justice\questions.html:13
+msgid "publié par"
+msgstr ""
+
+#: .\views\justice\comments.html:24
+msgid "marque"
+msgstr ""
+
+#: .\views\justice\comments.html:25
+msgid "Laissez un commentaire"
+msgstr ""
+
+#: .\views\justice\comments.html:26
+msgid "Laissez une réponse"
+msgstr ""
+
+#: .\views\justice\comments.html:27
+msgid "Commentaire"
+msgstr ""
+
+#: .\views\justice\comments.html:28 .\views\justice\comments.html:33
+msgid "Réponse"
+msgstr ""
+
+#: .\views\justice\comments.html:29 .\views\justice\questions.html:17
+msgid "Posez"
+msgstr ""
+
+#: .\views\justice\comments.html:30 .\views\justice\questions.html:18
+msgid "Fermer"
+msgstr ""
+
+#: .\views\justice\comments.html:31 .\views\justice\questions.html:19
+msgid "Nouvelle question"
+msgstr ""
+
+#: .\views\justice\comments.html:32 .\views\justice\questions.html:20
+msgid "Supprimer"
+msgstr ""
+
+#: .\views\justice\faq.html:9
+msgid "Qu’est ce que allo-oustad ?"
+msgstr ""
+
+#: .\views\justice\faq.html:10
+msgid "Je souhaite prendre un rendez-vous avec un médecin sur la plateforme ?"
+msgstr ""
+
+#: .\views\justice\faq.html:11
+msgid "Comment savoir si ma demande de rendez-vous a été validée ?"
+msgstr ""
+
+#: .\views\justice\faq.html:12
+msgid "Mon médecin n’est pas sur la plateforme"
+msgstr ""
+
+#: .\views\justice\faq.html:13
+msgid "Puis-je prendre un rendez-vous pour quelqu’un d’autre ?"
+msgstr ""
+
+#: .\views\justice\faq.html:14
+msgid "Je suis un avocat"
+msgstr ""
+
+#: .\views\justice\faq.html:15
+msgid "J'ai un soucis médical urgent, que faire ?"
+msgstr ""
+
+#: .\views\justice\faq.html:16
+msgid "J’ai rencontré un problème technique sur le site"
+msgstr ""
+
+#: .\views\justice\faq.html:17
+msgid "Je ne trouve pas ma question"
+msgstr ""
+
+#: .\views\justice\faq.html:38
+msgid ""
+"Allo-oustad est un site internet vous permettant de trouver des avocats et "
+"des praticiens près de chez vous et de prendre rendez-vous avec eux, "
+"directement en ligne via la plateforme."
+msgstr ""
+
+#: .\views\justice\faq.html:39
+msgid ""
+"Allo-oustad vous permet de centraliser les différents rendez-vous auprès des "
+"avocats que vous avez sollicité par le biais de notre annuaire."
+msgstr ""
+
+#: .\views\justice\faq.html:44
+msgid ""
+"Pour prendre un rendez-vous avec un avocat via le site allo-oustad.ma, "
+"effectuez la démarche suivante :"
+msgstr ""
+
+#: .\views\justice\faq.html:47
+msgid ""
+"Rendez-vous sur la page d'accueil allo-oustad.ma ou sur la page de recherche "
+"et insérez dans le formulaire le nom ou la spécialité de l’avocat que vous "
+"recherchez ainsi que la zone où vous souhaiter effectuer vos recherches "
+"(ville,...)"
+msgstr ""
+
+#: .\views\justice\faq.html:48
+msgid "Choisir l’avocat dans la liste qui vous est proposée et cliquez sur \\"
+msgstr ""
+
+#: .\views\justice\faq.html:49
+msgid ""
+"Remplissez les éléments d'informations pour finaliser votre demande de "
+"consultation juridique dans la page suivante et validez. N'oubliez pas, plus "
+"vos informations sont précises, plus il sera facile d'obtenir un créneau de "
+"consultation."
+msgstr ""
+
+#: .\views\justice\faq.html:50
+msgid ""
+"Connectez-vous ou inscrivez-vous et rendez-vous dans l'onglet Mon Compte "
+"pour suivre l'évolution de votre demande."
+msgstr ""
+
+#: .\views\justice\faq.html:51
+msgid ""
+"Une fois que votre rendez-vous est accepté, vous recevrez un mail de "
+"confirmation et le statut de votre demande dans Mon Compte sera également "
+"mise à jour."
+msgstr ""
+
+#: .\views\justice\faq.html:57
+msgid ""
+"Lorsque vous demandez un rendez-vous via la prise de rendez-vous, c’est le "
+"site qui vous confirme si votre créneau a bien été enregistré."
+msgstr ""
+
+#: .\views\justice\faq.html:58
+msgid ""
+"Pour la conciergerie, nous validons d’abord votre « Demande de rendez-Vous » "
+"puis, en cas de succès, vous recevez un email « Confirmation de rendez-vous "
+"»."
+msgstr ""
+
+#: .\views\justice\faq.html:63
+msgid ""
+"Vous aimeriez que votre avocat soit rajouté à la plateforme ou s'affilie à "
+"Allo-oustad ?"
+msgstr ""
+
+#: .\views\justice\faq.html:64
+msgid ""
+"Vous pouvez lui parler du service et le renvoyer vers la page dédiée aux "
+"avocats qui lui permettra de nous contacter directement pour toute "
+"information complémentaire."
+msgstr ""
+
+#: .\views\justice\faq.html:69
+msgid ""
+"Bien entendu ! Il vous suffit d'effectuer une démarche classique de demande "
+"de rendez-vous."
+msgstr ""
+
+#: .\views\justice\faq.html:70
+msgid ""
+"Il vous suffira ensuite simplement de renseigner dans le bloc de "
+"renseignement dédié les noms, prénoms et dates de naissance des clients pour "
+"lesquels vous souhaitez prendre rendez-vous."
+msgstr ""
+
+#: .\views\justice\faq.html:71
+msgid ""
+"De la même manière, toutes les informations sur l'évolution de votre demande "
+"de rendez-vous seront disponible dans l'onglet Mon Compte."
+msgstr ""
+
+#: .\views\justice\faq.html:76
+msgid ""
+"Vous souhaiteriez apparaître sur la plateforme allo-oustad.ma, en savoir "
+"plus sur le service que nous proposons aux avocats ou simplement nous poser "
+"quelques questions ?"
+msgstr ""
+
+#: .\views\justice\faq.html:77
+msgid ""
+"Vous pouvez consulter la page pro dédiée qui pourra vous proposer un "
+"récapitulatif des prestations que nous proposons aux professionnels du "
+"domaine juridique et judiciaire."
+msgstr ""
+
+#: .\views\justice\faq.html:82
+msgid ""
+"Contactez immédiatement le numéro indiqué en bas de la page d’accueil "
+"destiné aux urgences au plus vite. Ils seront les plus habilités à vous "
+"aider le plus rapidement possible dans votre situation."
+msgstr ""
+
+#: .\views\justice\faq.html:87
+msgid ""
+"Nous sommes navrés de la gêne occasionnée, n'hésitez pas à nous remonter "
+"votre soucis via notre formulaire de contact disponible ici. Nous tâcherons "
+"de vous répondre au plus vite et de trouver une solution au problème que "
+"vous avez rencontré."
+msgstr ""
+
+#: .\views\justice\faq.html:92
+msgid ""
+"Si votre question ne figure pas dans cette FAQ, vous pouvez nous poser votre "
+"question via notre formulaire de contact disponible ici."
+msgstr ""
+
+#: .\views\justice\questions.html:14
+msgid "Lire la suite"
+msgstr ""
+
+#: .\views\justice\questions.html:15
+msgid "Posez votre Question"
+msgstr ""

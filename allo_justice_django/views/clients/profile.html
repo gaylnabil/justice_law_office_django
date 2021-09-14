@@ -1,0 +1,97 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load i18n %} 
+{% load embed_video_tags %}
+{% load crispy_forms_tags %} 
+
+{% block container_main %}
+<!-- <div style="margin-bottom: 90px;"></div> -->
+<!-- Section: inner-header -->
+<section>
+    <div class="container">
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{% if messages.tags != 'info' %}danger {% else %}{{messages.tags}} {% endif %} " role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+       
+
+        <form name="login-form" class="clearfix" action="{% url 'client_profile' %}" method="POST" >
+            {% csrf_token %}
+           
+            <div class="row">
+                <ul id="myTab" class="nav nav-tabs boot-tabs">
+                    <li class="active"><a href="#info" data-toggle="tab">{% trans 'Mes informations' %}</a></li>
+                </ul>
+                <div id="tab_content" class="tab-content">
+                    <div class="tab-pane fade in active" id="info">
+                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
+                            booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente
+                            labore stumptown.
+                        </p>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.last_name|as_crispy_field }} 
+                                {{ form.last_name.errors }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.first_name|as_crispy_field }} 
+                                {{ form.first_name.errors }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.sex|as_crispy_field }} 
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.address|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.building|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.neighborhood|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                {{ form.city|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.indication|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-4">
+                                {{ form.zip_code|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                {{ form.tel|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-6">
+                                {{ form.gsm|as_crispy_field }}
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="clear text-left pt-10">
+                    <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5 hvr-float-shadow">{% trans 'Enregister' %}</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+{% endblock container_main %}

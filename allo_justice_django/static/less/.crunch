@@ -1,0 +1,204 @@
+{
+	"files": {
+		"style-main.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/style-main.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"less-bootstrap/mixins.less",
+				"less-bootstrap/mixins/alerts.less",
+				"less-bootstrap/mixins/background-variant.less",
+				"less-bootstrap/mixins/border-radius.less",
+				"less-bootstrap/mixins/buttons.less",
+				"less-bootstrap/mixins/center-block.less",
+				"less-bootstrap/mixins/clearfix.less",
+				"less-bootstrap/mixins/forms.less",
+				"less-bootstrap/mixins/gradients.less",
+				"less-bootstrap/mixins/grid-framework.less",
+				"less-bootstrap/mixins/grid.less",
+				"less-bootstrap/mixins/hide-text.less",
+				"less-bootstrap/mixins/image.less",
+				"less-bootstrap/mixins/labels.less",
+				"less-bootstrap/mixins/list-group.less",
+				"less-bootstrap/mixins/nav-divider.less",
+				"less-bootstrap/mixins/nav-vertical-align.less",
+				"less-bootstrap/mixins/opacity.less",
+				"less-bootstrap/mixins/pagination.less",
+				"less-bootstrap/mixins/panels.less",
+				"less-bootstrap/mixins/progress-bar.less",
+				"less-bootstrap/mixins/reset-filter.less",
+				"less-bootstrap/mixins/reset-text.less",
+				"less-bootstrap/mixins/resize.less",
+				"less-bootstrap/mixins/responsive-visibility.less",
+				"less-bootstrap/mixins/size.less",
+				"less-bootstrap/mixins/tab-focus.less",
+				"less-bootstrap/mixins/table-row.less",
+				"less-bootstrap/mixins/text-emphasis.less",
+				"less-bootstrap/mixins/text-overflow.less",
+				"less-bootstrap/mixins/vendor-prefixes.less",
+				"less-bootstrap/variables.less",
+				"less-mrlaw/about.less",
+				"less-mrlaw/blog.less",
+				"less-mrlaw/box-hover-effect.less",
+				"less-mrlaw/boxed-layout.less",
+				"less-mrlaw/common.less",
+				"less-mrlaw/contact.less",
+				"less-mrlaw/event.less",
+				"less-mrlaw/extra.less",
+				"less-mrlaw/footer.less",
+				"less-mrlaw/form.less",
+				"less-mrlaw/header.less",
+				"less-mrlaw/home.less",
+				"less-mrlaw/inner-header-title.less",
+				"less-mrlaw/job.less",
+				"less-mrlaw/menu-full-page.less",
+				"less-mrlaw/mixins.less",
+				"less-mrlaw/nav.less",
+				"less-mrlaw/overlay.less",
+				"less-mrlaw/portfolio-gallery.less",
+				"less-mrlaw/practice-area.less",
+				"less-mrlaw/services.less",
+				"less-mrlaw/shop.less",
+				"less-mrlaw/shortcodes.less",
+				"less-mrlaw/shortcodes/alerts.less",
+				"less-mrlaw/shortcodes/blockquote.less",
+				"less-mrlaw/shortcodes/buttons.less",
+				"less-mrlaw/shortcodes/clients.less",
+				"less-mrlaw/shortcodes/countdown-timer.less",
+				"less-mrlaw/shortcodes/countdown.less",
+				"less-mrlaw/shortcodes/dividers.less",
+				"less-mrlaw/shortcodes/facebook-disqus-comments.less",
+				"less-mrlaw/shortcodes/faqs.less",
+				"less-mrlaw/shortcodes/flex-slider.less",
+				"less-mrlaw/shortcodes/flip-box.less",
+				"less-mrlaw/shortcodes/font-icons.less",
+				"less-mrlaw/shortcodes/funfacts.less",
+				"less-mrlaw/shortcodes/icon-box.less",
+				"less-mrlaw/shortcodes/infinitescroll.less",
+				"less-mrlaw/shortcodes/instagram.less",
+				"less-mrlaw/shortcodes/lightbox.less",
+				"less-mrlaw/shortcodes/map.less",
+				"less-mrlaw/shortcodes/pegination.less",
+				"less-mrlaw/shortcodes/pricing.less",
+				"less-mrlaw/shortcodes/process-steps.less",
+				"less-mrlaw/shortcodes/progress-bar.less",
+				"less-mrlaw/shortcodes/promo.less",
+				"less-mrlaw/shortcodes/section-title.less",
+				"less-mrlaw/shortcodes/separators.less",
+				"less-mrlaw/shortcodes/social-icons.less",
+				"less-mrlaw/shortcodes/tabs.less",
+				"less-mrlaw/shortcodes/team.less",
+				"less-mrlaw/shortcodes/testimonials.less",
+				"less-mrlaw/shortcodes/toggles-accordions.less",
+				"less-mrlaw/shortcodes/vertical-timeline.less",
+				"less-mrlaw/shortcodes/working-process.less",
+				"less-mrlaw/side-push-panel.less",
+				"less-mrlaw/sliders.less",
+				"less-mrlaw/table-of-content.less",
+				"less-mrlaw/topbar.less",
+				"less-mrlaw/typography.less",
+				"less-mrlaw/variables.less",
+				"less-mrlaw/vertical-nav.less",
+				"less-mrlaw/widgets.less"
+			]
+		},
+		"style-main-dark.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/style-main-dark.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"less-mrlaw/variables.less"
+			]
+		},
+		"less-theme-color/theme-skin-color.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../../css/colors/theme-skin-orange.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"../less-bootstrap/mixins/nav-vertical-align.less",
+				"../less-mrlaw/variables.less",
+				"../less-bootstrap/mixins/opacity.less",
+				"../less-bootstrap/mixins.less",
+				"../less-bootstrap/mixins/pagination.less",
+				"../less-bootstrap/mixins/background-variant.less",
+				"../less-bootstrap/mixins/panels.less",
+				"../less-bootstrap/mixins/buttons.less",
+				"../less-bootstrap/mixins/progress-bar.less",
+				"../less-bootstrap/mixins/clearfix.less",
+				"../less-bootstrap/mixins/reset-filter.less",
+				"../less-bootstrap/mixins/gradients.less",
+				"../less-bootstrap/mixins/reset-text.less",
+				"../less-bootstrap/mixins/grid.less",
+				"../less-bootstrap/mixins/resize.less",
+				"../less-bootstrap/mixins/image.less",
+				"../less-bootstrap/mixins/responsive-visibility.less",
+				"../less-bootstrap/mixins/list-group.less",
+				"../less-bootstrap/mixins/size.less",
+				"../less-bootstrap/mixins/alerts.less",
+				"../less-bootstrap/mixins/tab-focus.less",
+				"../less-bootstrap/mixins/center-block.less",
+				"../less-bootstrap/mixins/table-row.less",
+				"../less-bootstrap/mixins/grid-framework.less",
+				"../less-bootstrap/mixins/labels.less",
+				"../less-bootstrap/variables.less",
+				"../less-bootstrap/mixins/vendor-prefixes.less",
+				"../less-bootstrap/mixins/text-overflow.less",
+				"../less-bootstrap/mixins/text-emphasis.less",
+				"../less-bootstrap/mixins/nav-divider.less",
+				"../less-bootstrap/mixins/hide-text.less",
+				"../less-bootstrap/mixins/forms.less",
+				"../less-bootstrap/mixins/border-radius.less"
+			]
+		},
+		"style-main-rtl-extra.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../css/style-main-rtl-extra.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": []
+		}
+	}
+}

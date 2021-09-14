@@ -1,0 +1,89 @@
+{% extends "base.html" %} {% load static %} {% load crispy_forms_tags %} {% load i18n %} {% block container_main %}
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-push-2">
+                <h4 class="text-gray mt-0 pt-5">S'inscrire</h4>
+                <hr>
+                <p>{% trans "S'inscrire et Commencez à utiliser Allo-ostad immédiatement" %}</p>
+                <form name="login-form" class="clearfix" action="{% url 'user_register' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            {{ form.last_name|as_crispy_field }}
+                            
+                            {% if form.last_name.errors  %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{  form.last_name.errors }} 
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            {{ form.first_name|as_crispy_field }} 
+
+                              dsfdssdf
+                            {% if form.first_name.errors  %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{  form.first_name.errors }} 
+                                </div>
+                            {% endif %}
+                           
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            {{ form.username|as_crispy_field }} 
+
+                            {% if form.username.errors  %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{  form.username.errors }} 
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            {{ form.email|as_crispy_field }}
+
+                            {% if form.email.errors  %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{  form.email.errors }} 
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            {{ form.password1|as_crispy_field }}
+                            
+                            {% if form.password1.errors  %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{  form.password1.errors }} 
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            {{ form.password2|as_crispy_field }} 
+
+                            {% if form.password2.errors  %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{  form.password2.errors }} 
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="clear text-center pt-10">
+                        <button type="submit" class="btn btn-dark btn-lg btn-block btn-flat btn-theme-colored mt-15 mb-15 mr-5 hvr-float-shadow">S'inscrire</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock container_main %}

@@ -1,0 +1,217 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% load i18n %} 
+{% load tags %}
+{% load humanize %}
+{% load crispy_forms_tags %} 
+{% block container_main %}
+{% load tz %}
+
+<!-- <div style="margin-bottom: 90px;"></div> -->
+<!-- Section: inner-header -->
+
+{% trans 'publié par' as postBy %}
+{% trans "Lire la suite" as readMore %}
+{% trans "Posez votre Question" as postQuestion %}
+{% trans "Titre" as title %}
+{% trans "Posez" as post %}
+{% trans "Fermer" as close %}
+{% trans "Nouvelle question" as newPost %}
+{% trans "Supprimer" as delete %}
+{% trans "Tous" as all %}
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{% if messages.tags != 'info' %}danger {% else %}{{messages.tags}}{% endif %} " role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    <!-- Section: Blog -->
+    <section>
+        <div class="container mt-30 mb-30 pt-30 pb-30">
+          <div class="row multi-row-clearfix">
+            <div class="col-md-9">
+              <div class="blog-posts">
+                <div class="col-md-12">
+                  <div class="row list-dashed">
+                    <article class="post clearfix mb-50 pb-30">
+                        <button type="button" class="btn btn-dark btn-theme-colored btn-flat hvr-float-shadow" data-toggle="modal" data-target=".bs-modal-questions">{{ newPost }}</button>
+                        <div class="modal fade bs-modal-questions" tabindex="-1" role="dialog" aria-labelledby="ModalLabelQuestions">
+
+                            <div class="modal-dialog">
+                                <form class="modal-content" action="{% url 'justice_question' %}" method="post">
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                    <h4 class="modal-title" id="myModalLabel2">{{ postQuestion }}</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="form-group pl-20 pr-20">
+                                                {{ form.title|as_crispy_field }} 
+                                                {% if form.title.errors %}
+                                                    <div class="alert alert-danger" role="alert">
+                                                        {{ form.title.errors }}
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group pl-20 pr-20">
+                                                {{ form.text|as_crispy_field }}
+                                                {% if form.text.errors %}
+                                                    <div class="alert alert-danger" role="alert">
+                                                        {{ form.text.errors }}
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group pl-20 pr-20">
+                                                {{ form.category|as_crispy_field }}
+                                                {% if form.category.errors %}
+                                                    <div class="alert alert-danger" role="alert">
+                                                        {{ form.category.errors }}
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">{{ close }}</button>
+                                    <button type="submit" class="btn btn-primary text-white">{{ post }}</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                          </div>
+                    </article>
+                    {% for qst in questions %}
+
+                        <article class="post clearfix mb-50 pb-30">
+                            {% if qst.client.username == user.username or qst.attorney.username == user.username %}
+                                {% with model_name=qst|class_name %}
+                                    <a class="replay-icon pull-right text-theme-colored" href="{% url 'justice_delete' qst.id model_name  %}"> <i class="fa fa-trash-o text-theme-colored"></i> {{ delete }}</a>
+                                {% endwith %}
+                            {% endif %}
+                            <div class="entry-header">
+                                <h5 class="entry-title mt-0 pt-0">
+                                    <a href="{% url 'justice_comments' qst.id %}"> 
+                                        {% if qst.client %}
+                                            <i class="fa fa-user fa-lg"></i>
+                                        {% else %}
+                                            <i class="fa fa-graduation-cap fa-lg"></i>
+                                        {% endif %} 
+                                    
+                                        {{ qst.title }}
+                                    </a>
+                                </h5>
+                                
+                                <ul class="list-inline font-12 mb-20 mt-10">
+                                    <li>
+                                        {{ postBy }} <a href="#" class="text-theme-colored">
+                                        {% if qst.client %}
+                                            {{ qst.client }}
+                                        {% else %}
+                                            {{ qst.attorney }}
+                                        {% endif %}&nbsp;&nbsp;&nbsp;|</a>
+                                    </li>
+                                    <li>
+                                        <span class="text-theme-colored">{{ qst.created_at|naturaltime }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="entry-content">
+                                <p class="mb-30">{{ qst.text |truncatewords:50 }} <a href="{% url 'justice_comments' qst.id %}">[...]</a></p>
+                                <ul class="list-inline like-comment pull-left font-12">
+                                <li><i class="pe-7s-comment"></i>{{ qst.comments__count|add:qst.subcomments__count }}</li>
+                                <!-- <li><i class="pe-7s-like2"></i>125</li> --> 
+                                </ul>
+                                <a class="pull-right text-gray font-13" href="{% url 'justice_comments' qst.id %}"><i class="fa fa-angle-double-right text-theme-colored"></i> {{ readMore }}</a>
+                            </div>
+                        </article>
+
+                    {% endfor %}
+  
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <nav>
+                    <ul class="pagination">
+                      <li> <a aria-label="Previous" href="#"> <span aria-hidden="true">«</span> </a> </li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">...</a></li>
+                      <li> <a aria-label="Next" href="#"> <span aria-hidden="true">»</span> </a> </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+              <div class="sidebar sidebar-right mt-sm-30">
+                <div class="widget">
+                  <h5 class="widget-title line-bottom">Search box</h5>
+                  <div class="search-form">
+                    <form>
+                      <div class="input-group">
+                        <input type="text" placeholder="Click to Search" class="form-control search-input">
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget">
+                  <h5 class="widget-title line-bottom">Categories</h5>
+                  <div class="categories">
+                    <ul class="list list-border angle-double-right">
+                        <li><a href="#">{{ all }}  <span>(100)</span></a></li>
+                     {% for cat in categories %}
+                        <li><a href="#">{{ cat.name }} <span>(19)</span></a></li>
+                     {% endfor %}
+                     
+                    </ul>
+                  </div>
+                </div>
+                <!-- <div class="widget">
+                  <h5 class="widget-title line-bottom">Latest News</h5>
+                  <div class="latest-posts">
+                    <article class="post media-post clearfix pb-0 mb-10">
+                      <a class="post-thumb" href="#"><img src="https://placehold.it/75x75" alt=""></a>
+                      <div class="post-right">
+                        <h5 class="post-title mt-0"><a href="#">Sustainable Construction</a></h5>
+                        <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                      </div>
+                    </article>
+                    <article class="post media-post clearfix pb-0 mb-10">
+                      <a class="post-thumb" href="#"><img src="https://placehold.it/75x75" alt=""></a>
+                      <div class="post-right">
+                        <h5 class="post-title mt-0"><a href="#">Industrial Coatings</a></h5>
+                        <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                      </div>
+                    </article>
+                    <article class="post media-post clearfix pb-0 mb-10">
+                      <a class="post-thumb" href="#"><img src="https://placehold.it/75x75" alt=""></a>
+                      <div class="post-right">
+                        <h5 class="post-title mt-0"><a href="#">Storefront Installations</a></h5>
+                        <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                      </div>
+                    </article>
+                  </div>
+                </div> -->
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock container_main %}
