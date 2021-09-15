@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'livereload',
     'django.contrib.postgres',
     'whitenoise.runserver_nostatic',
-    'livereload',
     'django.contrib.humanize',
     'django.contrib.sites',
     'clear_cache',
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'clients',
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,11 +63,12 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'livereload.middleware.LiveReloadScript',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django_session_timeout.middleware.SessionTimeoutMiddleware', 
-    'livereload.middleware.LiveReloadScript',
+    
 ]
 
 SESSION_EXPIRE_SECONDS = 3600  # 30 minutes = 1800 seconds; 1 hour = 3600 seconds

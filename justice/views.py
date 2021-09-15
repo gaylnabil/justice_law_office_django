@@ -7,6 +7,7 @@ def index(request):
 
     context = {
         'active_page': 'home',
+        'breadcrumb': 'home',
     }
     template_name = 'justice/index.html'
     return render(request=request, template_name=template_name, context=context)

@@ -1,10 +1,15 @@
 
 from django.views.static import serve
-from django.urls import path
+from django.urls import path, include
 from clients import views
 
 urlpatterns = [
-    path('clients', views.justice_clients, name='justice_clients'),
+    path('clients/',  include([
+         path('', views.justice_clients, name='justice_clients'),
+         path('create', views.client_form, name='client_form'),
+    ])),
+   
+    
     # path('attorneys/', views.attorneys_list, name='attorneys_list'),
     # path('attorneys/<str:id>/', views.attorney_details, name='attorney_details'),
     # path('contact/', views.contact, name='contact'),

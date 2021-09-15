@@ -92,7 +92,10 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN: Top Bar -->
                 <div class="top-bar">
                     <!-- BEGIN: Breadcrumb -->
-                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="">{{ trans_justice|title }}</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">{{ active_page|title }}</a> </div>
+                    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> 
+                    <a href="{% if active_page == 'client' %}{% url 'justice_clients' %} {% endif %}">{{ active_page|title }}</a> 
+                    <i data-feather="chevron-right" class="breadcrumb__icon"></i> 
+                    <a href="" class="breadcrumb--active">{{ breadcrumb|capfirst }}</a> </div>
                     <!-- END: Breadcrumb -->
                     <!-- BEGIN: Search -->
                     <div class="intro-x relative mr-3 sm:mr-6">
