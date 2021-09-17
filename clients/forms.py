@@ -15,7 +15,8 @@ class ClientForm(forms.ModelForm):
 
         self.fields['type_client'].widget.attrs['id'] = 'radio-switch-4'
         self.fields['type_client'].widget.attrs['class'] = 'form-check-input'
-
+        self.fields['type_client'].initial = 1
+        
         self.fields['nom'].widget.attrs['id'] = 'crud-form-1'
         self.fields['nom'].widget.attrs['class'] = 'form-control w-full'
         self.fields['nom'].widget.attrs['placeholder'] = _('Nom de client')
@@ -29,12 +30,14 @@ class ClientForm(forms.ModelForm):
         self.fields['ville'].widget.attrs['class'] = 'tom-select w-full'
         self.fields['ville'].widget.attrs['data-placeholder'] = _(
             'Selectioner une ville')
-            
+        self.fields['ville'].initial = 23
+        
         self.fields['tel'].widget.attrs['id'] = 'tel-id'
         self.fields['tel'].widget.attrs['class'] = 'form-control'
         self.fields['tel'].widget.attrs['type'] = 'tel'
         self.fields['tel'].widget.attrs['placeholder'] = _('teléphone')
         self.fields['tel'].widget.attrs['aria-describedby'] = 'input-group-3'
+       
         
         self.fields['gsm'].widget.attrs['id'] = 'gsm-id'
         self.fields['gsm'].widget.attrs['class'] = 'form-control'
@@ -47,6 +50,11 @@ class ClientForm(forms.ModelForm):
         self.fields['email'].widget.attrs['type'] = 'email'
         self.fields['email'].widget.attrs['placeholder'] = _('email')
         self.fields['email'].widget.attrs['aria-describedby'] = 'input-group-3'
+        
+        self.fields['status_juridique'].widget.attrs['id'] = 'status-select'
+        self.fields['status_juridique'].widget.attrs['class'] = 'tom-select w-full'
+        self.fields['status_juridique'].widget.attrs['data-placeholder'] = _(
+            'Selectioner une status juridique')
             
     class Meta:
         """Meta definition for Clientform."""
@@ -76,6 +84,12 @@ class ClientForm(forms.ModelForm):
                 'cols': 80, 
                 'rows': 5, 
                 'placeholder': _('ajouter une adresse')
+            }),
+            
+            'observation': Textarea(attrs={
+                'cols': 80,
+                'rows': 5,
+                'placeholder': _("ajouter l'Obeservation")
             }),
         }
         

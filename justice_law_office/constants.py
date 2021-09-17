@@ -4,6 +4,9 @@ TYPE_CLIENT = [
     (1, _('Physique')), 
     (2, _('Moral'))
 ]
+JURIDIQUE = [(1, _('Status 01')),
+             (2, _('Status 02')),
+             (3, _('Status 03'))]
 VILLES = [
     (1	,_('AGADIR')),
     (2	,_('AHFIR')),

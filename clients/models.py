@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext as _
 from django.contrib.auth.models import User
-from justice_law_office.constants import VILLES
+from justice_law_office.constants import VILLES, JURIDIQUE
 # Create your models here.
 
 class Client(models.Model):
@@ -15,9 +15,9 @@ class Client(models.Model):
         max_length = 255, blank = True, null = True)
 
     presentant_legal = models.CharField(
-        max_length = 255, blank = False, null = False)
+        max_length=255, blank=True, null=True)
 
-    adresse = models.TextField(blank = False, null = False)
+    adresse = models.TextField(blank=True, null=True)
     # siege_social = models.TextField(blank = False, null = False)
     ville = models.CharField(max_length=50, blank=True,
                              null=True, choices=VILLES)
@@ -26,7 +26,7 @@ class Client(models.Model):
     email = models.CharField(max_length = 50, blank = True, null = True)
     
     status_juridique = models.CharField(
-        max_length = 50, blank = True, null = True)
+        max_length=50, blank=True, null=True, choices=JURIDIQUE)
 
     observation = models.TextField(blank = True, null = True)
     #user_id = models.OneToOneField(User, on_delete=models.CASCADE)
