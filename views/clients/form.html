@@ -8,9 +8,10 @@
 <div class="intro-y flex items-center mt-8">
     <h2 class="text-lg font-medium mr-auto">
         {{ title|capfirst }}
+        
     </h2>
 </div>
-<form name="login-form" class="clearfix" action="{% url 'client_form' %}" method="POST">
+<form name="login-form" class="clearfix" action="" method="POST">
     {% csrf_token %}
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 lg:col-span-6">
@@ -18,7 +19,7 @@
                 <div class="intro-y box p-5">
                 
                     <div class="mt-3">
-                        {{ form.type_client.label }}
+                        {{ form.type_client.label|capfirst }}
                         <div class="flex flex-col sm:flex-row mt-2">
                             {% for radio in form.type_client %}
                                     <div class="form-check mr-2 mt-2">
@@ -31,7 +32,8 @@
                     </div>
                     
                     <div class="mt-3">
-                        {{ form.nom|as_crispy_field }}
+                        {{ form.nom.label|capfirst }}
+                        {{ form.nom }}
                         {% if form.nom.errors %}
                         <div class="alert alert-danger" role="alert">
                             {{ form.nom.errors }}
@@ -39,7 +41,8 @@
                         {% endif %}
                     </div>
                     <div class="mt-3">
-                        {{ form.prenom|as_crispy_field }}
+                        {{ form.prenom.label|capfirst }}
+                        {{ form.prenom }}
                         {% if form.prenom.errors %}
                         <div class="alert alert-danger" role="alert">
                             {{ form.prenom.errors }}
@@ -48,15 +51,42 @@
                     </div>
                     
                     <div class="mt-3">
-                        {{ form.presentant_legal|as_crispy_field }}
-                        {% if form.presentant_legal.errors %}
+                        {{ form.sexe.label|capfirst }}
+                        <div class="flex flex-col sm:flex-row mt-2">
+                            {% for radio in form.sexe %}
+                            <div class="form-check mr-2 mt-2">
+                                {{ radio.tag }}
+                                <label class="form-check-label" for="radio-{{ forloop.counter }}">{{ radio.choice_label }}</label>
+                            </div>
+                            </li>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3" data-client="moral" >
+                        {{ form.company.label|capfirst }}
+                        
+                        <input 
+                            {% if form.type_client.value == 1 %} disabled {% endif %}
+                            type="text" 
+                            name="{{ form.company.name }}" 
+                            class="form-control w-full"
+                            id="{{ form.company.id_for_label }}" 
+                            value="{% firstof form.company.value %}"
+                            maxlength="{{ form.company.field.max_length }}" 
+                            placeholder="{{ form.company.field.widget.attrs.placeholder }}"
+                            {% if form.type_client.value == 2 %} required {% endif %} 
+                        />
+                        {% if form.company.errors %}
                         <div class="alert alert-danger" role="alert">
-                            {{ form.presentant_legal.errors }}
+                            {{ form.company.errors }}
                         </div>
                         {% endif %}
                     </div>
+
                     <div class="mt-3">
-                        {{ form.adresse|as_crispy_field }}
+                        {{ form.adresse.label|capfirst }}
+                        {{ form.adresse }}
                         {% if form.adresse.errors %}
                         <div class="alert alert-danger" role="alert">
                             {{ form.adresse.errors }}
@@ -79,11 +109,23 @@
         <div class="intro-y col-span-12 lg:col-span-6">
             <!-- BEGIN: Form Layout -->
             <div class="intro-y box p-5">
+        
+                <div class="mt-3">
+                    {{ form.gsm.label|capfirst }}
+                    <div class="sm:grid grid-cols-1 gap-2">
+                        <div class="input-group">
+                            <div id="input-group-3" class="input-group-text">
+                                <i data-feather="smartphone" class="block mx-auto"></i>
+                            </div>
+                            {{ form.gsm }}
+                        </div>
+        
+                    </div>
+                </div>
                 
         
                 <div class="mt-3">
-                    {{ form.tel.label_tag }}
-                    <label class="form-label">{{ form.tel.help_text }}</label>
+                    {{ form.tel.label|capfirst }}
                     <div class="sm:grid grid-cols-1 gap-2">
                         <div class="input-group">
                             <div id="input-group-3" class="input-group-text">
@@ -96,21 +138,7 @@
                 </div>
         
                 <div class="mt-3">
-                    {{ form.gsm.label_tag }}
-                    <label class="form-label">{{ form.gsm.help_text }}</label>
-                    <div class="sm:grid grid-cols-1 gap-2">
-                        <div class="input-group">
-                            <div id="input-group-3" class="input-group-text">
-                                <i data-feather="smartphone" class="block mx-auto"></i>
-                            </div>
-                            {{ form.gsm }}
-                        </div>
-        
-                    </div>
-                </div>
-        
-                <div class="mt-3">
-                    {{ form.email.label_tag }}
+                    {{ form.email.label|capfirst }}
                     <label class="form-label">{{ form.email.help_text }}</label>
                     <div class="sm:grid grid-cols-1 gap-2">
                         <div class="input-group">
@@ -140,8 +168,7 @@
                     {% endif %}
                 </div>
                 <div class="text-right mt-5">
-                    <button type="button" class="btn btn-outline-secondary w-24 mr-1">Cancel</button>
-                    <button type="button" class="btn btn-primary w-24">Save</button>
+                    <button type="submit" class="btn btn-primary w-24">{{ trans_save|capfirst }}</button>
                 </div>
             </div>
             <!-- END: Form Layout -->
@@ -151,3 +178,12 @@
 
 
 {% endblock content %}
+
+{% block js %}
+    <script>
+    </script>
+
+  
+{% endblock js %}
+    
+

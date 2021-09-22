@@ -1,0 +1,224 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+    <h2 class="text-lg font-medium mr-auto">
+        {{ title|capfirst }}
+    </h2>
+</div>
+
+<!-- BEGIN: HTML Table Data -->
+<div class="intro-y box p-5 mt-5">
+    <div class="grid grid-cols-12 gap-6 mt-5">
+            <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
+                <a href="{% url 'client_form' %}" data-toggle="modal" data-target="#header-footer-modal-preview"
+                    class="btn btn-primary shadow-md mr-2">
+                    {{ trans_new_client|title }}
+                </a>
+                <div class="flex mt-5 sm:mt-0">
+                    <button id="tabulator-print" class="btn btn-outline-secondary w-1/2 sm:w-auto mr-2"> <i data-feather="printer"
+                            class="w-4 h-4 mr-2"></i> Print </button>
+                    <div class="dropdown w-1/2 sm:w-auto">
+                        <button class="dropdown-toggle btn btn-outline-secondary w-full sm:w-auto" aria-expanded="false"> <i
+                                data-feather="file-text" class="w-4 h-4 mr-2"></i> Export <i data-feather="chevron-down"
+                                class="w-4 h-4 ml-auto sm:ml-2"></i> </button>
+                        <div class="dropdown-menu w-40">
+                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
+                                <a id="tabulator-export-csv" href="javascript:;"
+                                    class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                    <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export CSV </a>
+                                <a id="tabulator-export-json" href="javascript:;"
+                                    class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                    <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export JSON </a>
+                                <a id="tabulator-export-xlsx" href="javascript:;"
+                                    class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                    <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export XLSX </a>
+                                <a id="tabulator-export-html" href="javascript:;"
+                                    class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                    <i data-feather="file-text" class="w-4 h-4 mr-2"></i> Export HTML </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block mx-auto text-gray-600">Showing 1 to 10 of 150 entries</div>
+                <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
+                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                        <input type="text" class="form-control w-56 box pr-10 placeholder-theme-13" placeholder="Search...">
+                        <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- BEGIN: Data List -->
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+            <table class="table table-report -mt-2">
+                <thead>
+                    <tr>
+                        <th class="whitespace-nowrap">{{ trans_client_lastname|upper }}</th>
+                        <th class="whitespace-nowrap">{{ trans_client_firstname|upper }}</th>
+                        <th class="text-center whitespace-nowrap">{{ trans_client_personne_morale|upper }}</th>
+                        <th class="text-center whitespace-nowrap">{{ trans_status|upper }}</th>
+                        <th class="text-center whitespace-nowrap">{{ trans_actions|upper }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for clt in clients %}
+                        <tr class="intro-x">
+                            <td class="w-40">
+                                <a href="" class="font-medium whitespace-nowrap">{{ clt.nom }}</a>
+                            </td>
+                        
+                            <td>
+                                <a href="" class="font-medium whitespace-nowrap">{{ clt.prenom }}</a>
+                            </td>
+                        
+                            <td>
+                                <a href="" class="font-medium whitespace-nowrap">{{ clt.personne_morale }}</a>
+                                <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">{{ clt.representant_legal }}</div>
+                            </td>
+                        
+                            <!-- <td class="text-center">147</td> -->
+                            <td class="w-40">
+                                <div class="flex items-center justify-center text-theme-9"> <i data-feather="check-square"
+                                        class="w-4 h-4 mr-2"></i> Active </div>
+                            </td>
+                            <td class="table-report__action w-56">
+                                <div class="flex justify-center items-center">
+                                    <a class="flex items-center mr-3" href="javascript:;"> <i data-feather="check-square"
+                                            class="w-4 h-4 mr-1"></i> Edit </a>
+                                    <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal"
+                                        data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- END: Data List -->
+        <!-- BEGIN: Pagination -->
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-nowrap items-center">
+            <ul class="pagination">
+                <li>
+                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
+                </li>
+                <li>
+                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
+                </li>
+                <li> <a class="pagination__link" href="">...</a> </li>
+                <li> <a class="pagination__link" href="">1</a> </li>
+                <li> <a class="pagination__link pagination__link--active" href="">2</a> </li>
+                <li> <a class="pagination__link" href="">3</a> </li>
+                <li> <a class="pagination__link" href="">...</a> </li>
+                <li>
+                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevron-right"></i> </a>
+                </li>
+                <li>
+                    <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-right"></i> </a>
+                </li>
+            </ul>
+            <select class="w-20 form-select box mt-3 sm:mt-0">
+                <option>10</option>
+                <option>25</option>
+                <option>35</option>
+                <option>50</option>
+            </select>
+        </div>
+        <!-- END: Pagination -->
+    </div>
+</div>
+
+
+<!-- BEGIN: Footer Modal -->
+<div id="header-footer-modal" class="p-5">
+    <div class="preview">
+    
+        <!-- BEGIN: Modal Toggle -->
+        <div class="text-center"> <a href="javascript:;" data-toggle="modal" data-target="#header-footer-modal-preview"
+                class="btn btn-primary">Show Modal</a> </div>
+        <!-- END: Modal Toggle -->
+        <!-- BEGIN: Modal Content -->
+        <div id="header-footer-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- BEGIN: Modal Header -->
+                    <div class="modal-header">
+                        <h2 class="font-medium text-base mr-auto">
+                            Broadcast Message
+                        </h2>
+                        <button class="btn btn-outline-secondary hidden sm:flex"> <i data-feather="file"
+                                class="w-4 h-4 mr-2"></i> Download Docs </button>
+                        <div class="dropdown sm:hidden">
+                            <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i
+                                    data-feather="more-horizontal" class="w-5 h-5 text-gray-600 dark:text-gray-600"></i>
+                            </a>
+                            <div class="dropdown-menu w-40">
+                                <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
+                                    <a href="javascript:;"
+                                        class="flex items-center p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
+                                        <i data-feather="file" class="w-4 h-4 mr-2"></i> Download Docs </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Modal Header -->
+                    <!-- BEGIN: Modal Body -->
+                    <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                        <div class="col-span-12 sm:col-span-6">
+                            <label for="modal-form-1" class="form-label">From</label>
+                            <input id="modal-form-1" type="text" class="form-control" placeholder="example@gmail.com">
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                            <label for="modal-form-2" class="form-label">To</label>
+                            <input id="modal-form-2" type="text" class="form-control" placeholder="example@gmail.com">
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                            <label for="modal-form-3" class="form-label">Subject</label>
+                            <input id="modal-form-3" type="text" class="form-control" placeholder="Important Meeting">
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                            <label for="modal-form-4" class="form-label">Has the Words</label>
+                            <input id="modal-form-4" type="text" class="form-control"
+                                placeholder="Job, Work, Documentation">
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                            <label for="modal-form-5" class="form-label">Doesn't Have</label>
+                            <input id="modal-form-5" type="text" class="form-control"
+                                placeholder="Job, Work, Documentation">
+                        </div>
+                        <div class="col-span-12 sm:col-span-6">
+                            <label for="modal-form-6" class="form-label">Size</label>
+                            <select id="modal-form-6" class="form-select">
+                                <option>10</option>
+                                <option>25</option>
+                                <option>35</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- END: Modal Body -->
+                    <!-- BEGIN: Modal Footer -->
+                    <div class="modal-footer text-right">
+                        <button type="button" data-dismiss="modal"
+                            class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
+                        <button type="button" class="btn btn-primary w-20">Send</button>
+                    </div>
+                    <!-- END: Modal Footer -->
+                </div>
+            </div>
+        </div>
+        <!-- END: Modal Content -->
+    </div>
+    <div class="source-code hidden">
+        <button data-target="#copy-header-footer-modal" class="copy-code btn py-1 px-2 btn-outline-secondary"> <i
+                data-feather="file" class="w-4 h-4 mr-2"></i> Copy example code </button>
+        <div class="overflow-y-auto mt-3 rounded-md">
+            <pre id="copy-header-footer-modal"
+                class="source-preview"> <code class="text-xs p-0 rounded-md html pl-5 pt-8 pb-4 -mb-10 -mt-10"> HTMLOpenTag!-- BEGIN: Modal Toggle --HTMLCloseTag HTMLOpenTagdiv class=&quot;text-center&quot;HTMLCloseTag HTMLOpenTaga href=&quot;javascript:;&quot; data-toggle=&quot;modal&quot; data-target=&quot;#header-footer-modal-preview&quot; class=&quot;btn btn-primary&quot;HTMLCloseTagShow ModalHTMLOpenTag/aHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag!-- END: Modal Toggle --HTMLCloseTag HTMLOpenTag!-- BEGIN: Modal Content --HTMLCloseTag HTMLOpenTagdiv id=&quot;header-footer-modal-preview&quot; class=&quot;modal&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;modal-dialog&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;modal-content&quot;HTMLCloseTag HTMLOpenTag!-- BEGIN: Modal Header --HTMLCloseTag HTMLOpenTagdiv class=&quot;modal-header&quot;HTMLCloseTag HTMLOpenTagh2 class=&quot;font-medium text-base mr-auto&quot;HTMLCloseTagBroadcast MessageHTMLOpenTag/h2HTMLCloseTag HTMLOpenTagbutton class=&quot;btn btn-outline-secondary hidden sm:flex&quot;HTMLCloseTag HTMLOpenTagi data-feather=&quot;file&quot; class=&quot;w-4 h-4 mr-2&quot;HTMLCloseTagHTMLOpenTag/iHTMLCloseTag Download Docs HTMLOpenTag/buttonHTMLCloseTag HTMLOpenTagdiv class=&quot;dropdown sm:hidden&quot;HTMLCloseTag HTMLOpenTaga class=&quot;dropdown-toggle w-5 h-5 block&quot; href=&quot;javascript:;&quot; aria-expanded=&quot;false&quot;HTMLCloseTag HTMLOpenTagi data-feather=&quot;more-horizontal&quot; class=&quot;w-5 h-5 text-gray-600 dark:text-gray-600&quot;HTMLCloseTagHTMLOpenTag/iHTMLCloseTag HTMLOpenTag/aHTMLCloseTag HTMLOpenTagdiv class=&quot;dropdown-menu w-40&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;dropdown-menu__content box dark:bg-dark-1 p-2&quot;HTMLCloseTag HTMLOpenTaga href=&quot;javascript:;&quot; class=&quot;flex items-center p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md&quot;HTMLCloseTag HTMLOpenTagi data-feather=&quot;file&quot; class=&quot;w-4 h-4 mr-2&quot;HTMLCloseTagHTMLOpenTag/iHTMLCloseTag Download Docs HTMLOpenTag/aHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag!-- END: Modal Header --HTMLCloseTag HTMLOpenTag!-- BEGIN: Modal Body --HTMLCloseTag HTMLOpenTagdiv class=&quot;modal-body grid grid-cols-12 gap-4 gap-y-3&quot;HTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-12 sm:col-span-6&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;modal-form-1&quot; class=&quot;form-label&quot;HTMLCloseTagFromHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;modal-form-1&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;example@gmail.com&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-12 sm:col-span-6&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;modal-form-2&quot; class=&quot;form-label&quot;HTMLCloseTagToHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;modal-form-2&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;example@gmail.com&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-12 sm:col-span-6&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;modal-form-3&quot; class=&quot;form-label&quot;HTMLCloseTagSubjectHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;modal-form-3&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Important Meeting&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-12 sm:col-span-6&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;modal-form-4&quot; class=&quot;form-label&quot;HTMLCloseTagHas the WordsHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;modal-form-4&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Job, Work, Documentation&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-12 sm:col-span-6&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;modal-form-5&quot; class=&quot;form-label&quot;HTMLCloseTagDoesn&#039;t HaveHTMLOpenTag/labelHTMLCloseTag HTMLOpenTaginput id=&quot;modal-form-5&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Job, Work, Documentation&quot;HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTagdiv class=&quot;col-span-12 sm:col-span-6&quot;HTMLCloseTag HTMLOpenTaglabel for=&quot;modal-form-6&quot; class=&quot;form-label&quot;HTMLCloseTagSizeHTMLOpenTag/labelHTMLCloseTag HTMLOpenTagselect id=&quot;modal-form-6&quot; class=&quot;form-select&quot;HTMLCloseTag HTMLOpenTagoptionHTMLCloseTag10HTMLOpenTag/optionHTMLCloseTag HTMLOpenTagoptionHTMLCloseTag25HTMLOpenTag/optionHTMLCloseTag HTMLOpenTagoptionHTMLCloseTag35HTMLOpenTag/optionHTMLCloseTag HTMLOpenTagoptionHTMLCloseTag50HTMLOpenTag/optionHTMLCloseTag HTMLOpenTag/selectHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag!-- END: Modal Body --HTMLCloseTag HTMLOpenTag!-- BEGIN: Modal Footer --HTMLCloseTag HTMLOpenTagdiv class=&quot;modal-footer text-right&quot;HTMLCloseTag HTMLOpenTagbutton type=&quot;button&quot; data-dismiss=&quot;modal&quot; class=&quot;btn btn-outline-secondary w-20 mr-1&quot;HTMLCloseTagCancelHTMLOpenTag/buttonHTMLCloseTag HTMLOpenTagbutton type=&quot;button&quot; class=&quot;btn btn-primary w-20&quot;HTMLCloseTagSendHTMLOpenTag/buttonHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag!-- END: Modal Footer --HTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag/divHTMLCloseTag HTMLOpenTag!-- END: Modal Content --HTMLCloseTag </code> </pre>
+        </div>
+    </div>
+</div>
+<!-- END: Footer Modal -->
+<!-- END: HTML Table Data -->
+{% endblock content %}

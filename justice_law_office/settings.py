@@ -39,19 +39,21 @@ ALLOWED_HOSTS = ['192.168.221.131', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+   
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'livereload',
+    'django.contrib.staticfiles',
     'django.contrib.postgres',
     'whitenoise.runserver_nostatic',
     'django.contrib.humanize',
     'django.contrib.sites',
     'clear_cache',
     'crispy_forms',
+    'accounts',
     'clients',
 ]
 
@@ -63,12 +65,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'livereload.middleware.LiveReloadScript',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django_session_timeout.middleware.SessionTimeoutMiddleware', 
-    
+    'livereload.middleware.LiveReloadScript',
 ]
 
 SESSION_EXPIRE_SECONDS = 3600  # 30 minutes = 1800 seconds; 1 hour = 3600 seconds

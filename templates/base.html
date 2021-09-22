@@ -29,7 +29,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
+    
     <body class="main">
+       
         <!-- BEGIN: Mobile Menu -->
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
@@ -93,7 +95,9 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="top-bar">
                     <!-- BEGIN: Breadcrumb -->
                     <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> 
-                    <a href="{% if active_page == 'client' %}{% url 'justice_clients' %} {% endif %}">{{ active_page|title }}</a> 
+                    {% if active_page == 'clients' %}
+                        <a href="{% url 'justice_clients' %} ">{{ active_page|title }}</a>
+                    {% endif %}
                     <i data-feather="chevron-right" class="breadcrumb__icon"></i> 
                     <a href="" class="breadcrumb--active">{{ breadcrumb|capfirst }}</a> </div>
                     <!-- END: Breadcrumb -->
@@ -294,7 +298,10 @@ License: You must have a valid license purchased only from themeforest(the above
                 
                 <!-- END: HTML Content -->
             </div>
+            
             <!-- END: Content -->
+            
+           
         </div>
         <!-- BEGIN: Dark Mode Switcher-->
         <div data-url="side-menu-dark-tabulator.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box dark:bg-dark-2 border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
@@ -308,9 +315,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="{% static 'dist/js/app.js' %}"></script>
         <script src="{% static 'dist/js/jquery-3.6.0.min.js' %}"></script>
         <script src="{% static 'dist/js/justice.js' %}"></script>
-        <script >
-            
-        </script>
+        
+        
+        {% block js %}
+          
+        {% endblock js %}
         <!-- END: JS Assets-->
     </body>
 </html>

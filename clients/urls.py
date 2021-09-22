@@ -6,7 +6,9 @@ from clients import views
 urlpatterns = [
     path('clients/',  include([
          path('', views.justice_clients, name='justice_clients'),
-         path('create', views.client_form, name='client_form'),
+         path('create', views.client_form, name='client_create'),
+         path('<int:id>/edit', views.client_form, name='client_update'),
+         path('<int:id>/delete', views.client_delete, name='client_delete'),
     ])),
    
     
