@@ -6,22 +6,47 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
 from clients.models import Client
+from django.contrib.postgres.search import SearchVector, SearchQuery, TrigramSimilarity
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.db.models import Q, Count
+
 # Create your views here.
+CLIENTS_PER_PAGE = 4
 
 def justice_clients(request):
     
     # user = request.user
     # if user and user.is_authenticated:
     #     return HttpResponseRedirect(reverse('home'))
-    clients = Client.objects.all()
-    value = _('list des client')
+    
+    query = request.GET.get('query', '')
+    page = request.GET.get('page', 1)
+    total = Client.objects.all().count()
+    clients = Client.objects.annotate(search=SearchVector('nom', 'prenom', 'ville', 'company')).filter(
+        Q(search__icontains=query))
+    print('clients : ', clients)
+    
+    paginator = Paginator(clients, CLIENTS_PER_PAGE)
+    
+
+    try:
+        clients = paginator.page(page)
+    except PageNotAnInteger:
+        # page = CLIENTS_PER_PAGE
+        clients = paginator.page(page)
+    except EmptyPage:
+        # page = paginator.num_pages
+        clients = paginator.page(page)
+    
+    title = _('list des client')
     context = {
-        'title': value,
+        'title': title + f' ({page})',
         'active_page': 'clients',
-        'breadcrumb': value,
+        'breadcrumb': title,
         'clients': clients,
+        'page': clients.number,
+        'query': query,
     }
     template_name = 'clients/index.html'
          

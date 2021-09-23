@@ -36,6 +36,7 @@ DEBUG = os.environ.get('DEBUG', bool)
 ALLOWED_HOSTS = ['192.168.221.131', '127.0.0.1']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
     'whitenoise.runserver_nostatic',
@@ -60,6 +60,7 @@ INSTALLED_APPS = [
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
+   
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -69,7 +70,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django_session_timeout.middleware.SessionTimeoutMiddleware', 
-    'livereload.middleware.LiveReloadScript',
 ]
 
 SESSION_EXPIRE_SECONDS = 3600  # 30 minutes = 1800 seconds; 1 hour = 3600 seconds
@@ -97,6 +97,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins':[
+                'clients.templatetags.tags',
+            ]
         },
     },
 ]

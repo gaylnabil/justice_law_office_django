@@ -1,0 +1,67 @@
+<!-- BEGIN: Pagination -->
+<div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-nowrap items-center">
+    <ul class="pagination">
+    
+        {% if objects.has_previous %}
+    
+        <li>
+            <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page=1"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
+        </li>
+        <li>
+            <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.previous_page_number }}"> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
+        </li>
+        <!-- <li> <a class="pagination__link" href="">...</a> </li> -->
+        {% if objects.number|add:'-2' > 0 %}
+            <li> 
+                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.number|add:'-2' }}">
+                {{objects.number|add:'-2' }}
+                </a>
+            </li>
+        {% endif %}
+
+        <li>
+            <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.previous_page_number }}">
+                {{ objects.previous_page_number }}
+            </a>
+        </li>
+        
+    {% endif %}
+    
+        <li> <a class="pagination__link pagination__link--active">{{ objects.number }}</a> </li>
+        <!-- <li> <a class="pagination__link" href="">...</a> </li> -->
+        {% if objects.has_next %}
+        
+            <li>
+                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.next_page_number }}">
+                    {{ objects.next_page_number }}
+                </a>
+            </li>
+            
+            {% if objects.number|add:'2' <= objects.paginator.num_pages %} 
+            <li>
+                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.number|add:'2' }}">
+                    {{ objects.number|add:'2' }}
+                </a>
+            </li>
+            {% endif %}
+                
+            <li>
+                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.next_page_number }}">
+                    <i class="w-4 h-4" data-feather="chevron-right"></i>
+                </a>
+            </li>
+            <li>
+                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}page={{ objects.paginator.num_pages }}">
+                    <i class="w-4 h-4" data-feather="chevrons-right"></i>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+    <select class="w-20 form-select box mt-3 sm:mt-0">
+        <option>10</option>
+        <option>25</option>
+        <option>35</option>
+        <option>50</option>
+    </select>
+</div>
+<!-- END: Pagination -->
