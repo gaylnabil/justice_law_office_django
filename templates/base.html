@@ -54,7 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 </li>
                 
                 <li>
-                    <a href="{% url 'justice_clients' %}" class="menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
+                    <a href="{% url 'justice_clients_all' %}" class="menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
                         <div class="menu__title"> {{ trans_clients|title }}
                         <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
                     </a>
@@ -82,7 +82,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </li>
                     
                     <li>
-                        <a href="{% url 'justice_clients' %}" class="side-menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
+                        <a href="{% url 'justice_clients_all' %}" class="side-menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                             <div class="side-menu__title">
                                 {{ trans_clients|title }}
@@ -99,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN: Breadcrumb -->
                     <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> 
                     {% if active_page == 'clients' %}
-                        <a href="{% url 'justice_clients' %} ">{{ active_page|title }}</a>
+                        <a href="{% url 'justice_clients_all' %} ">{{ active_page|title }}</a>
                     {% endif %}
                     <i data-feather="chevron-right" class="breadcrumb__icon"></i> 
                     <a href="" class="breadcrumb--active">{{ breadcrumb|capfirst }}</a> </div>

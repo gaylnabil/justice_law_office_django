@@ -1,7 +1,7 @@
 
 from django.template.defaultfilters import stringfilter
 from django import template
-
+from justice_law_office.constants import VILLES
 
 register = template.Library()
 
@@ -23,3 +23,11 @@ def divide(value, arg):
 @register.filter(name='multiply')
 def multiply(value, arg):
     return int(value) * int(arg)
+    
+
+@register.filter(name='city_name')
+def city_name(value):
+    
+    list = dict(VILLES)
+    
+    return list[value]

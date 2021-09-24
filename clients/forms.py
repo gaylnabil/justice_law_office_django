@@ -95,7 +95,7 @@ class ClientForm(forms.ModelForm):
 
         model = Client
         fields = '__all__'
-        exclude = ("created_at", "updated_at",)
+        exclude = ("created_at", "updated_at","slug")
         labels = {
             # TODO: Define fields here
             'type_client': _('type de client'),

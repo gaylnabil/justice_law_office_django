@@ -47,7 +47,18 @@
             </div>
             <div class="hidden md:block mx-auto text-gray-600">{{ trans_showing|capfirst }} {{clients.start_index}} {{ trans_to }} {{ clients.end_index }} {{ trans_of }} {{ clients.paginator.count }} {{ trans_entries }}</div>
             <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                <form action="" method=""></form>
+                <form action="{% url 'justice_clients_all' %}" method="POST" >
+                    {% csrf_token %}
+                    <div class="w-56 relative text-gray-700 dark:text-gray-300">
+                        <input name="query" type="text" 
+                        value="{% if query is not None and query != 'all-clients' and query != '' %}{{ query }}{% endif %}" class="form-control w-56 box pr-10 placeholder-theme-13" placeholder="Search...">
+                        <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search" ></i>
+                    </div>
+                    
+                    <div class="w-56 relative text-gray-700 dark:text-gray-300" style="display: none;">
+                        <button type="submit">_</button>
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -61,6 +72,7 @@
                         <th class="whitespace-nowrap">{{ trans_client_firstname|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_client_genre|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_client_company|upper }}</th>
+                        <th class="whitespace-nowrap">{{ trans_client_city|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_gsm|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_email|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_actions|upper }}</th>
@@ -82,7 +94,7 @@
                         </td>
 
                         <td class="w-40">
-                            <span>{% firstof clt.prenom %}</span>
+                            <span>{% if clt.sexe == 'M'%}{{ trans_male|capfirst }} {% else %} {{ trans_female|capfirst }} {% endif %}</span>
                         </td>
         
                         <td class="w-40">
@@ -94,7 +106,9 @@
                             {% endif %}
                            
                         </td>
-        
+                        <td class="w-40">
+                            <span>{% firstof clt.ville|city_name %}</span>
+                        </td>
                         <td class="w-40">
                             <span>{% firstof clt.gsm %}</span>
                         </td>
