@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'accounts',
     'clients',
+    'adversaires',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -178,3 +179,93 @@ SITE_ID = 3
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'nga_console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'nga_verbose',
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+        
+        'nga_file': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'logs/justice.log',
+            'when': 'D',
+            'interval': 1,
+            'utc': True,
+            'backupCount': 5,
+            'formatter': 'nga_verbose',
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+        
+        'nga_file_debug': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'logs/justice_debug.log',
+            'when': 'D',
+            'interval': 1,
+            'utc': True,
+            'backupCount': 5,
+            'formatter': 'nga_verbose',
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+        },
+        
+        'nga_file_warning': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'logs/justice_warning.log',
+            'when': 'D',
+            'interval': 1,
+            'utc': True,
+            'backupCount': 5,
+            'formatter': 'nga_verbose',
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'WARNING'),
+        },
+        
+        'nga_file_error': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'logs/justice_error.log',
+            'when': 'D',
+            'interval': 1,
+            'utc': True,
+            'backupCount': 5,
+            'formatter': 'nga_verbose',
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
+        },
+        
+        'nga_file_critical': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': 'logs/justice_critical.log',
+            'when': 'D',
+            'interval': 1,
+            'utc': True,
+            'backupCount': 5,
+            'formatter': 'nga_verbose',
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'CRITICAL'),
+        },
+    },
+    'root': {
+        'handlers': ['nga_file', 'nga_console', 'nga_file_warning', 'nga_file_error', 'nga_file_critical'],
+         'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+    },
+    # 'loggers': {
+    #     'django': {
+    #         'handlers': ['console'],
+    #         'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+    #         'propagate': False,
+    #     },
+    # },
+    
+    'formatters': {
+        'nga_verbose': {
+            'format': '{asctime}: {levelname} [{pathname}: {funcName}:{lineno:d}], {name}, {module}, {process:d}, {thread:d}, {message}',
+            'style': '{',
+        },
+        'nga_simple': {
+            'format': '{levelname}, {message}',
+            'style': '{',
+        },
+    },
+}

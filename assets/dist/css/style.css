@@ -6,3 +6,9 @@ margin-right:auto;
 a:hover{
     text-decoration: underline;
 }
+
+.icon-remove:hover, .icon-reset:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgba(28, 63, 170, var(--tw-bg-opacity));
+}

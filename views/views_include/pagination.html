@@ -5,22 +5,22 @@
         {% if objects.has_previous %}
     
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients' 1 query %}"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
+                <a class="pagination__link" href="{% url 'justice_clients' 1 city query %}"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
             </li>
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients' objects.previous_page_number query %}"> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
+                <a class="pagination__link" href="{% url 'justice_clients' objects.previous_page_number city query %}"> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
             </li>
             <!-- <li> <a class="pagination__link" href="">...</a> </li> -->
             {% if objects.number|add:'-2' > 0 %}
                 <li> 
-                    <a class="pagination__link" href="{% url 'justice_clients' objects.number|add:'-2' query %}">
+                    <a class="pagination__link" href="{% url 'justice_clients' objects.number|add:'-2' city query %}">
                     {{objects.number|add:'-2' }}
                     </a>
                 </li>
             {% endif %}
     
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients' objects.previous_page_number query %}">
+                <a class="pagination__link" href="{% url 'justice_clients' objects.previous_page_number city query %}">
                     {{ objects.previous_page_number }}
                 </a>
             </li>
@@ -32,26 +32,26 @@
         {% if objects.has_next %}
         
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients' objects.next_page_number query %}">
+                <a class="pagination__link" href="{% url 'justice_clients' objects.next_page_number city query %}">
                     {{ objects.next_page_number }}
                 </a>
             </li>
             
             {% if objects.number|add:'2' <= objects.paginator.num_pages %} 
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients'  objects.number|add:'2' query %}">
+                <a class="pagination__link" href="{% url 'justice_clients'  objects.number|add:'2' city query %}">
                     {{ objects.number|add:'2' }}
                 </a>
             </li>
             {% endif %}
                 
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients' objects.next_page_number query %}">
+                <a class="pagination__link" href="{% url 'justice_clients' objects.next_page_number city query %}">
                     <i class="w-4 h-4" data-feather="chevron-right"></i>
                 </a>
             </li>
             <li>
-                <a class="pagination__link" href="{% url 'justice_clients' objects.paginator.num_pages query %}">
+                <a class="pagination__link" href="{% url 'justice_clients' objects.paginator.num_pages city query %}">
                     <i class="w-4 h-4" data-feather="chevrons-right"></i>
                 </a>
             </li>

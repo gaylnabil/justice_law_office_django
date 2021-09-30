@@ -6,6 +6,7 @@ from enum import Enum
 from django.utils.translation import gettext as _
 import pandas as pd
 
+
 # class AccountActivationTokenGenerator(PasswordResetTokenGenerator):
 #     def _make_hash_value(self, user, timestamp):
 #         return (

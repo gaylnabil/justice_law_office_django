@@ -19,7 +19,7 @@ class Avocat(models.Model):
     quartier = models.CharField(max_length=255, blank=True, null=True)
     indication = models.CharField(max_length=255, blank=True, null=True)
     ville = models.CharField(max_length=150, blank=True,
-                             null=True, choices=VILLES)
+                             null=True, choices=VILLES, default='Casablanca')
     zip_code = models.IntegerField(blank=True, null=True)
     tel = models.CharField(max_length=255, blank=True, null=True)
     gsm = models.CharField(max_length=255, blank=True, null=True)
@@ -48,6 +48,7 @@ class Avocat(models.Model):
 
     class Meta:
         db_table = 'avocat'
+        managed = True
         verbose_name = _("Avocat")
         verbose_name_plural = _("Avocats")
 

@@ -1,17 +1,15 @@
 from django.contrib import admin
 
-from clients.models import Client
+from accounts.models import Avocat
 
 # Register your models here.
 
 
-@admin.register(Client)
-class ClientAdmin(admin.ModelAdmin):
-    
-    readonly_fields = ("created_at", "updated_at",)
+@admin.register(Avocat)
+class accountAdmin(admin.ModelAdmin):
     
     class Meta:
-        model = Client
+        model = Avocat
 
 
     

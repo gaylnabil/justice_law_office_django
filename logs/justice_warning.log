@@ -1,0 +1,544 @@
+2021-09-30 09:47:28,064: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /dist/images/profile-9.jpg
+2021-09-30 09:47:28,078: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295206201088, Not Found: /dist/images/profile-11.jpg
+2021-09-30 09:47:28,096: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294972503808, Not Found: /dist/images/profile-12.jpg
+2021-09-30 09:47:28,144: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294964111104, Not Found: /dist/images/preview-2.jpg
+2021-09-30 09:47:28,269: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294972503808, Not Found: /dist/images/profile-14.jpg
+2021-09-30 09:47:28,338: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294955718400, Not Found: /dist/images/profile-2.jpg
+2021-09-30 09:47:28,342: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /dist/images/profile-6.jpg
+2021-09-30 09:47:28,349: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295206201088, Not Found: /dist/images/preview-11.jpg
+2021-09-30 09:47:28,479: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294964111104, Not Found: /dist/images/preview-9.jpg
+2021-09-30 09:47:28,457: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295188367104, Not Found: /dist/images/preview-13.jpg
+2021-09-30 09:47:28,768: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294955718400, Not Found: /dist/images/preview-5.jpg
+2021-09-30 09:47:28,854: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294964111104, Not Found: /dist/images/preview-15.jpg
+2021-09-30 09:47:28,940: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /dist/images/preview-1.jpg
+2021-09-30 09:47:28,975: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295188367104, Not Found: /dist/images/preview-3.jpg
+2021-09-30 09:47:29,005: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294972503808, Not Found: /dist/images/preview-8.jpg
+2021-09-30 09:47:29,136: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294964111104, Not Found: /dist/images/preview-12.jpg
+2021-09-30 09:47:29,161: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140294955718400, Not Found: /dist/images/profile-3.jpg
+2021-09-30 09:47:29,186: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /dist/images/profile-4.jpg
+2021-09-30 09:47:30,104: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /dist/json/location.json
+2021-09-30 09:47:30,785: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:47:39,966: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:47:42,868: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:47:45,798: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/dist/images/profile-9.jpg
+2021-09-30 09:48:05,004: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:48:07,027: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/dist/images/profile-9.jpg
+2021-09-30 09:49:17,291: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:49:27,468: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:49:33,570: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:49:35,169: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/dist/images/profile-9.jpg
+2021-09-30 09:50:59,391: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 09:53:15,416: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 10:02:22,175: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 10:02:42,987: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 10:02:57,387: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2556, 140295197284096, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:08:41,888: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808442873600, Not Found: /dist/images/profile-9.jpg
+2021-09-30 15:08:41,890: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808366130944, Not Found: /dist/images/profile-12.jpg
+2021-09-30 15:08:41,898: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/profile-2.jpg
+2021-09-30 15:08:41,905: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808332560128, Not Found: /dist/images/preview-2.jpg
+2021-09-30 15:08:41,959: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808340952832, Not Found: /dist/images/profile-11.jpg
+2021-09-30 15:08:42,182: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808442873600, Not Found: /dist/images/preview-5.jpg
+2021-09-30 15:08:42,415: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808357738240, Not Found: /dist/images/preview-15.jpg
+2021-09-30 15:08:42,424: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/preview-1.jpg
+2021-09-30 15:08:42,474: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/preview-8.jpg
+2021-09-30 15:08:42,483: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808332560128, Not Found: /dist/images/preview-9.jpg
+2021-09-30 15:08:42,511: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808357738240, Not Found: /dist/images/preview-3.jpg
+2021-09-30 15:08:42,518: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/preview-13.jpg
+2021-09-30 15:08:42,589: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/preview-12.jpg
+2021-09-30 15:08:42,694: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/profile-14.jpg
+2021-09-30 15:08:42,758: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808332560128, Not Found: /dist/images/preview-11.jpg
+2021-09-30 15:08:42,778: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808357738240, Not Found: /dist/images/profile-6.jpg
+2021-09-30 15:08:42,786: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808442873600, Not Found: /dist/images/profile-3.jpg
+2021-09-30 15:08:42,941: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/images/profile-4.jpg
+2021-09-30 15:08:43,889: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /dist/json/location.json
+2021-09-30 15:08:45,968: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:09:08,830: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:12:04,345: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5206, 139808349345536, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:19:21,214: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5414, 140288240899840, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:37:33,916: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:37:37,263: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Internal Server Error: /adversaires/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py", line 125, in adversaire_form
+    form = AdversaireForm(instance=adversaire)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/forms.py", line 14, in __init__
+    super(AdversaireForm, self).__init__(*args, **kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/parents/parent.py", line 57, in __init__
+    super(AdversaireForm, self).__init__(*args, **kwargs)
+NameError: name 'AdversaireForm' is not defined
+2021-09-30 15:37:37,766: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /favicon.ico
+2021-09-30 15:39:27,934: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/profile-9.jpg
+2021-09-30 15:39:27,995: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/profile-12.jpg
+2021-09-30 15:39:28,028: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/profile-2.jpg
+2021-09-30 15:39:28,057: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726022768384, Not Found: /dist/images/profile-11.jpg
+2021-09-30 15:39:28,123: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726022768384, Not Found: /dist/images/preview-2.jpg
+2021-09-30 15:39:28,131: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/preview-5.jpg
+2021-09-30 15:39:28,177: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/preview-1.jpg
+2021-09-30 15:39:28,207: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726014375680, Not Found: /dist/images/preview-15.jpg
+2021-09-30 15:39:28,245: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/preview-9.jpg
+2021-09-30 15:39:28,262: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726022768384, Not Found: /dist/images/preview-8.jpg
+2021-09-30 15:39:28,277: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726022768384, Not Found: /dist/images/preview-3.jpg
+2021-09-30 15:39:28,332: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/preview-13.jpg
+2021-09-30 15:39:28,482: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726022768384, Not Found: /dist/images/profile-6.jpg
+2021-09-30 15:39:28,601: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726099797760, Not Found: /dist/images/preview-11.jpg
+2021-09-30 15:39:28,849: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726014375680, Not Found: /dist/images/profile-14.jpg
+2021-09-30 15:39:28,916: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726005982976, Not Found: /dist/images/preview-12.jpg
+2021-09-30 15:39:28,957: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139725997590272, Not Found: /dist/images/profile-3.jpg
+2021-09-30 15:39:29,104: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726014375680, Not Found: /dist/images/profile-4.jpg
+2021-09-30 15:39:29,626: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5752, 139726014375680, Not Found: /dist/json/location.json
+2021-09-30 15:39:37,833: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/profile-12.jpg
+2021-09-30 15:39:37,847: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/profile-2.jpg
+2021-09-30 15:39:37,913: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105905420032, Not Found: /dist/images/profile-9.jpg
+2021-09-30 15:39:38,025: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105905420032, Not Found: /dist/images/profile-11.jpg
+2021-09-30 15:39:38,033: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/preview-2.jpg
+2021-09-30 15:39:38,166: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /dist/images/preview-5.jpg
+2021-09-30 15:39:38,373: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/preview-1.jpg
+2021-09-30 15:39:38,425: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105923516160, Not Found: /dist/images/preview-15.jpg
+2021-09-30 15:39:38,626: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /dist/images/preview-9.jpg
+2021-09-30 15:39:38,647: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/profile-14.jpg
+2021-09-30 15:39:38,712: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /dist/images/profile-6.jpg
+2021-09-30 15:39:38,829: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /dist/images/preview-11.jpg
+2021-09-30 15:39:38,841: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/preview-13.jpg
+2021-09-30 15:39:38,898: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105923516160, Not Found: /dist/images/preview-8.jpg
+2021-09-30 15:39:38,915: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105905420032, Not Found: /dist/images/preview-3.jpg
+2021-09-30 15:39:39,059: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105923516160, Not Found: /dist/images/preview-12.jpg
+2021-09-30 15:39:39,067: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105888634624, Not Found: /dist/images/profile-3.jpg
+2021-09-30 15:39:39,116: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /dist/images/profile-4.jpg
+2021-09-30 15:39:39,935: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /dist/json/location.json
+2021-09-30 15:39:40,338: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:39:42,714: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Internal Server Error: /adversaires/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py", line 125, in adversaire_form
+    form = AdversaireForm(instance=adversaire)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/forms.py", line 14, in __init__
+    super(AdversaireForm, self).__init__(*args, **kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/parents/parent.py", line 57, in __init__
+    super(AdversaireForm, self).__init__(*args, **kwargs)
+NameError: name 'AdversaireForm' is not defined
+2021-09-30 15:40:37,434: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5858, 140105914337024, Internal Server Error: /adversaires/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py", line 125, in adversaire_form
+    form = AdversaireForm(instance=adversaire)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/forms.py", line 14, in __init__
+    super(AdversaireForm, self).__init__(*args, **kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/parents/parent.py", line 57, in __init__
+    super(AdversaireForm, self).__init__(*args, **kwargs)
+NameError: name 'AdversaireForm' is not defined
+2021-09-30 15:41:28,408: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489990862592, Not Found: /dist/images/profile-9.jpg
+2021-09-30 15:41:28,415: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489974077184, Not Found: /dist/images/profile-11.jpg
+2021-09-30 15:41:28,476: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489982469888, Not Found: /dist/images/profile-12.jpg
+2021-09-30 15:41:28,491: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /dist/images/preview-5.jpg
+2021-09-30 15:41:28,528: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489965684480, Not Found: /dist/images/profile-2.jpg
+2021-09-30 15:41:28,542: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489974077184, Not Found: /dist/images/preview-2.jpg
+2021-09-30 15:41:28,644: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489990862592, Not Found: /dist/images/preview-1.jpg
+2021-09-30 15:41:28,711: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /dist/images/preview-15.jpg
+2021-09-30 15:41:28,733: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489974077184, Not Found: /dist/images/preview-9.jpg
+2021-09-30 15:41:28,781: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489965684480, Not Found: /dist/images/preview-8.jpg
+2021-09-30 15:41:28,940: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /dist/images/preview-3.jpg
+2021-09-30 15:41:29,094: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489965684480, Not Found: /dist/images/preview-13.jpg
+2021-09-30 15:41:29,140: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /dist/images/profile-14.jpg
+2021-09-30 15:41:29,150: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489974077184, Not Found: /dist/images/profile-6.jpg
+2021-09-30 15:41:29,286: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489990862592, Not Found: /dist/images/preview-11.jpg
+2021-09-30 15:41:29,298: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /dist/images/preview-12.jpg
+2021-09-30 15:41:29,526: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /dist/images/profile-3.jpg
+2021-09-30 15:41:29,749: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489990862592, Not Found: /dist/images/profile-4.jpg
+2021-09-30 15:41:30,473: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489990862592, Not Found: /dist/json/location.json
+2021-09-30 15:41:46,619: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 15:41:50,060: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:42:02,600: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:42:20,196: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5931, 140489957291776, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:43:43,912: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5993, 139964838823680, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:43:45,121: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5993, 139964838823680, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:43:49,700: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5993, 139964838823680, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:45:30,916: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6040, 140184727754496, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 15:45:36,425: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6040, 140184645531392, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:02:47,394: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:02:51,468: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /clients/2/dist/images/profile-9.jpg
+2021-09-30 16:03:16,423: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:03:19,781: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /clients/2/dist/images/profile-9.jpg
+2021-09-30 16:03:28,737: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:17:52,468: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:17:58,683: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6231, 140133062563584, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:49:24,470: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6765, 140001759405824, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:49:32,743: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6765, 140001759405824, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:49:51,983: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6765, 140001759405824, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 16:50:13,491: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6765, 140001759405824, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:55:46,373: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583348745984, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:56:07,327: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/profile-9.jpg
+2021-09-30 16:56:07,503: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/profile-2.jpg
+2021-09-30 16:56:07,583: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583238350592, Not Found: /dist/images/profile-12.jpg
+2021-09-30 16:56:07,595: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/profile-11.jpg
+2021-09-30 16:56:07,683: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/profile-14.jpg
+2021-09-30 16:56:07,815: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/preview-13.jpg
+2021-09-30 16:56:07,913: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/profile-6.jpg
+2021-09-30 16:56:07,809: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583229957888, Not Found: /dist/images/preview-11.jpg
+2021-09-30 16:56:07,977: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583229957888, Not Found: /dist/images/preview-9.jpg
+2021-09-30 16:56:07,987: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/preview-2.jpg
+2021-09-30 16:56:08,076: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/preview-5.jpg
+2021-09-30 16:56:08,150: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/preview-15.jpg
+2021-09-30 16:56:08,127: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583238350592, Not Found: /dist/images/preview-1.jpg
+2021-09-30 16:56:08,166: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583348745984, Not Found: /dist/images/preview-8.jpg
+2021-09-30 16:56:08,303: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/preview-3.jpg
+2021-09-30 16:56:08,347: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583229957888, Not Found: /dist/images/preview-12.jpg
+2021-09-30 16:56:08,393: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/profile-3.jpg
+2021-09-30 16:56:08,413: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/profile-4.jpg
+2021-09-30 16:56:09,052: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/json/location.json
+2021-09-30 16:56:09,807: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/profile-9.jpg
+2021-09-30 16:56:09,827: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/profile-2.jpg
+2021-09-30 16:56:09,872: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/profile-12.jpg
+2021-09-30 16:56:09,897: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583246743296, Not Found: /dist/images/preview-5.jpg
+2021-09-30 16:56:09,879: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583229957888, Not Found: /dist/images/profile-11.jpg
+2021-09-30 16:56:09,923: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/preview-2.jpg
+2021-09-30 16:56:10,135: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/preview-15.jpg
+2021-09-30 16:56:10,163: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/preview-1.jpg
+2021-09-30 16:56:10,175: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/preview-9.jpg
+2021-09-30 16:56:10,179: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/preview-8.jpg
+2021-09-30 16:56:10,205: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583271921408, Not Found: /dist/images/profile-6.jpg
+2021-09-30 16:56:10,243: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583246743296, Not Found: /dist/images/preview-11.jpg
+2021-09-30 16:56:10,247: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583238350592, Not Found: /dist/images/profile-14.jpg
+2021-09-30 16:56:10,253: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583229957888, Not Found: /dist/images/preview-13.jpg
+2021-09-30 16:56:10,261: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583263528704, Not Found: /dist/images/preview-3.jpg
+2021-09-30 16:56:10,351: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583238350592, Not Found: /dist/images/preview-12.jpg
+2021-09-30 16:56:10,363: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583229957888, Not Found: /dist/images/profile-3.jpg
+2021-09-30 16:56:10,417: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/images/profile-4.jpg
+2021-09-30 16:56:11,117: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /dist/json/location.json
+2021-09-30 16:56:12,918: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 16:56:44,951: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6976, 140583255136000, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:03:39,732: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:03:47,812: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /clients/page/1/city/Casablanca/search/dist/images/profile-9.jpg
+2021-09-30 17:03:52,085: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:03:59,526: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:04:05,100: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Internal Server Error: /adversaires/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py", line 114, in justice_adversaires
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_avocats_adversaires_all' not found. 'justice_avocats_adversaires_all' is not a valid view function or pattern name.
+2021-09-30 17:04:15,449: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Internal Server Error: /adversaires/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py", line 114, in justice_adversaires
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_avocats_adversaires_all' not found. 'justice_avocats_adversaires_all' is not a valid view function or pattern name.
+2021-09-30 17:05:22,798: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:05:30,618: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:05:35,867: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:05:38,296: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:07:45,725: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:07:51,229: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445174396672, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:09:27,811: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:09:59,367: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:10:41,833: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:10:43,609: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:11:58,530: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Internal Server Error: /adversaires/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py", line 114, in justice_adversaires
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_avocats_adversaires_all' not found. 'justice_avocats_adversaires_all' is not a valid view function or pattern name.
+2021-09-30 17:12:15,155: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_avocats_adversaires_all' not found. 'justice_avocats_adversaires_all' is not a valid view function or pattern name.
+2021-09-30 17:12:19,877: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7184, 140445086639872, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_avocats_adversaires_all' not found. 'justice_avocats_adversaires_all' is not a valid view function or pattern name.
+2021-09-30 17:17:32,292: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348673120000, Not Found: /dist/images/profile-9.jpg
+2021-09-30 17:17:32,380: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /dist/images/profile-2.jpg
+2021-09-30 17:17:32,398: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348689905408, Not Found: /dist/images/profile-12.jpg
+2021-09-30 17:17:32,575: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348689905408, Not Found: /dist/images/preview-5.jpg
+2021-09-30 17:17:32,581: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /dist/images/profile-11.jpg
+2021-09-30 17:17:32,590: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348689905408, Not Found: /dist/images/preview-2.jpg
+2021-09-30 17:17:32,679: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348689905408, Not Found: /dist/images/preview-1.jpg
+2021-09-30 17:17:32,762: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348689905408, Not Found: /dist/images/preview-9.jpg
+2021-09-30 17:17:32,782: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348698298112, Not Found: /dist/images/profile-6.jpg
+2021-09-30 17:17:32,762: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /dist/images/preview-15.jpg
+2021-09-30 17:17:32,874: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348706690816, Not Found: /dist/images/preview-11.jpg
+2021-09-30 17:17:33,065: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348706690816, Not Found: /dist/images/profile-14.jpg
+2021-09-30 17:17:33,075: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /dist/images/preview-13.jpg
+2021-09-30 17:17:33,084: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348698298112, Not Found: /dist/images/preview-8.jpg
+2021-09-30 17:17:33,365: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348689905408, Not Found: /dist/images/preview-3.jpg
+2021-09-30 17:17:33,450: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348715083520, Not Found: /dist/images/preview-12.jpg
+2021-09-30 17:17:33,643: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348698298112, Not Found: /dist/images/profile-3.jpg
+2021-09-30 17:17:33,809: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348706690816, Not Found: /dist/images/profile-4.jpg
+2021-09-30 17:17:34,565: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348706690816, Not Found: /dist/json/location.json
+2021-09-30 17:17:35,006: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348706690816, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:17:53,223: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348706690816, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:18:11,111: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:19:44,272: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:19:49,710: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7534, 140348681512704, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:20:28,584: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7642, 140666188486400, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:22:55,504: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7642, 140666188486400, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:22:59,946: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7642, 140666188486400, Not Found: /adversaires/1/dist/images/profile-9.jpg
+2021-09-30 17:23:18,514: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7642, 140666188486400, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:23:57,531: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7642, 140666188486400, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-09-30 17:24:04,424: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7642, 140666188486400, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg

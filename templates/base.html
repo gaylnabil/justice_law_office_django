@@ -56,7 +56,26 @@ License: You must have a valid license purchased only from themeforest(the above
                 <li>
                     <a href="{% url 'justice_clients_all' %}" class="menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
                         <div class="menu__title"> {{ trans_clients|title }}
-                        <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
+                        <i data-feather="users" class="menu__sub-icon transform rotate-180"></i> </div>
+                    </a>
+                
+                </li>
+                <li>
+                    <a href="{% url 'justice_adversaires_all' %}"
+                        class="menu {% if active_page == 'adversaires' %} side-menu--active {% endif %}">
+                        <div class="menu__title"> {{ trans_opponents|title }}
+                            <i data-feather="users" class="menu__sub-icon transform rotate-180"></i>
+                        </div>
+                    </a>
+                
+                </li>
+                
+                <li>
+                    <a href="{% url 'justice_avocats_adversaires_all' %}"
+                        class="menu {% if active_page == 'avocat_adversaire' %} side-menu--active {% endif %}">
+                        <div class="menu__title"> {{ trans_attorney|title }} {{ trans_opponents|title }}
+                            <i data-feather="users" class="menu__sub-icon transform rotate-180"></i>
+                        </div>
                     </a>
                 
                 </li>
@@ -81,25 +100,51 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                     </li>
                     
+                    
                     <li>
                         <a href="{% url 'justice_clients_all' %}" class="side-menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
-                            <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
+                            <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                             <div class="side-menu__title">
                                 {{ trans_clients|title }}
                             </div>
                         </a>
                     </li>
+                    
+                    <li>
+                        <a href="{% url 'justice_adversaires_all' %}"
+                            class="side-menu {% if active_page == 'adversaires' %} side-menu--active {% endif %}">
+                            <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                            <div class="side-menu__title">
+                                {{ trans_opponents|title }}
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{% url 'justice_avocats_adversaires_all' %}"
+                            class="side-menu {% if active_page == 'avocat_adversaire' %} side-menu--active {% endif %}">
+                            <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                            <div class="side-menu__title">
+                                {{ trans_attorney|title }} {{ trans_opponents|title }}
+                            </div>
+                        </a>
+                    </li>
+                    
                 </ul>
             </nav>
             <!-- END: Side Menu -->
             <!-- BEGIN: Content -->
             <div class="content">
-                <!-- BEGIN: Top Bar -->
+                <!-- BEGIN: Top Bar -->  
                 <div class="top-bar">
                     <!-- BEGIN: Breadcrumb -->
                     <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> 
                     {% if active_page == 'clients' %}
                         <a href="{% url 'justice_clients_all' %} ">{{ active_page|title }}</a>
+                    {% endif %}
+                    
+                    {% if active_page == 'adversaires' %}
+                    <a href="{% url 'justice_adversaires_all' %} ">{{ active_page|title }}</a>
                     {% endif %}
                     <i data-feather="chevron-right" class="breadcrumb__icon"></i> 
                     <a href="" class="breadcrumb--active">{{ breadcrumb|capfirst }}</a> </div>

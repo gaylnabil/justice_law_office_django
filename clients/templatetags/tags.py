@@ -26,8 +26,10 @@ def multiply(value, arg):
     
 
 @register.filter(name='city_name')
-def city_name(value):
+def city_name(key):
     
-    list = dict(VILLES)
+    dictionary = dict(VILLES)
+    if key in dictionary:
+        return dictionary[key]
     
-    return list[value]
+    return ''

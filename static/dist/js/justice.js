@@ -2,8 +2,8 @@
 
 $(window).ready(function () {
     
-    $('input[type=radio][name=type_client]').on('change', function() {
-      CheckTypeClient($(this));
+    $('.radio-type').on('change', function() {
+      CheckTypeClient($(this).val());
     });
     
   // $("input:radio:first").click();
@@ -12,19 +12,35 @@ $(window).ready(function () {
   $(".btn-delete").click(function(){
     
     var url = $(this).attr("data-url");
-    alert(url);
-    
     var $form = $('#delete-confirmation-modal form'). attr('action',url);
     
   });
+  
+  
+  $('select[name=city]').on('change',function(e){
+     $('#btn-search').click();
+  });
+  
+  $('.icon-remove').on('click',function(e){
+       $('input[name=query]').val('');
+       $('input[name=query]').focus();
+  });
+  
+  $('.icon-reset').on('click',function(e){
+     
+      $("select[name=city] option[value='all']").prop('selected', true);
+      $("select[name=city]").change();
+     // $('select[name=city]').focus();
+  });
+
 
 }); 
 
-function CheckTypeClient($element){
-  switch ($element.val()) {
+function CheckTypeClient(value){
+  switch (value) {
       case '1': // 1: Physique
           
-          $('div[data-client=moral]').find('input:text').each(function() {
+          $('div[data-type=moral]').find('input:text').each(function() {
               // alert($(this).val() +" => " + $(this).attr("id"));
              $(this).val('');
              $(this).prop('required', false);

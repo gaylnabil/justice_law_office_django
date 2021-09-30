@@ -2,8 +2,12 @@
 {% load i18n %}
 {% trans "justice" as trans_justice %}
 
-{% trans "id" as trans_client_id %}
+{% trans "id" as trans_id %}
 {% trans "clients" as trans_clients %}
+{% trans "adversaires" as trans_opponents %}
+{% trans "avocat" as trans_attorney %}
+
+{% trans "rechercher" as trans_search %}
 
 {% trans "affichage de" as trans_showing %}
 {% trans "à" as trans_to %}
@@ -11,11 +15,13 @@
 {% trans "entrées" as trans_entries %}
 
 {% trans "nouveau client" as trans_new_client %}
-{% trans "nom" as trans_client_lastname %}
-{% trans "prénom" as trans_client_firstname %}
-{% trans "genre" as trans_client_genre %}
-{% trans "société" as trans_client_company %}
-{% trans "ville" as trans_client_city %}
+{% trans "nouveau adversaire" as trans_new_opponents %}
+{% trans "nouveau avocat adversaire" as trans_new_attorney_opponents %}
+{% trans "nom" as trans_lastname %}
+{% trans "prénom" as trans_firstname %}
+{% trans "genre" as trans_genre %}
+{% trans "société" as trans_company %}
+{% trans "ville" as trans_city %}
 {% trans "status" as trans_status %}
 {% trans "téléphone" as trans_phone %}
 {% trans "gsm" as trans_gsm %}
@@ -26,9 +32,10 @@
 {% trans "masculin" as trans_male %}
 {% trans "féminin" as trans_female %}
 
-{% trans "es-tu sûr?" as trans_sure %}
+{% trans "êtes-vous sûr ?" as trans_sure %}
 {% trans "voulez-vous vraiment supprimer ce client ?" as trans_question_delete %}
 {% trans "ce processus ne peut pas être annulé" as trans_undone %}
+{% trans "modifier" as trans_edit %}
 {% trans "supprimer" as trans_delete %}
 {% trans "annulé" as trans_cancel %}
 
