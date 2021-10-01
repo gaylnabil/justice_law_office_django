@@ -32,7 +32,11 @@ class AdversaireForm(PersonForm):
         # self.fields['representant_legal'].widget.attrs['placeholder'] = _(
         #     'Nom et Prénom de Representant legal')
 
-
+    def clean_company(self):
+        value = self.cleaned_data['company']
+        if value:
+            return value.upper()
+        return value
     class Meta:
         """Meta definition for Adversaireform."""
 
@@ -73,20 +77,26 @@ class AvocatAdversaireForm(PersonForm):
     def __init__(self, *args, **kwargs):
         super(AvocatAdversaireForm, self).__init__(*args, **kwargs)
 
-        self.fields['type_adversaire'].widget.attrs['id'] = 'radio-switch-4'
-        self.fields['type_adversaire'].widget.attrs['class'] = 'form-check-input radio-type'
+        # self.fields['type_adversaire'].widget.attrs['id'] = 'radio-switch-4'
+        # self.fields['type_adversaire'].widget.attrs['class'] = 'form-check-input radio-type'
         # self.fields['type_adversaire'].initial = 2
 
-        self.fields['nom'].widget.attrs['placeholder'] = _("Nom d'avocat adversaire")
+        self.fields['nom'].widget.attrs['placeholder'] = _("Nom d'avocat")
 
-        self.fields['prenom'].widget.attrs['placeholder'] = _("Prénom d'avocat adversaire")
+        self.fields['prenom'].widget.attrs['placeholder'] = _("Prénom d'avocat")
 
         self.fields['sexe'].initial = 'M'
 
         self.fields['cabinet'].widget.attrs['placeholder'] = _(
-            "Nom de cabinet d'avocat")
+            "Nom de cabinet")
 
-
+    def clean_cabinet(self):
+        value = self.cleaned_data['cabinet']
+        if value:
+            return value.upper()
+        return value
+        
+        
     class Meta:
         """Meta definition for AvocatAdversaireForm."""
 

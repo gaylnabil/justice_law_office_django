@@ -31,5 +31,11 @@ def city_name(key):
     dictionary = dict(VILLES)
     if key in dictionary:
         return dictionary[key]
-    
     return ''
+    
+    
+@register.simple_tag
+def string_to_list(value, separator):
+    if isinstance(value, str):
+        return value.split(separator)
+    return []    

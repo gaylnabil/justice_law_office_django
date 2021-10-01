@@ -17,7 +17,7 @@
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
         <div class="flex mt-5 sm:mt-0">
-            <a href="{% url 'adversaire_create' %}" data-toggle="modal" data-target="#header-footer-modal-preview"
+            <a href="{% url 'avocat_adversaire_create' %}" data-toggle="modal" data-target="#header-footer-modal-preview"
                 class="btn btn-primary shadow-md mr-2"> <i data-feather="user-plus" class="w-4 h-4 mr-2"></i>
                 {{ trans_new_attorney_opponents|title }}
             </a>
@@ -85,7 +85,7 @@
                         <th class="whitespace-nowrap">{{ trans_lastname|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_firstname|upper }}</th>
                         <!-- <th class="whitespace-nowrap">{{ trans_genre|upper }}</th> -->
-                        <th class="whitespace-nowrap">{{ trans_company|upper }}</th>
+                        <th class="whitespace-nowrap">{{ trans_cabinet|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_city|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_gsm|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_email|upper }}</th>
@@ -136,11 +136,11 @@
         
                         <td class="table-report__action w-56">
                             <div class="flex justify-center items-center">
-                                <a class="flex items-center mr-3" href="{% url 'adversaire_update' adv.pk %}"> <i data-feather="check-square"
+                                <a class="flex items-center mr-3" href="{% url 'avocat_adversaire_update' adv.pk %}"> <i data-feather="check-square"
                                         class="w-4 h-4 mr-1"></i> {{ trans_edit }} 
                                 </a>
                                 <a class="flex items-center text-theme-6 btn-delete" href="javascript:;" data-toggle="modal"
-                                    data-target="#delete-confirmation-modal" data-url="{% url 'adversaire_delete' adv.pk %}"> 
+                                    data-target="#delete-confirmation-modal" data-url="{% url 'avocat_adversaire_delete' adv.pk %}"> 
                                     <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> {{ trans_delete }}
                                 </a>
                             </div>

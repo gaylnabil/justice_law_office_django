@@ -17,19 +17,6 @@
         <div class="intro-y col-span-12 lg:col-span-12">
             <!-- BEGIN: Form Layout -->
                 <div class="intro-y box p-5">
-                
-                    <div class="mt-3">
-                        {{ form.type_adversaire.label|capfirst }}
-                        <div class="flex flex-col sm:flex-row mt-2">
-                            {% for radio in form.type_adversaire %}
-                                    <div class="form-check mr-2 mt-2">
-                                        {{ radio.tag }}
-                                        <label class="form-check-label" for="radio-{{ forloop.counter }}">{{ radio.choice_label }}</label>
-                                    </div>
-                                </li>
-                            {% endfor %}
-                        </div>
-                    </div>
                     
                     <div class="mt-3">
                         {{ form.nom.label|capfirst }}
@@ -64,22 +51,21 @@
                     </div>
                     
                     <div class="mt-3" data-type="moral" >
-                        {{ form.company.label|capfirst }}
+                        {{ form.cabinet.label|capfirst }}
                         
                         <input 
-                            {% if form.type_adversaire.value == 1 %} disabled {% endif %}
                             type="text" 
-                            name="{{ form.company.name }}" 
+                            name="{{ form.cabinet.name }}" 
                             class="form-control w-full"
-                            id="{{ form.company.id_for_label }}" 
-                            value="{% firstof form.company.value %}"
-                            maxlength="{{ form.company.field.max_length }}" 
-                            placeholder="{{ form.company.field.widget.attrs.placeholder }}"
+                            id="{{ form.cabinet.id_for_label }}" 
+                            value="{% firstof form.cabinet.value %}"
+                            maxlength="{{ form.cabinet.field.max_length }}" 
+                            placeholder="{{ form.cabinet.field.widget.attrs.placeholder }}"
                             {% if form.type_adversaire.value == 2 %} required {% endif %} 
                         />
-                        {% if form.company.errors %}
+                        {% if form.cabinet.errors %}
                         <div class="alert alert-danger" role="alert">
-                            {{ form.company.errors }}
+                            {{ form.cabinet.errors }}
                         </div>
                         {% endif %}
                     </div>

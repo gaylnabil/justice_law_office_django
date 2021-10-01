@@ -26,7 +26,7 @@ class Adversaire(Person):
 
     def __str__(self):
         """Unicode representation of Adversaire."""
-        return f'{self.nom} {self.prenom}'
+        return f'{self.nom} {self.prenom}'        
 
     def save(self, *args, **kwargs):
         fullname = f'{self.nom} {self.prenom}'
@@ -53,7 +53,7 @@ class AvocatAdversaire(Person):
     observation = models.TextField(blank=True, null=True)
 
     class Meta:
-        """Meta definition for Adversaire."""
+        """Meta definition for Avocat Adversaire."""
         ordering = ['-id']
         db_table = 'avocat_adversaire'
         verbose_name = 'AvocatAdversaire'

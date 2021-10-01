@@ -41,13 +41,10 @@ class ClientForm(PersonForm):
         self.fields['status_juridique'].widget.attrs['id'] = 'status-select'
         self.fields['status_juridique'].widget.attrs['class'] = 'tom-select w-full'
         self.fields['status_juridique'].widget.attrs['data-placeholder'] = _('Selectioner une status juridique')
-            
         
-    def clean_nom(self):
-        return self.cleaned_data['nom'].upper()
 
-    def clean_prenom(self):
-        return self.cleaned_data['prenom'].capitalize()
+    def clean_company(self):
+        return self.cleaned_data['company'].upper()
     class Meta:
         """Meta definition for Clientform."""
 

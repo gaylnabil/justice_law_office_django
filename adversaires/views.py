@@ -205,7 +205,7 @@ def justice_avocats_adversaires_all(request):
         
         query = 'all-list' if query == '' else query
 
-        redirect_to = reverse('justice_avocat_adversaires', kwargs={
+        redirect_to = reverse('justice_avocats_adversaires', kwargs={
             'page': 1,
             'city': city,
             'query': slugify(query)
@@ -249,13 +249,13 @@ def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
 
     total = AvocatAdversaire.objects.all().count()
     avocats_adv = AvocatAdversaire.objects.annotate(
-        search=SearchVector('nom', 'prenom', 'company', 'ville')
+        search=SearchVector('nom', 'prenom', 'cabinet', 'ville')
     ).filter(q)
 
     print('search : ', search)
     search = 'all-list' if search == '' else search
 
-    paginator = Paginator(avocats, AVOCAT_ADVERSARIES_PER_PAGE)
+    paginator = Paginator(avocats_adv, AVOCAT_ADVERSARIES_PER_PAGE)
 
     try:
         avocats_adv = paginator.page(page)

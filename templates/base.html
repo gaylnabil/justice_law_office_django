@@ -1,8 +1,10 @@
 
 {% extends 'translate.html' %}
 {% load static %}
+{% load tags %}
 
 {% block main %}
+{% string_to_list "clients, adversaires, avocats_adversaires" ", " as list %}
 <!DOCTYPE html>
 <!--
 Template Name: Rubick - HTML Admin Dashboard Template
@@ -54,30 +56,36 @@ License: You must have a valid license purchased only from themeforest(the above
                 </li>
                 
                 <li>
-                    <a href="{% url 'justice_clients_all' %}" class="menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
-                        <div class="menu__title"> {{ trans_clients|title }}
-                        <i data-feather="users" class="menu__sub-icon transform rotate-180"></i> </div>
-                    </a>
-                
-                </li>
-                <li>
-                    <a href="{% url 'justice_adversaires_all' %}"
-                        class="menu {% if active_page == 'adversaires' %} side-menu--active {% endif %}">
-                        <div class="menu__title"> {{ trans_opponents|title }}
-                            <i data-feather="users" class="menu__sub-icon transform rotate-180"></i>
+                    <a href="javascript:;.html" class="menu {% if active_page in list %}menu--active{% endif %}">
+                    <div class="menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="menu__title"> {{ trans_clients|title }} & {{ trans_opponents|title }}
+                            <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i>
                         </div>
                     </a>
-                
-                </li>
-                
-                <li>
-                    <a href="{% url 'justice_avocats_adversaires_all' %}"
-                        class="menu {% if active_page == 'avocat_adversaire' %} side-menu--active {% endif %}">
-                        <div class="menu__title"> {{ trans_attorney|title }} {{ trans_opponents|title }}
-                            <i data-feather="users" class="menu__sub-icon transform rotate-180"></i>
-                        </div>
-                    </a>
-                
+                    <ul class="{% if active_page in list %}menu__sub-open{% endif %}">
+                        <li>
+                            <a href="{% url 'justice_clients_all' %}" class="menu {% if active_page == list.0 %} menu--active {% endif %}">
+                            <div class="menu__icon"> <i data-feather="user"></i> </div>
+                                <div class="menu__title"> {{ trans_clients|title }}
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'justice_adversaires_all' %}" class="menu {% if active_page == list.1 %} menu--active {% endif %}">
+                                <div class="menu__icon"> <i data-feather="user"></i> </div>
+                                <div class="menu__title"> {{ trans_opponents|title }}
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="{% url 'justice_avocats_adversaires_all' %}" class="menu {% if active_page == list.2 %} menu--active {% endif %}">
+                                <div class="menu__icon"> <i data-feather="user"></i> </div>
+                                <div class="menu__title"> {{ trans_attorney|title }} {{ trans_opponents|title }}
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -95,39 +103,49 @@ License: You must have a valid license purchased only from themeforest(the above
                         <a href="{% url 'home' %}" class="side-menu {% if active_page == 'home' %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                             <div class="side-menu__title">
-                                home
-                            </div>
-                        </a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a href="{% url 'justice_clients_all' %}" class="side-menu {% if active_page == 'clients' %} side-menu--active {% endif %}">
-                            <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                            <div class="side-menu__title">
-                                {{ trans_clients|title }}
+                                Home
                             </div>
                         </a>
                     </li>
                     
                     <li>
-                        <a href="{% url 'justice_adversaires_all' %}"
-                            class="side-menu {% if active_page == 'adversaires' %} side-menu--active {% endif %}">
+                        <a href="javascript:;" class="side-menu {% if active_page in list %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                             <div class="side-menu__title">
-                                {{ trans_opponents|title }}
+                                {{ trans_clients|title }} & {{ trans_opponents|title }}
+                                <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
-                    </li>
-                    
-                    <li>
-                        <a href="{% url 'justice_avocats_adversaires_all' %}"
-                            class="side-menu {% if active_page == 'avocat_adversaire' %} side-menu--active {% endif %}">
-                            <div class="side-menu__icon"> <i data-feather="users"></i> </div>
-                            <div class="side-menu__title">
-                                {{ trans_attorney|title }} {{ trans_opponents|title }}
-                            </div>
-                        </a>
+                        <ul class="{% if active_page in list %}side-menu__sub-open{% endif %}">
+                            <li>
+                                <a href="{% url 'justice_clients_all' %}"
+                                    class="side-menu {% if active_page == list.0 %} side-menu--active {% endif %}">
+                                    <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                                    <div class="side-menu__title">
+                                        {{ trans_clients|title }}
+                                       
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'justice_adversaires_all' %}"
+                                    class="side-menu {% if active_page == list.1 %} side-menu--active {% endif %}">
+                                    <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                                    <div class="side-menu__title">
+                                        {{ trans_opponents|title }}
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'justice_avocats_adversaires_all' %}"
+                                    class="side-menu {% if active_page == list.2 %} side-menu--active {% endif %}">
+                                    <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                                    <div class="side-menu__title">
+                                        {{ trans_attorney|title }} {{ trans_opponents|title }}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     
                 </ul>

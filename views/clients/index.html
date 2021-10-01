@@ -124,7 +124,7 @@
                             <span>{% firstof clt.ville|city_name %}</span>
                         </td>
                         <td class="w-40">
-                            <span>{% firstof clt.gsm %}</span>
+                            <span>{% firstof clt.gsm|phone2numeric %}</span>
                         </td>
         
                         <td class="w-40">
