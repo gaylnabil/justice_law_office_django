@@ -4,10 +4,10 @@ from django.forms.widgets import RadioSelect, Textarea
 from django.utils.translation import gettext_lazy as _
 from adversaires.models import Adversaire, AvocatAdversaire
 from justice_law_office.constants import GENDERS, TYPE_PERSON
-from parents.parent import PersonForm
+from parents.parent import PersonMixinForm
 
 
-class AdversaireForm(PersonForm):
+class AdversaireForm(PersonMixinForm):
     """Form definition for Adversaire."""
 
     def __init__(self, *args, **kwargs):
@@ -71,7 +71,7 @@ class AdversaireForm(PersonForm):
         }
         
         
-class AvocatAdversaireForm(PersonForm):
+class AvocatAdversaireForm(PersonMixinForm):
     """Form definition for AvocatAdversaireForm."""
 
     def __init__(self, *args, **kwargs):

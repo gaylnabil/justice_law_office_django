@@ -104,6 +104,7 @@ def justice_adversaires(request, page=1, city='all', query='all-list'):
         'query': search,
         'cities': VILLES,
         'city':  city,
+        'url_link': 'justice_adversaires_all'
     }
     template_name = 'adversaires/index.html'
 
@@ -122,7 +123,7 @@ def adversaire_form(request, id=0):
             form = AdversaireForm()
             msg_log = "Page Creating of 'Adversaire'"
         else:
-            value = _('Modification de adversaire')
+            value = _("Modification d'Adversaire")
             adversaire = Adversaire.objects.filter(pk=id).first()
             form = AdversaireForm(instance=adversaire)
             msg_log = "Page Creating of 'Adversaire'"
@@ -167,6 +168,7 @@ def adversaire_form(request, id=0):
         'active_page': 'adversaires',
         'breadcrumb': value,
         'form': form,
+        'url_link': 'justice_adversaires_all'
     }
     template_name = 'adversaires/form.html'
     
@@ -248,32 +250,33 @@ def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
        q = Q(search__icontains=search)
 
     total = AvocatAdversaire.objects.all().count()
-    avocats_adv = AvocatAdversaire.objects.annotate(
+    avocats_advs = AvocatAdversaire.objects.annotate(
         search=SearchVector('nom', 'prenom', 'cabinet', 'ville')
     ).filter(q)
 
     print('search : ', search)
     search = 'all-list' if search == '' else search
 
-    paginator = Paginator(avocats_adv, AVOCAT_ADVERSARIES_PER_PAGE)
+    paginator = Paginator(avocats_advs, AVOCAT_ADVERSARIES_PER_PAGE)
 
     try:
-        avocats_adv = paginator.page(page)
+        avocats_advs = paginator.page(page)
     except PageNotAnInteger:
-        avocats_adv = paginator.page(page)
+        avocats_advs = paginator.page(page)
     except EmptyPage:
-        avocats_adv = paginator.page(page)
+        avocats_advs = paginator.page(page)
 
     title = _('list des avocats adversaires')
     context = {
         'title': title + f' ({page})',
         'active_page': 'avocats_adversaires',
         'breadcrumb': title,
-        'avocats_adv': avocats_adv,
-        'page': avocats_adv.number,
+        'avocats_advs': avocats_advs,
+        'page': avocats_advs.number,
         'query': search,
         'cities': VILLES,
         'city':  city,
+        'url_link': 'justice_avocats_adversaires_all'
     }
     template_name = 'avocats_adversaires/index.html'
     
@@ -295,8 +298,8 @@ def avocat_adversaire_form(request, id=0):
             form = AvocatAdversaireForm()
         else:
             value = _("Modification d'avocat adversaire")
-            avocats_adv = AvocatAdversaire.objects.filter(pk=id).first()
-            form = AvocatAdversaireForm(instance=avocats_adv)
+            avocat_adv = AvocatAdversaire.objects.filter(pk=id).first()
+            form = AvocatAdversaireForm(instance=avocat_adv)
             
             msg_log = "Page Editing of 'Avocat Adversaire'"
             
@@ -308,31 +311,31 @@ def avocat_adversaire_form(request, id=0):
             form = AvocatAdversaireForm(request.POST)
             msg_log = "Avocat Adversaire has been Created."
         else:
-            avocats_adv = AvocatAdversaire.objects.filter(pk=id).first()
-            form = AvocatAdversaireForm(request.POST, instance=avocats_adv)
+            avocat_adv = AvocatAdversaire.objects.filter(pk=id).first()
+            form = AvocatAdversaireForm(request.POST, instance=avocat_adv)
             msg_log = "Avocat Adversaire has been Updated."
 
         print('form.is_valid(): ', form.is_valid())
         print('request.get_full_path(): ',  request.get_full_path())
 
         if form.is_valid():
-            avocats_adv = form.save(commit=True)
+            avocat_adv = form.save(commit=True)
             # user = form.save()
-            # redirect_to = reverse('justice_avocats_adversaires')
+            # redirect_to = reverse('justice_avocat_adversaires')
 
             redirect_to = reverse('justice_avocats_adversaires', kwargs={
                 'page': 1,
                 'city': 'all',
-                'query': slugify(avocats_adv.nom)}
+                'query': slugify(avocat_adv.nom)}
             )
 
             value = _("L'avocat adversaire")
 
             success = _('a été enregister avec succés ...')
 
-            messages.info(request, f'{value} {avocats_adv} {success}')
+            messages.info(request, f'{value} {avocat_adv} {success}')
             
-            msg_log = f"'{avocats_adv}' {msg_log}"
+            msg_log = f"'{avocat_adv}' {msg_log}"
             logger.info(msg_log)
 
             return HttpResponseRedirect(redirect_to)
@@ -342,6 +345,7 @@ def avocat_adversaire_form(request, id=0):
         'active_page': 'avocats_adversaires',
         'breadcrumb': value,
         'form': form,
+        'url_link': 'justice_avocats_adversaires_all'
     }
     template_name = 'avocats_adversaires/form.html'
     
@@ -351,16 +355,16 @@ def avocat_adversaire_form(request, id=0):
 
 
 def avocat_adversaire_delete(request, id=0):
-    avocats_adv = AvocatAdversaire.objects.filter(pk=id).first()
+    avocat_adv = AvocatAdversaire.objects.filter(pk=id).first()
     value = _("L'avocat adversaire")
     success = _('a été supprimer avec succés ...')
 
-    messages.info(request, f'{value} {avocats_adv} {success}')
+    messages.info(request, f'{value} {avocat_adv} {success}')
 
-    msg_log = f"Avocat Adversaire '{avocats_adv}' has been deleted successfully."
+    msg_log = f"Avocat Adversaire '{avocat_adv}' has been deleted successfully."
     logger.info(msg_log)
 
-    avocats_adv.delete()
+    avocat_adv.delete()
     
     redirect_to = reverse('justice_avocats_adversaires_all')
 

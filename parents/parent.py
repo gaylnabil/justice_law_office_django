@@ -12,7 +12,7 @@ class AutoDateTimeField(models.DateTimeField):
         return timezone.now()
         
         
-class Person(models.Model):
+class PersonMixin(models.Model):
     
     nom = models.CharField(max_length= 100, blank = True, null = True)
     prenom = models.CharField(max_length=100, blank=True, null=True)
@@ -52,11 +52,11 @@ class Person(models.Model):
         
 # Form definition for Person ***************************************
 
-class PersonForm(forms.ModelForm):
+class PersonMixinForm(forms.ModelForm):
     """Form definition for Adversaire."""
 
     def __init__(self, *args, **kwargs):
-        super(PersonForm, self).__init__(*args, **kwargs)
+        super(PersonMixinForm, self).__init__(*args, **kwargs)
 
         initials = kwargs.get("initial", {})
 
@@ -106,9 +106,9 @@ class PersonForm(forms.ModelForm):
         return self.cleaned_data['prenom'].capitalize()
 
     class Meta:
-        """Meta definition for Personform."""
+        """Meta definition for PersonMixinForm."""
 
-        model = Person
+        model = PersonMixin
         fields = '__all__'
         # exclude = ("created_at", "updated_at", "slug")
         labels = {

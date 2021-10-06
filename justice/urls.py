@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('', include('clients.urls')),
     path('', include('adversaires.urls')),
+    path('', include('affaires.urls')),
 ]

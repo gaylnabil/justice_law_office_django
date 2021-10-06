@@ -22,7 +22,6 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 CLIENTS_PER_PAGE = 3
 
-
 def justice_clients_all(request):
     
     try:
@@ -107,6 +106,7 @@ def justice_clients(request, page=1, city='all', query='all-list'):
         'query': search,
         'cities': VILLES,
         'city':  city,
+        'url_link': 'justice_clients_all'
     }
     template_name = 'clients/index.html'
     
@@ -174,6 +174,7 @@ def client_form(request, id=0):
         'active_page': 'clients',
         'breadcrumb': value,
         'form': form,
+        'url_link': 'justice_clients_all'
     }
     template_name = 'clients/form.html'
     

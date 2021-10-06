@@ -1,4 +1,4 @@
-from parents.parent import Person
+from parents.parent import PersonMixin
 from django.db import models
 from django.db.models.fields import SlugField
 from django.template.defaultfilters import slugify
@@ -14,7 +14,7 @@ class AutoDateTimeField(models.DateTimeField):
     def pre_save(self, model_instance, add):
         return timezone.now()
 
-class Client(Person):
+class Client(PersonMixin):
     """Model definition for Client."""
     
     # TODO: Define fields here

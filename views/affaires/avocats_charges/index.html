@@ -17,9 +17,9 @@
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
         <div class="flex mt-5 sm:mt-0">
-            <a href="{% url 'avocat_adversaire_create' %}" data-toggle="modal" data-target="#header-footer-modal-preview"
+            <a href="{% url 'avocat_charge_create' %}" data-toggle="modal" data-target="#header-footer-modal-preview"
                 class="btn btn-primary shadow-md mr-2"> <i data-feather="user-plus" class="w-4 h-4 mr-2"></i>
-                {{ trans_new_attorney_opponents|title }}
+                {{ trans_new_attroney_in_charge|title }}
             </a>
             </div>
             <div class="flex mt-5 sm:mt-0">
@@ -47,9 +47,9 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden md:block mx-auto text-gray-600"> {{ trans_showing|capfirst }} {{avocats_advs.start_index}} {{ trans_to }} {{ avocats_advs.end_index }} {{ trans_of }} {{ avocats_advs.paginator.count }} {{ trans_entries }}</div>
+            <div class="hidden md:block mx-auto text-gray-600"> {{ trans_showing|capfirst }} {{avocats_charges.start_index}} {{ trans_to }} {{ avocats_charges.end_index }} {{ trans_of }} {{ avocats_charges.paginator.count }} {{ trans_entries }}</div>
             <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                <form id='form-search' action="{% url 'justice_avocats_adversaires_all' %}" method="POST" >
+                <form id='form-search' action="{% url 'justice_avocats_charges_all' %}" method="POST" >
                     {% csrf_token %}
                     <div class="w-auto relative text-gray-700 dark:text-gray-300">
                         <input name="query" type="text" 
@@ -85,7 +85,6 @@
                         <th class="whitespace-nowrap">{{ trans_lastname|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_firstname|upper }}</th>
                         <!-- <th class="whitespace-nowrap">{{ trans_genre|upper }}</th> -->
-                        <th class="whitespace-nowrap">{{ trans_cabinet|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_city|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_gsm|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_email|upper }}</th>
@@ -93,48 +92,45 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for adv in avocats_advs %}
+                    {% for avocat in avocats_charges %}
         
                     <tr class="intro-x">
                         <td class="w-20">
-                            <a href="{% url 'avocat_adversaire_update' adv.pk %}" class="font-medium whitespace-nowrap text-theme-1">{% firstof adv.pk %}</a>
+                            <a href="{% url 'avocat_charge_update' avocat.pk %}" class="font-medium whitespace-nowrap text-theme-1">{% firstof avocat.pk %}</a>
                         </td>
                         <td class="w-40">
-                            <a href="#" class="font-medium whitespace-nowrap text-theme-1">{% firstof adv.nom %}</a>
+                            <a href="#" class="font-medium whitespace-nowrap text-theme-1">{% firstof avocat.nom %}</a>
                         </td>
         
                         <td class="w-40">
-                            <span>{% firstof adv.prenom %}</span>
+                            <span>{% firstof avocat.prenom %}</span>
                         </td>
 
                         <!-- <td class="w-40">
-                            <span>{% if adv.sexe == 'M'%}{{ trans_male|capfirst }} {% else %} {{ trans_female|capfirst }} {% endif %}</span>
+                            <span>{% if avocat.sexe == 'M'%}{{ trans_male|capfirst }} {% else %} {{ trans_female|capfirst }} {% endif %}</span>
                         </td> -->
         
                         <td class="w-40">
-                            <span class="font-normal whitespace-nowrap">{% firstof adv.cabinet %}</span>
+                            <span>{% firstof avocat.ville|city_name %}</span>
                         </td>
                         <td class="w-40">
-                            <span>{% firstof adv.ville|city_name %}</span>
-                        </td>
-                        <td class="w-40">
-                            <span>{% firstof adv.gsm %}</span>
+                            <span>{% firstof avocat.gsm %}</span>
                         </td>
         
                         <td class="w-40">
-                            <a href="mailto:{% firstof adv.email %}" class="font-medium whitespace-nowrap text-theme-1">
-                                {% firstof adv.email %}
+                            <a href="mailto:{% firstof avocat.email %}" class="font-medium whitespace-nowrap text-theme-1">
+                                {% firstof avocat.email %}
                             </a>
                         
                         </td>
         
                         <td class="table-report__action w-56">
                             <div class="flex justify-center items-center">
-                                <a class="flex items-center mr-3" href="{% url 'avocat_adversaire_update' adv.pk %}"> <i data-feather="check-square"
+                                <a class="flex items-center mr-3" href="{% url 'avocat_charge_update' avocat.pk %}"> <i data-feather="check-square"
                                         class="w-4 h-4 mr-1"></i> {{ trans_edit }} 
                                 </a>
                                 <a class="flex items-center text-theme-6 btn-delete" href="javascript:;" data-toggle="modal"
-                                    data-target="#delete-confirmation-modal" data-url="{% url 'avocat_adversaire_delete' adv.pk %}"> 
+                                    data-target="#delete-confirmation-modal" data-url="{% url 'avocat_charge_delete' avocat.pk %}"> 
                                     <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> {{ trans_delete }}
                                 </a>
                             </div>
@@ -146,7 +142,7 @@
         </div>
         <!-- END: Data List -->
         <!-- BEGIN: Pagination -->
-        {% include 'views_include/pagination.html' with objects=avocats_advs %}
+        {% include 'views_include/pagination.html' with objects=avocats_charges %}
         <!-- END: Pagination -->
     </div>
 </div>

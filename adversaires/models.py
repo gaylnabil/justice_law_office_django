@@ -1,4 +1,4 @@
-from parents.parent import Person
+from parents.parent import PersonMixin
 from django.db import models
 from django.db.models.fields import SlugField
 from django.template.defaultfilters import slugify
@@ -9,7 +9,8 @@ from justice_law_office.constants import STATUS_JURIDIQUE, CORRESPONDENCE
 
 # Create your models here.
 
-class Adversaire(Person):
+
+class Adversaire(PersonMixin):
     """Model definition for Adversaire."""
 
     # TODO: Define fields here
@@ -41,7 +42,7 @@ class Adversaire(Person):
         verbose_name_plural = 'Adversaires'
 
 
-class AvocatAdversaire(Person):
+class AvocatAdversaire(PersonMixin):
     """Model definition for Adversaire."""
 
     # TODO: Define fields here
@@ -49,6 +50,8 @@ class AvocatAdversaire(Person):
         max_length=255, blank=True, null=True)
     # representant_legal = models.CharField(
     #     max_length=255, blank=True, null=True)
+    
+    slug = models.SlugField(blank=True, null=True)
 
     observation = models.TextField(blank=True, null=True)
 

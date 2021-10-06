@@ -4,9 +4,9 @@ from django.forms.widgets import RadioSelect, Textarea
 from django.utils.translation import gettext_lazy as _
 from clients.models import Client
 from justice_law_office.constants import GENDERS, TYPE_PERSON, CORRESPONDENCE
-from parents.parent import PersonForm
+from parents.parent import PersonMixinForm
 
-class ClientForm(PersonForm):
+class ClientForm(PersonMixinForm):
     """Form definition for Client."""
 
     def __init__(self, *args, **kwargs):
