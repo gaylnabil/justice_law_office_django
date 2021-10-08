@@ -1,8 +1,8 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
-from affaires.models import AvocatCharge
-from affaires.forms import AvocatChargeForm
+from affaires.models import AvocatCharge, Departement
+from affaires.forms import AvocatChargeForm, DepartementForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 AVOCAT_CHARGE_PER_PAGE = 3
+DEPARTEMENT_PER_PAGE = 3
 
 # Attorney Charge Views *************************************
 def justice_avocats_charges_all(request):
@@ -55,7 +56,7 @@ def justice_avocats_charges(request, page=1, city='all', query='all-list'):
 
     # user = request.user
     # if user and user.is_authenticated:
-    #     return HttpResponseRedirect(reverse('home'))
+        #     return HttpResponseRedirect(reverse('home'))
 
     # query = request.GET.get('query', 'all')
 
@@ -76,7 +77,6 @@ def justice_avocats_charges(request, page=1, city='all', query='all-list'):
     if city == 'all':
        q = Q(search__icontains=search)
 
-    total = AvocatCharge.objects.all().count()
     avocats_charges = AvocatCharge.objects.annotate(
         search=SearchVector('nom', 'prenom', 'ville')
     ).filter(q)
@@ -96,7 +96,7 @@ def justice_avocats_charges(request, page=1, city='all', query='all-list'):
     title = _('list des avocats charges')
     context = {
         'title': title + f' ({page})',
-        'active_page': 'avocats_charges',
+        'active_page': 5,
         'breadcrumb': title,
         'avocats_charges': avocats_charges,
         'page': avocats_charges.number,
@@ -145,10 +145,8 @@ def avocat_charge_form(request, id=0):
 
         if form.is_valid():
             avocat_charge = form.save(commit=True)
-            # user = form.save()
-            # redirect_to = reverse('justice_avocats_charges')
 
-            redirect_to = reverse('justice_avocats_charges', kwargs={
+            redirect_to = reverse('departements_views', kwargs={
                 'page': 1,
                 'city': 'all',
                 'query': slugify(avocat_charge.nom)}
@@ -167,10 +165,10 @@ def avocat_charge_form(request, id=0):
 
     context = {
         'title': value,
-        'active_page': 'avocats_charges',
+        'active_page': 5,
         'breadcrumb': value,
         'form': form,
-        'url_link': 'justice_avocats_charges_all'
+        'url_link': 'departements_all'
     }
     template_name = 'affaires/avocats_charges/form.html'
 
@@ -191,6 +189,178 @@ def avocat_charge_delete(request, id=0):
 
     avocat_charge.delete()
 
-    redirect_to = reverse('justice_avocats_charges_all')
+    redirect_to = reverse('departements_all')
+
+    return HttpResponseRedirect(redirect_to)
+    
+    
+# Departments Views *************************************
+
+
+# Attorney Charge Views *************************************
+def departements_all(request):
+
+    try:
+        query = 'all-list'
+        
+        if request.method == 'POST':
+            query = request.POST.get('query', default='all-list')
+        
+        query = 'all-list' if query == '' else query
+
+        redirect_to = reverse('departements_views', kwargs={
+            'page': 1,
+            'query': slugify(query)
+        })
+
+    except:
+      # logger.error(f"Error charges Page; %s", traceback.format_exc())
+      logger.error(f"Error Avocats charges Page !!!", exc_info=True)
+
+    return HttpResponseRedirect(redirect_to)
+    
+    
+def departements_views(request, page=1, city='all', query='all-list'):
+
+    # user = request.user
+    # if user and user.is_authenticated:
+    #     return HttpResponseRedirect(reverse('home'))
+
+    # query = request.GET.get('query', 'all')
+
+    # page = request.GET.get('page', 1)
+
+    query = query.strip()
+    search = query if query != 'all-list' else ''
+    # Create a regex pattern to match all special characters in string
+    pattern = r'[' + string.punctuation + ']'
+    # Remove special characters from the string
+    search = re.sub(pattern, ' ', search)
+
+    print('departements_views => ', query,
+          "Results : ", search)
+
+    q = Q(search__icontains=search)
+
+    departements = Departement.objects.annotate(
+        search=SearchVector('nom_depart')
+    ).filter(q)
+
+    print('search : ', search)
+    search = 'all-list' if search == '' else search
+
+    paginator = Paginator(departements, DEPARTEMENT_PER_PAGE)
+
+    try:
+        departements = paginator.page(page)
+    except PageNotAnInteger:
+        departements = paginator.page(page)
+    except EmptyPage:
+        departements = paginator.page(page)
+
+    template_name = 'affaires/departements/index.html'
+    
+    
+    # Departement form
+    
+    form = DepartementForm()
+
+    title = _('list de Departements')
+    context = {
+        'title': title + f' ({page})',
+        'active_page': 6,
+        'breadcrumb': title,
+        'departements': departements,
+        'page': departements.number,
+        'query': search,
+        'url_link': 'departements_all',
+        'form': form,
+        'add_title': _("information de departement"),
+        
+    }
+    
+    logger.info("Page list of Departements.")
+
+    return render(request=request, template_name=template_name, context=context)
+    
+    
+def departement_form(request, id=0):
+    value = ""
+    form = None
+    if request.method == 'GET':
+
+        if id == 0:
+            value = _("L'ajout de departement")
+            msg_log = "Page Creating of 'Departement'"
+
+            form = DepartementForm()
+        else:
+            value = _("Modification de Departement")
+            departement = AvocatCharge.objects.filter(pk=id).first()
+            form = DepartementForm(instance=departement)
+
+            msg_log = "Page Editing of 'Departement'"
+
+    print('request.method: ', request.method, " => id : ", id)
+
+    if request.method == 'POST':
+        if id == 0:
+            form = DepartementForm(request.POST)
+            msg_log = "Departement has been Created."
+        else:
+            departement = Departement.objects.filter(pk=id).first()
+            form = DepartementForm(request.POST, instance=departement)
+            msg_log = "Departement has been Updated."
+
+        print('form.is_valid(): ', form.is_valid())
+        print('request.get_full_path(): ',  request.get_full_path())
+
+        if form.is_valid():
+            departement = form.save(commit=True)
+
+            redirect_to = reverse('departements_views', kwargs={
+                'page': 1,
+                'query': slugify(departement.nom_depart)}
+            )
+
+            value = _("Le Departement")
+
+            success = _('a été enregister avec succés ...')
+
+            messages.info(request, f'{value} {departement} {success}')
+
+            msg_log = f"'{departement}' {msg_log}"
+            logger.info(msg_log)
+
+            return HttpResponseRedirect(redirect_to)
+
+    context = {
+        'title': value,
+        'active_page': 5,
+        'breadcrumb': value,
+        'form': form,
+        'url_link': 'departements_all',
+     
+    }
+    template_name = 'affaires/departements/form.html'
+
+    logger.info(msg_log)
+
+    return render(request=request, template_name=template_name, context=context)
+
+
+def departement_delete(request, id=0):
+    departement = AvocatCharge.objects.filter(pk=id).first()
+    value = _("Le Departement")
+    success = _('a été supprimer avec succés ...')
+
+    messages.info(request, f'{value} {departement} {success}')
+
+    msg_log = f"Departement '{departement}' has been deleted successfully."
+    logger.info(msg_log)
+
+    departement.delete()
+
+    redirect_to = reverse('departements_all')
 
     return HttpResponseRedirect(redirect_to)

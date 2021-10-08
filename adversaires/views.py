@@ -77,7 +77,6 @@ def justice_adversaires(request, page=1, city='all', query='all-list'):
     if city == 'all':
        q = Q(search__icontains=search)
 
-    total = Adversaire.objects.all().count()
     adversaires = Adversaire.objects.annotate(
         search=SearchVector('nom', 'prenom', 'company', 'ville')
     ).filter(q)
@@ -97,7 +96,7 @@ def justice_adversaires(request, page=1, city='all', query='all-list'):
     title = _('list des adversaires')
     context = {
         'title': title + f' ({page})',
-        'active_page': 'adversaires',
+        'active_page': 3,
         'breadcrumb': title,
         'adversaires': adversaires,
         'page': adversaires.number,
@@ -165,7 +164,7 @@ def adversaire_form(request, id=0):
 
     context = {
         'title': value,
-        'active_page': 'adversaires',
+        'active_page': 3,
         'breadcrumb': value,
         'form': form,
         'url_link': 'justice_adversaires_all'
@@ -249,7 +248,6 @@ def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
     if city == 'all':
        q = Q(search__icontains=search)
 
-    total = AvocatAdversaire.objects.all().count()
     avocats_advs = AvocatAdversaire.objects.annotate(
         search=SearchVector('nom', 'prenom', 'cabinet', 'ville')
     ).filter(q)
@@ -269,7 +267,7 @@ def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
     title = _('list des avocats adversaires')
     context = {
         'title': title + f' ({page})',
-        'active_page': 'avocats_adversaires',
+        'active_page': 4,
         'breadcrumb': title,
         'avocats_advs': avocats_advs,
         'page': avocats_advs.number,
@@ -342,7 +340,7 @@ def avocat_adversaire_form(request, id=0):
 
     context = {
         'title': value,
-        'active_page': 'avocats_adversaires',
+        'active_page': 4,
         'breadcrumb': value,
         'form': form,
         'url_link': 'justice_avocats_adversaires_all'

@@ -1,7 +1,7 @@
 
 from django.template.defaultfilters import stringfilter
 from django import template
-from justice_law_office.constants import VILLES
+from justice_law_office.constants import PAGES, VILLES
 
 register = template.Library()
 
@@ -38,4 +38,10 @@ def city_name(key):
 def string_to_list(value, separator):
     if isinstance(value, str):
         return value.split(separator)
-    return []    
+    return []   
+
+@register.filter(name='page_name') 
+def page_name(key):
+    if key in PAGES:
+        return PAGES[key]
+    return None

@@ -17,9 +17,9 @@
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
         <div class="flex mt-5 sm:mt-0">
-            <a href="{% url 'adversaire_create' %}" data-toggle="modal" data-target="#header-footer-modal-preview"
-                class="btn btn-primary shadow-md mr-2"> <i data-feather="user-plus" class="w-4 h-4 mr-2"></i>
-                {{ trans_new_opponents|title }}
+            <a href="javascript:;" data-toggle="modal" data-target="#header-footer-modal-preview"
+                class="btn btn-primary shadow-md mr-2"> <i data-feather="box" class="w-4 h-4 mr-2"></i>
+                {{ trans_new_department|title }}
             </a>
             </div>
             <div class="flex mt-5 sm:mt-0">
@@ -47,9 +47,9 @@
                     </div>
                 </div>
             </div>
-            <div class="hidden md:block mx-auto text-gray-600"> {{ trans_showing|capfirst }} {{adversaires.start_index}} {{ trans_to }} {{ adversaires.end_index }} {{ trans_of }} {{ adversaires.paginator.count }} {{ trans_entries }}</div>
+            <div class="hidden md:block mx-auto text-gray-600"> {{ trans_showing|capfirst }} {{departements.start_index}} {{ trans_to }} {{ departements.end_index }} {{ trans_of }} {{ departements.paginator.count }} {{ trans_entries }}</div>
             <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                <form id='form-search' action="{% url 'justice_adversaires_all' %}" method="POST" >
+                <form id='form-search' action="{% url 'departements_all' %}" method="POST" >
                     {% csrf_token %}
                     <div class="w-auto relative text-gray-700 dark:text-gray-300">
                         <input name="query" type="text" 
@@ -57,20 +57,6 @@
                         <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search" ></i>
                         <i class="w-4 h-4 absolute my-auto inset-y-0 mr-8 right-0 icon-remove" data-feather="x"></i>
                     </div>
-    
-                    <!-- BEGIN: Basic Select -->
-                    <div class="w-auto relative text-gray-700 dark:text-gray-300">
-                        <div class="mt-2"> 
-                        <i class="w-4 h-4 absolute my-auto inset-y-0 mr-8 right-0 icon-reset" data-feather="x" style="z-index: 1000;"></i>
-                            <select name="city" data-placeholder="Select your favorite actors" class="tom-select w-full placeholder-theme-13">
-                                {% for key, value in cities %}
-                                    <option value="{{ key }}" {% if city == key %}selected="True"{% endif %}>{{ value|capfirst }}</option>
-                                {% endfor %}
-                            </select> 
-                           
-                        </div>
-                    </div> <!-- END: Basic Select -->
-                    
                     <button id="btn-search" type="submit" style="display: none;">_</button>
                 </form>
             </div>
@@ -82,65 +68,28 @@
                 <thead>
                     <tr>
                         <th class="whitespace-nowrap">{{ trans_id|upper }}</th>
-                        <th class="whitespace-nowrap">{{ trans_lastname|upper }}</th>
-                        <th class="whitespace-nowrap">{{ trans_name|upper }}</th>
-                        <!-- <th class="whitespace-nowrap">{{ trans_genre|upper }}</th> -->
-                        <th class="whitespace-nowrap">{{ trans_company|upper }}</th>
-                        <th class="whitespace-nowrap">{{ trans_city|upper }}</th>
-                        <th class="whitespace-nowrap">{{ trans_gsm|upper }}</th>
-                        <th class="whitespace-nowrap">{{ trans_email|upper }}</th>
+                        <th class="whitespace-nowrap text-center">{{ trans_departments|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_actions|upper }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for adv in adversaires %}
+                    {% for dept in departements %}
         
                     <tr class="intro-x">
                         <td class="w-20">
-                            <a href="{% url 'adversaire_update' adv.pk %}" class="font-medium whitespace-nowrap text-theme-1">{% firstof adv.pk %}</a>
+                            <a href="{% url 'departement_update' dept.pk %}" class="font-medium whitespace-nowrap text-theme-1">{% firstof dept.pk %}</a>
                         </td>
-                        <td class="w-40">
-                            <a href="#" class="font-medium whitespace-nowrap text-theme-1">{% firstof adv.nom %}</a>
-                        </td>
-        
-                        <td class="w-40">
-                            <span>{% firstof adv.prenom %}</span>
-                        </td>
-
-                        <!-- <td class="w-40">
-                            <span>{% if adv.sexe == 'M'%}{{ trans_male|capfirst }} {% else %} {{ trans_female|capfirst }} {% endif %}</span>
-                        </td> -->
-        
-                        <td class="w-40">
-                            <span class="font-normal whitespace-nowrap">{% firstof adv.company %}</span>
-                            {% if adv.company is not None %}
-                            <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">
-                                <span>{{ trans_representative|capfirst }}: </span><span> {% firstof adv.nom %} {% firstof adv.prenom %}</span>
-                            </div>
-                            {% endif %}
-                           
-                        </td>
-                        <td class="w-40">
-                            <span>{% firstof adv.ville|city_name %}</span>
-                        </td>
-                        <td class="w-40">
-                            <span>{% firstof adv.gsm %}</span>
-                        </td>
-        
-                        <td class="w-40">
-                            <a href="mailto:{% firstof adv.email %}" class="font-medium whitespace-nowrap text-theme-1">
-                                {% firstof adv.email %}
-                            </a>
-                        
+                        <td class="text-center w-full">
+                            <a href="#" class="font-medium whitespace-nowrap text-theme-1">{% firstof dept.nom_depart %}</a>
                         </td>
         
                         <td class="table-report__action w-56">
                             <div class="flex justify-center items-center">
-                                <a class="flex items-center mr-3" href="{% url 'adversaire_update' adv.pk %}"> <i data-feather="check-square"
+                                <a id="{{ dept.pk }}" class="flex items-center mr-3 btn-edit" data-url="{% url 'departement_update' dept.pk %"} href="javascript:;"> <i data-feather="check-square"
                                         class="w-4 h-4 mr-1"></i> {{ trans_edit }} 
                                 </a>
                                 <a class="flex items-center text-theme-6 btn-delete" href="javascript:;" data-toggle="modal"
-                                    data-target="#delete-confirmation-modal" data-url="{% url 'adversaire_delete' adv.pk %}"> 
+                                    data-target="#delete-confirmation-modal" data-url="{% url 'departement_delete' dept.pk %}"> 
                                     <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> {{ trans_delete }}
                                 </a>
                             </div>
@@ -152,7 +101,7 @@
         </div>
         <!-- END: Data List -->
         <!-- BEGIN: Pagination -->
-        {% include 'views_include/pagination.html' with objects=adversaires %}
+        {% include 'views_include/pagination.html' with objects=departements %}
         <!-- END: Pagination -->
     </div>
 </div>
@@ -169,69 +118,37 @@
         <div id="header-footer-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <!-- BEGIN: Modal Header -->
-                    <div class="modal-header">
-                        <h2 class="font-medium text-base mr-auto">
-                            Broadcast Message
-                        </h2>
-                        <button class="btn btn-outline-secondary hidden sm:flex"> <i data-feather="file"
-                                class="w-4 h-4 mr-2"></i> Download Docs </button>
-                        <div class="dropdown sm:hidden">
-                            <a class="dropdown-toggle w-5 h-5 block" href="javascript:;" aria-expanded="false"> <i
-                                    data-feather="more-horizontal" class="w-5 h-5 text-gray-600 dark:text-gray-600"></i>
-                            </a>
-                            <div class="dropdown-menu w-40">
-                                <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                    <a href="javascript:;"
-                                        class="flex items-center p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md">
-                                        <i data-feather="file" class="w-4 h-4 mr-2"></i> Download Docs </a>
+                    <form action="{% url 'departement_create' %}" method="POST">
+                        <!-- BEGIN: Modal Header -->
+                        <div class="modal-header">
+                            <h2 class="font-medium text-base mr-auto">
+                                {{ add_title|title }}
+                            </h2>
+                        </div>
+                        <!-- END: Modal Header -->
+                        <!-- BEGIN: Modal Body -->
+                        <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                            {% csrf_token %}
+                                <div class="col-span-12 sm:col-span-12">
+                                    <label for="modal-form-3" class="form-label">{{ form.nom_depart.label|capfirst }}</label>
+                                    {{ form.nom_depart }}
+                                    {% if form.nom_depart.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ form.nom_depart.errors }}
+                                    </div>
+                                    {% endif %}
                                 </div>
-                            </div>
+                            
+                            
                         </div>
-                    </div>
-                    <!-- END: Modal Header -->
-                    <!-- BEGIN: Modal Body -->
-                    <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
-                        <div class="col-span-12 sm:col-span-6">
-                            <label for="modal-form-1" class="form-label">From</label>
-                            <input id="modal-form-1" type="text" class="form-control" placeholder="example@gmail.com">
+                        <!-- END: Modal Body -->
+                        <!-- BEGIN: Modal Footer -->
+                        <div class="modal-footer text-right">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-secondary w-24 mr-1">{{ trans_cancel|capfirst }}</button>
+                            <button type="submit" class="btn btn-primary w-24">{{ trans_save|capfirst }}</button>
                         </div>
-                        <div class="col-span-12 sm:col-span-6">
-                            <label for="modal-form-2" class="form-label">To</label>
-                            <input id="modal-form-2" type="text" class="form-control" placeholder="example@gmail.com">
-                        </div>
-                        <div class="col-span-12 sm:col-span-6">
-                            <label for="modal-form-3" class="form-label">Subject</label>
-                            <input id="modal-form-3" type="text" class="form-control" placeholder="Important Meeting">
-                        </div>
-                        <div class="col-span-12 sm:col-span-6">
-                            <label for="modal-form-4" class="form-label">Has the Words</label>
-                            <input id="modal-form-4" type="text" class="form-control"
-                                placeholder="Job, Work, Documentation">
-                        </div>
-                        <div class="col-span-12 sm:col-span-6">
-                            <label for="modal-form-5" class="form-label">Doesn't Have</label>
-                            <input id="modal-form-5" type="text" class="form-control"
-                                placeholder="Job, Work, Documentation">
-                        </div>
-                        <div class="col-span-12 sm:col-span-6">
-                            <label for="modal-form-6" class="form-label">Size</label>
-                            <select id="modal-form-6" class="form-select">
-                                <option>10</option>
-                                <option>25</option>
-                                <option>35</option>
-                                <option>50</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- END: Modal Body -->
-                    <!-- BEGIN: Modal Footer -->
-                    <div class="modal-footer text-right">
-                        <button type="button" data-dismiss="modal"
-                            class="btn btn-outline-secondary w-20 mr-1">Cancel</button>
-                        <button type="button" class="btn btn-primary w-20">Send</button>
-                    </div>
-                    <!-- END: Modal Footer -->
+                        <!-- END: Modal Footer -->
+                    </form>
                 </div>
             </div>
         </div>

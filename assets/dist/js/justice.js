@@ -32,6 +32,11 @@ $(window).ready(function () {
       $("select[name=city]").change();
      // $('select[name=city]').focus();
   });
+  
+  $('.btn-edit').on('click',function(e){
+     
+    alert($(this).attr('id'));
+  });
 
 
 }); 

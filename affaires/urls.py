@@ -13,5 +13,17 @@ urlpatterns = [
          path('<int:id>/edit', views.avocat_charge_form,name='avocat_charge_update'),
          path('<int:id>/delete', views.avocat_charge_delete, name='avocat_charge_delete'),
          ])),
+         
+         
+         
+    path('departements/',  include([
+        # Departments URLs ***************************************
+        path('', views.departements_all, name='departements_all'),
+        path('page/<int:page>/search/<slug:query>',
+             views.departements_views, name='departements_views'),
+        path('create', views.departement_form, name='departement_create'),
+        path('<int:id>/edit', views.departement_form, name='departement_update'),
+          path('<int:id>/delete', views.departement_delete, name='departement_delete'),
+         ])),
 
 ]

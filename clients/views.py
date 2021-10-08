@@ -76,7 +76,7 @@ def justice_clients(request, page=1, city='all', query='all-list'):
     if city == 'all':
        q  = Q(search__icontains=search)
     
-    total = Client.objects.all().count()
+    # total = Client.objects.all().count()
     clients = Client.objects.annotate(
         search=SearchVector('nom', 'prenom', 'company','ville') 
             ).filter(q)
@@ -99,7 +99,7 @@ def justice_clients(request, page=1, city='all', query='all-list'):
     title = _('list des client')
     context = {
         'title': title + f' ({page})',
-        'active_page': 'clients',
+        'active_page': 2,
         'breadcrumb': title,
         'clients': clients,
         'page': clients.number,
@@ -171,7 +171,7 @@ def client_form(request, id=0):
         
     context = {
         'title': value,
-        'active_page': 'clients',
+        'active_page': 2,
         'breadcrumb': value,
         'form': form,
         'url_link': 'justice_clients_all'

@@ -337,3 +337,1013 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'cabinet' into field. 
 2021-10-06 17:14:40,896: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7193, 140065586013952, Not Found: /avocats_charges/1/dist/images/profile-9.jpg
 2021-10-06 17:14:53,184: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: justice_avocats_charges:110], affaires.views, views, 7193, 140065586013952, Page list of Avocats charges.
 2021-10-06 17:14:53,422: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 7193, 140065586013952, Not Found: /avocats_charges/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 09:48:32,440: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 1918, 139857514309440, Watching for file changes with StatReloader
+2021-10-07 09:48:38,900: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1918, 139857396610816, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2021-10-07 09:48:39,738: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1918, 139857396610816, Not Found: /favicon.ico
+2021-10-07 09:48:45,696: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1918, 139857396610816, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2021-10-07 09:49:08,336: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 1935, 140263444719424, Watching for file changes with StatReloader
+2021-10-07 09:49:11,176: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1935, 140263327020800, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2021-10-07 10:07:17,003: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 1935, 140263444719424, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/urls.py changed, reloading.
+2021-10-07 10:07:18,456: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2136, 139793047603008, Watching for file changes with StatReloader
+2021-10-07 10:07:19,521: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2136, 139792863721216, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_clients_all' not found. 'justice_clients_all' is not a valid view function or pattern name.
+2021-10-07 10:07:27,627: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2136, 139793047603008, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/urls.py changed, reloading.
+2021-10-07 10:07:29,065: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2141, 139678972077888, Watching for file changes with StatReloader
+2021-10-07 10:07:29,862: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2141, 139678855427840, Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py", line 13, in index
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+2021-10-07 10:09:28,508: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2141, 139678972077888, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py changed, reloading.
+2021-10-07 10:09:30,082: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2245, 139878331909952, Watching for file changes with StatReloader
+2021-10-07 10:09:37,908: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878178805504, Not Found: /dist/images/profile-9.jpg
+2021-10-07 10:09:37,978: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878214211328, Not Found: /dist/images/profile-12.jpg
+2021-10-07 10:09:38,022: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878214211328, Not Found: /dist/images/profile-2.jpg
+2021-10-07 10:09:38,027: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878205032192, Not Found: /dist/images/profile-11.jpg
+2021-10-07 10:09:38,060: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878178805504, Not Found: /dist/images/preview-5.jpg
+2021-10-07 10:09:38,127: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878170150656, Not Found: /dist/images/preview-15.jpg
+2021-10-07 10:09:38,069: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878214211328, Not Found: /dist/images/preview-2.jpg
+2021-10-07 10:09:38,186: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878178805504, Not Found: /dist/images/preview-1.jpg
+2021-10-07 10:09:38,221: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878196377344, Not Found: /dist/images/preview-9.jpg
+2021-10-07 10:09:38,254: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878178805504, Not Found: /dist/images/preview-8.jpg
+2021-10-07 10:09:38,260: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878196377344, Not Found: /dist/images/preview-3.jpg
+2021-10-07 10:09:38,303: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878170150656, Not Found: /dist/images/preview-13.jpg
+2021-10-07 10:09:38,312: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878196377344, Not Found: /dist/images/preview-12.jpg
+2021-10-07 10:09:38,353: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878196377344, Not Found: /dist/images/profile-6.jpg
+2021-10-07 10:09:38,383: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878178805504, Not Found: /dist/images/preview-11.jpg
+2021-10-07 10:09:38,388: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878214211328, Not Found: /dist/images/profile-3.jpg
+2021-10-07 10:09:38,448: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878170150656, Not Found: /dist/images/profile-14.jpg
+2021-10-07 10:09:38,501: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878196377344, Not Found: /dist/images/profile-4.jpg
+2021-10-07 10:09:39,512: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878205032192, Not Found: /dist/json/location.json
+2021-10-07 10:47:21,848: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients_all:44], clients.views, views, 2245, 139878205032192, Getting Clients Page...
+2021-10-07 10:47:22,225: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 2245, 139878205032192, Page list of 'Clients'.
+2021-10-07 10:47:22,580: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2245, 139878205032192, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 10:50:52,938: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2245, 139878331909952, /home/kali/Projects/Python_Projects/justice_law_office_django/justice_law_office/constants.py changed, reloading.
+2021-10-07 10:50:53,975: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2888, 139915697145664, Watching for file changes with StatReloader
+2021-10-07 10:52:35,750: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2888, 139915697145664, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 10:52:36,975: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2925, 139670862583616, Watching for file changes with StatReloader
+2021-10-07 10:53:00,256: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2925, 139670862583616, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py changed, reloading.
+2021-10-07 10:53:01,287: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2936, 139731560769344, Watching for file changes with StatReloader
+2021-10-07 10:53:59,603: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2936, 139731560769344, /home/kali/Projects/Python_Projects/justice_law_office_django/justice_law_office/constants.py changed, reloading.
+2021-10-07 10:54:00,718: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2951, 140140780250944, Watching for file changes with StatReloader
+2021-10-07 10:54:39,436: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2951, 140140780250944, /home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py changed, reloading.
+2021-10-07 10:54:40,688: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2964, 140400630269760, Watching for file changes with StatReloader
+2021-10-07 10:55:14,867: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2964, 140400630269760, /home/kali/Projects/Python_Projects/justice_law_office_django/justice_law_office/constants.py changed, reloading.
+2021-10-07 10:55:16,084: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2984, 139952237819712, Watching for file changes with StatReloader
+2021-10-07 10:58:34,871: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2984, 139952237819712, /home/kali/Projects/Python_Projects/justice_law_office_django/clients/templatetags/tags.py changed, reloading.
+2021-10-07 10:58:35,935: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3042, 139702222714688, Watching for file changes with StatReloader
+2021-10-07 11:00:44,794: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3042, 139702222714688, /home/kali/Projects/Python_Projects/justice_law_office_django/clients/templatetags/tags.py changed, reloading.
+2021-10-07 11:00:45,885: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3079, 140672958687040, Watching for file changes with StatReloader
+2021-10-07 11:01:14,548: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3079, 140672840988416, Page list of 'Clients'.
+2021-10-07 11:01:15,000: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672840988416, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:01:16,718: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672840988416, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:01:16,767: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672840988416, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:01:16,783: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672831284992, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:01:16,809: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672822892288, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:01:16,816: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672814499584, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:01:16,819: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672840988416, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:01:16,871: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672459863808, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:01:16,899: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672806106880, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:01:16,903: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672831284992, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:01:16,931: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672822892288, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:01:16,934: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672814499584, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:01:16,951: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672806106880, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:01:17,001: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672831284992, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:01:17,009: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672840988416, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:01:17,055: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672459863808, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:01:17,066: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672451471104, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:01:17,080: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672831284992, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:01:17,107: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672814499584, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:01:17,717: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3079, 140672814499584, Not Found: /dist/json/location.json
+2021-10-07 11:02:39,570: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3079, 140672958687040, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py changed, reloading.
+2021-10-07 11:02:40,721: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3128, 140086827030336, Watching for file changes with StatReloader
+2021-10-07 11:02:48,618: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3128, 140086827030336, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py changed, reloading.
+2021-10-07 11:02:50,071: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3133, 140635875522368, Watching for file changes with StatReloader
+2021-10-07 11:02:52,538: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:02:52,568: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:02:52,649: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:02:52,718: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:02:52,771: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:02:52,802: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:02:52,818: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:02:52,900: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635659028224, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:02:52,839: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:02:52,995: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:02:53,222: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635659028224, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:02:53,345: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:02:53,433: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:02:53,495: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:02:53,516: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:02:53,550: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:02:53,587: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:02:53,626: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635659028224, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:02:54,228: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/json/location.json
+2021-10-07 11:02:58,301: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:02:58,378: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635659028224, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:02:58,385: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:02:58,414: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:02:58,476: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:02:58,500: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:02:58,543: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:02:58,560: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:02:58,583: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:02:58,679: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:02:58,756: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:02:58,782: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:02:58,798: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635659028224, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:02:58,821: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:02:58,872: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:02:58,880: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:02:58,894: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:02:58,913: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635633850112, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:02:59,304: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/json/location.json
+2021-10-07 11:03:00,878: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:03:00,969: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:03:00,988: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635633850112, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:03:01,048: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:03:01,083: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:03:01,093: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:03:01,113: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:03:01,130: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:03:01,234: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635633850112, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:03:01,246: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:03:01,278: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:03:01,317: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:03:01,347: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:03:01,418: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:03:01,430: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:03:01,440: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635633850112, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:03:01,529: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:03:01,531: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:03:01,830: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/json/location.json
+2021-10-07 11:03:03,121: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:03:03,164: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:03:03,183: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:03:03,232: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635642242816, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:03:03,239: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:03:03,267: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:03:03,197: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635633850112, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:03:03,331: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635633850112, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:03:03,342: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635667420928, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:03:03,346: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:03:03,353: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:03:03,399: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635659028224, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:03:03,468: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:03:03,521: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:03:03,553: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:03:03,599: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635650635520, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:03:03,618: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:03:03,637: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635684206336, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:03:03,975: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3133, 140635675813632, Not Found: /dist/json/location.json
+2021-10-07 11:04:11,062: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3133, 140635875522368, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py changed, reloading.
+2021-10-07 11:04:12,158: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3245, 140241295931200, Watching for file changes with StatReloader
+2021-10-07 11:04:26,731: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3245, 140241295931200, /home/kali/Projects/Python_Projects/justice_law_office_django/justice/views.py changed, reloading.
+2021-10-07 11:04:28,052: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3256, 139712111888192, Watching for file changes with StatReloader
+2021-10-07 11:04:36,288: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711927023360, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:04:36,467: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711918106368, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:04:36,549: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:04:36,599: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711918106368, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:04:36,664: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711918106368, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:04:36,703: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:04:36,762: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711927023360, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:04:36,807: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711927023360, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:04:36,848: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711927023360, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:04:36,883: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:04:36,945: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711918106368, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:04:36,950: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:04:36,963: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711918106368, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:04:36,996: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:04:37,033: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711927023360, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:04:37,045: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711918106368, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:04:37,061: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711927023360, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:04:37,095: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:04:37,733: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /dist/json/location.json
+2021-10-07 11:04:40,063: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients_all:44], clients.views, views, 3256, 139711909713664, Getting Clients Page...
+2021-10-07 11:04:40,132: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3256, 139711909713664, Page list of 'Clients'.
+2021-10-07 11:04:40,477: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3256, 139711909713664, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:06:15,623: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3256, 139712111888192, /home/kali/Projects/Python_Projects/justice_law_office_django/clients/templatetags/tags.py changed, reloading.
+2021-10-07 11:06:16,705: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3309, 140389813503808, Watching for file changes with StatReloader
+2021-10-07 11:17:20,167: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389678495488, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:17:20,180: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:17:20,276: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389461784320, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:17:20,344: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389678495488, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:17:20,345: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:17:20,348: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389686888192, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:17:20,354: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:17:20,381: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389678495488, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:17:20,546: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389461784320, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:17:20,588: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389678495488, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:17:20,594: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:17:20,595: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:17:20,610: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:17:20,615: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389686888192, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:17:20,743: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:17:20,807: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:17:20,838: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:17:20,850: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389678495488, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:17:21,289: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389678495488, Not Found: /dist/json/location.json
+2021-10-07 11:17:25,479: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /dist/images/profile-9.jpg
+2021-10-07 11:17:25,488: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389436606208, Not Found: /dist/images/profile-11.jpg
+2021-10-07 11:17:25,520: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389686888192, Not Found: /dist/images/profile-2.jpg
+2021-10-07 11:17:25,619: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389461784320, Not Found: /dist/images/preview-2.jpg
+2021-10-07 11:17:25,548: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/profile-12.jpg
+2021-10-07 11:17:25,680: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/profile-6.jpg
+2021-10-07 11:17:25,686: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389461784320, Not Found: /dist/images/profile-14.jpg
+2021-10-07 11:17:25,737: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389686888192, Not Found: /dist/images/preview-11.jpg
+2021-10-07 11:17:25,743: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/preview-13.jpg
+2021-10-07 11:17:25,814: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389436606208, Not Found: /dist/images/preview-5.jpg
+2021-10-07 11:17:25,832: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389461784320, Not Found: /dist/images/preview-9.jpg
+2021-10-07 11:17:25,874: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /dist/images/preview-15.jpg
+2021-10-07 11:17:25,969: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389436606208, Not Found: /dist/images/preview-12.jpg
+2021-10-07 11:17:25,988: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389461784320, Not Found: /dist/images/preview-8.jpg
+2021-10-07 11:17:26,021: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389695805184, Not Found: /dist/images/preview-1.jpg
+2021-10-07 11:17:26,036: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389686888192, Not Found: /dist/images/preview-3.jpg
+2021-10-07 11:17:26,140: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /dist/images/profile-3.jpg
+2021-10-07 11:17:26,136: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /dist/images/profile-4.jpg
+2021-10-07 11:17:26,873: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /dist/json/location.json
+2021-10-07 11:17:29,054: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients_all:44], clients.views, views, 3309, 140389444998912, Getting Clients Page...
+2021-10-07 11:17:29,157: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389444998912, Page list of 'Clients'.
+2021-10-07 11:17:29,450: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:17:33,681: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:112], adversaires.views, views, 3309, 140389444998912, Page list of 'Adversaires'.
+2021-10-07 11:17:33,891: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:17:42,381: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:112], adversaires.views, views, 3309, 140389444998912, Page list of 'Adversaires'.
+2021-10-07 11:17:42,654: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:18:00,375: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_avocats_adversaires:283], adversaires.views, views, 3309, 140389444998912, Page list of Avocats adversaires.
+2021-10-07 11:18:00,734: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /avocats_adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:20:16,681: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_avocats_adversaires:283], adversaires.views, views, 3309, 140389444998912, Page list of Avocats adversaires.
+2021-10-07 11:20:17,016: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /avocats_adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:20:18,837: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:112], adversaires.views, views, 3309, 140389444998912, Page list of 'Adversaires'.
+2021-10-07 11:20:19,094: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:20:21,633: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients_all:44], clients.views, views, 3309, 140389444998912, Getting Clients Page...
+2021-10-07 11:20:21,749: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389444998912, Page list of 'Clients'.
+2021-10-07 11:20:21,927: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:20:24,339: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:112], adversaires.views, views, 3309, 140389444998912, Page list of 'Adversaires'.
+2021-10-07 11:20:24,537: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:21:55,129: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:112], adversaires.views, views, 3309, 140389444998912, Page list of 'Adversaires'.
+2021-10-07 11:21:55,581: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:21:59,723: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: justice_avocats_charges:110], affaires.views, views, 3309, 140389444998912, Page list of Avocats charges.
+2021-10-07 11:21:59,994: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /avocats_charges/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:33:59,466: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: justice_avocats_charges:110], affaires.views, views, 3309, 140389444998912, Page list of Avocats charges.
+2021-10-07 11:33:59,845: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /avocats_charges/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:34:06,138: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients_all:44], clients.views, views, 3309, 140389444998912, Getting Clients Page...
+2021-10-07 11:34:06,179: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389444998912, Page list of 'Clients'.
+2021-10-07 11:34:06,531: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:34:55,873: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389444998912, Page list of 'Clients'.
+2021-10-07 11:34:56,175: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:35:46,629: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389444998912, Page list of 'Clients'.
+2021-10-07 11:35:47,289: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:36:13,338: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389453391616, Page list of 'Clients'.
+2021-10-07 11:36:13,643: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:36:26,473: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389453391616, Page list of 'Clients'.
+2021-10-07 11:36:26,811: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:36:38,349: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389453391616, Page list of 'Clients'.
+2021-10-07 11:36:38,640: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:38:19,707: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389453391616, Page list of 'Clients'.
+2021-10-07 11:38:20,073: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:38:34,757: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389453391616, Page list of 'Clients'.
+2021-10-07 11:38:35,082: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389453391616, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:41:07,253: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389453391616, Page list of 'Clients'.
+2021-10-07 11:41:08,149: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389444998912, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:43:06,341: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389444998912, Page list of 'Clients'.
+2021-10-07 11:43:07,157: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389436606208, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:44:15,819: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389436606208, Page list of 'Clients'.
+2021-10-07 11:44:16,237: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389436606208, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:47:27,237: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 3309, 140389436606208, Page list of 'Clients'.
+2021-10-07 11:47:27,628: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3309, 140389436606208, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 11:56:10,218: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 957, 140290956179264, Watching for file changes with StatReloader
+2021-10-07 11:59:25,640: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 957, 140290838480640, Page list of 'Clients'.
+2021-10-07 11:59:26,081: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 957, 140290838480640, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 12:50:22,957: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py: justice_clients:113], clients.views, views, 957, 140290838480640, Page list of 'Clients'.
+2021-10-07 12:50:23,340: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 957, 140290838480640, Not Found: /clients/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 12:51:13,963: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: justice_avocats_charges:110], affaires.views, views, 957, 140290838480640, Page list of Avocats charges.
+2021-10-07 12:51:14,276: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 957, 140290838480640, Not Found: /avocats_charges/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 12:51:18,441: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:112], adversaires.views, views, 957, 140290838480640, Page list of 'Adversaires'.
+2021-10-07 12:51:18,757: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 957, 140290838480640, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 12:56:45,969: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 957, 140290956179264, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 12:56:47,102: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2250, 139879498917696, Watching for file changes with StatReloader
+2021-10-07 12:56:50,651: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2250, 139879498917696, /home/kali/Projects/Python_Projects/justice_law_office_django/justice_law_office/constants.py changed, reloading.
+2021-10-07 12:56:51,753: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2255, 140110392387392, Watching for file changes with StatReloader
+2021-10-07 12:57:19,404: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2255, 140110392387392, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 12:57:20,511: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2289, 140318259226432, Watching for file changes with StatReloader
+2021-10-07 12:57:34,061: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2289, 140318259226432, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 12:57:35,109: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2295, 140408468625216, Watching for file changes with StatReloader
+2021-10-07 13:03:32,217: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2295, 140408468625216, /home/kali/Projects/Python_Projects/justice_law_office_django/justice_law_office/constants.py changed, reloading.
+2021-10-07 13:03:33,392: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2339, 140419448047424, Watching for file changes with StatReloader
+2021-10-07 13:04:20,784: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2339, 140419448047424, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 13:04:22,231: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2357, 140246365833024, Watching for file changes with StatReloader
+2021-10-07 13:53:20,004: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2885, 140327578740544, Watching for file changes with StatReloader
+2021-10-07 13:54:40,990: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2885, 140327578740544, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 13:54:42,144: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 2900, 139968710387520, Watching for file changes with StatReloader
+2021-10-07 14:01:25,589: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 2900, 139968710387520, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:01:26,739: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3017, 140104717526848, Watching for file changes with StatReloader
+2021-10-07 14:01:28,152: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3017, 140104717526848, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:01:29,309: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3022, 140604535146304, Watching for file changes with StatReloader
+2021-10-07 14:01:48,158: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3022, 140604535146304, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:01:49,453: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3032, 140170054125376, Watching for file changes with StatReloader
+2021-10-07 14:03:19,436: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3032, 140170054125376, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/urls.py changed, reloading.
+2021-10-07 14:03:20,706: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3061, 140621412878144, Watching for file changes with StatReloader
+2021-10-07 14:03:38,785: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3061, 140621412878144, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/urls.py changed, reloading.
+2021-10-07 14:03:40,105: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3072, 140440182650688, Watching for file changes with StatReloader
+2021-10-07 14:04:01,312: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3072, 140440182650688, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/urls.py changed, reloading.
+2021-10-07 14:04:02,591: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3082, 140318582396736, Watching for file changes with StatReloader
+2021-10-07 14:08:35,600: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3082, 140318582396736, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:08:37,140: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3155, 140007026505536, Watching for file changes with StatReloader
+2021-10-07 14:09:02,552: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3155, 140007026505536, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:09:03,908: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3208, 140221105837888, Watching for file changes with StatReloader
+2021-10-07 14:09:23,847: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3208, 140221105837888, /home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py changed, reloading.
+2021-10-07 14:09:25,475: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3226, 139958515656512, Watching for file changes with StatReloader
+2021-10-07 14:09:55,116: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3226, 139958515656512, /home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py changed, reloading.
+2021-10-07 14:09:56,341: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3246, 139954531919680, Watching for file changes with StatReloader
+2021-10-07 14:10:16,206: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3246, 139954531919680, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:10:17,760: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3254, 140106847299392, Watching for file changes with StatReloader
+2021-10-07 14:17:20,157: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3254, 140106847299392, /home/kali/Projects/Python_Projects/justice_law_office_django/justice_law_office/constants.py changed, reloading.
+2021-10-07 14:17:21,415: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3345, 139757584885568, Watching for file changes with StatReloader
+2021-10-07 14:23:00,144: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3345, 139757584885568, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/urls.py changed, reloading.
+2021-10-07 14:23:01,390: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3441, 140620656412480, Watching for file changes with StatReloader
+2021-10-07 14:25:46,294: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3441, 140620656412480, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:25:47,895: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3473, 140112599660352, Watching for file changes with StatReloader
+2021-10-07 14:28:51,848: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3473, 140112599660352, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:28:53,068: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3510, 139717072545600, Watching for file changes with StatReloader
+2021-10-07 14:30:16,109: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3510, 139717072545600, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:30:17,351: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3522, 139895642859328, Watching for file changes with StatReloader
+2021-10-07 14:30:24,191: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3522, 139895642859328, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 14:30:25,334: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3527, 139706523268928, Watching for file changes with StatReloader
+2021-10-07 14:48:39,225: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3527, 139706523268928, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:48:40,592: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3675, 140492956673856, Watching for file changes with StatReloader
+2021-10-07 14:48:46,938: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3675, 140492956673856, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:48:48,113: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3681, 140545125050176, Watching for file changes with StatReloader
+2021-10-07 14:48:57,469: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3681, 140545125050176, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:48:58,683: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3686, 140307843733312, Watching for file changes with StatReloader
+2021-10-07 14:49:22,169: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3695, 139886361098048, Watching for file changes with StatReloader
+2021-10-07 14:49:31,529: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3695, 139886361098048, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:49:33,118: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3702, 139638914242368, Watching for file changes with StatReloader
+2021-10-07 14:51:06,860: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3702, 139638914242368, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:51:08,435: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3719, 140309764196160, Watching for file changes with StatReloader
+2021-10-07 14:51:17,348: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:111], adversaires.views, views, 3719, 140309646497536, Page list of 'Adversaires'.
+2021-10-07 14:51:17,794: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3719, 140309646497536, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 14:51:21,965: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3719, 140309646497536, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "departement" does not exist
+LINE 1: ...ALESCE("departement"."nom", '')) AS "search" FROM "departeme...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 256, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "departement" does not exist
+LINE 1: ...ALESCE("departement"."nom", '')) AS "search" FROM "departeme...
+                                                             ^
+
+2021-10-07 14:52:26,319: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3719, 140309764196160, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:52:27,726: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3743, 140654661297984, Watching for file changes with StatReloader
+2021-10-07 14:53:22,026: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3743, 140654661297984, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:53:23,486: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3761, 139787255945024, Watching for file changes with StatReloader
+2021-10-07 14:54:25,024: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3761, 139787255945024, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:54:26,660: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3783, 140609944909632, Watching for file changes with StatReloader
+2021-10-07 14:54:47,857: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3783, 140609944909632, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:54:49,297: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3799, 140319411021632, Watching for file changes with StatReloader
+2021-10-07 14:56:13,114: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3799, 140319411021632, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:56:14,429: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3824, 140364931766080, Watching for file changes with StatReloader
+2021-10-07 14:56:33,567: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3824, 140364931766080, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 14:56:34,986: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3838, 140295827236672, Watching for file changes with StatReloader
+2021-10-07 14:57:25,521: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:111], adversaires.views, views, 3838, 140295642281728, Page list of 'Adversaires'.
+2021-10-07 14:57:25,843: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 15:02:27,783: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/adversaires/views.py: justice_adversaires:111], adversaires.views, views, 3838, 140295642281728, Page list of 'Adversaires'.
+2021-10-07 15:02:28,064: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /adversaires/page/1/city/all/search/dist/images/profile-9.jpg
+2021-10-07 15:02:31,262: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 3838, 140295642281728, Page list of Departements.
+2021-10-07 15:02:31,595: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:05:25,580: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 3838, 140295642281728, Page list of Departements.
+2021-10-07 15:05:26,134: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:06:01,777: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 3838, 140295642281728, Page list of Departements.
+2021-10-07 15:06:02,159: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:06:58,987: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 3838, 140295642281728, Page list of Departements.
+2021-10-07 15:06:59,484: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:07:03,192: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departement_form:338], affaires.views, views, 3838, 140295642281728, Page Creating of 'Departement'
+2021-10-07 15:07:05,065: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3838, 140295642281728, Not Found: /departements/dist/images/profile-9.jpg
+2021-10-07 15:08:04,202: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 3838, 140295827236672, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:08:07,139: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4012, 140543393195840, Watching for file changes with StatReloader
+2021-10-07 15:12:05,815: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 4012, 140543208191744, Page list of Departements.
+2021-10-07 15:12:06,168: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4012, 140543208191744, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:14:11,709: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 4012, 140543208191744, Page list of Departements.
+2021-10-07 15:14:12,121: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4012, 140543208191744, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:15:06,811: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4012, 140543393195840, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:15:08,142: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4132, 139699192633152, Watching for file changes with StatReloader
+2021-10-07 15:15:50,170: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4132, 139699192633152, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:15:51,555: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4144, 139729048528704, Watching for file changes with StatReloader
+2021-10-07 15:15:56,295: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:274], affaires.views, views, 4144, 139728930830080, Page list of Departements.
+2021-10-07 15:15:56,657: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4144, 139728930830080, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:16:31,563: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4144, 139729048528704, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:16:33,587: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4187, 139816875214656, Watching for file changes with StatReloader
+2021-10-07 15:16:34,625: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:275], affaires.views, views, 4187, 139816687630080, Page list of Departements.
+2021-10-07 15:16:34,893: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4187, 139816687630080, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:16:52,735: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4187, 139816875214656, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:16:54,095: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4203, 139906378102592, Watching for file changes with StatReloader
+2021-10-07 15:16:56,673: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4203, 139906378102592, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:16:58,523: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4209, 140249021503296, Watching for file changes with StatReloader
+2021-10-07 15:16:58,874: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:275], affaires.views, views, 4209, 140248905115392, Page list of Departements.
+2021-10-07 15:16:59,144: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4209, 140248905115392, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:20:32,735: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4209, 140249021503296, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 15:20:33,926: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4256, 140086982317888, Watching for file changes with StatReloader
+2021-10-07 15:20:49,645: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4256, 140086982317888, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/models.py changed, reloading.
+2021-10-07 15:20:50,903: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4263, 140406850504512, Watching for file changes with StatReloader
+2021-10-07 15:31:34,473: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4263, 140406850504512, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:31:35,725: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4319, 140163630778176, Watching for file changes with StatReloader
+2021-10-07 15:33:47,253: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4319, 140163630778176, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/forms.py changed, reloading.
+2021-10-07 15:33:48,484: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4386, 140227895207744, Watching for file changes with StatReloader
+2021-10-07 15:34:29,415: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4386, 140227895207744, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/forms.py changed, reloading.
+2021-10-07 15:34:30,703: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4399, 140585531311936, Watching for file changes with StatReloader
+2021-10-07 15:34:42,100: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4399, 140585531311936, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/forms.py changed, reloading.
+2021-10-07 15:34:43,284: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4405, 140012999915328, Watching for file changes with StatReloader
+2021-10-07 15:35:26,342: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4405, 140012882216704, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 246, in departements_views
+    departements = Departement.objects.annotate(
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1056, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 999, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 62, in resolve_expression
+    resolved = super().resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 603, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 514, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize, simple_col)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1601, in resolve_ref
+    join_info = self.setup_joins(field_list, self.get_meta(), self.get_initial_alias(), can_reuse=reuse)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1503, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'nom' into field. Choices are: affaire, id, nom_depart
+2021-10-07 15:36:08,227: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4405, 140012999915328, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:36:09,935: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4439, 139665772771136, Watching for file changes with StatReloader
+2021-10-07 15:36:19,004: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4448, 140674473899840, Watching for file changes with StatReloader
+2021-10-07 15:36:20,424: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674356987648, Not Found: /dist/images/profile-9.jpg
+2021-10-07 15:36:20,445: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674356987648, Not Found: /dist/images/profile-11.jpg
+2021-10-07 15:36:20,521: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674347546368, Not Found: /dist/images/profile-12.jpg
+2021-10-07 15:36:20,652: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674356987648, Not Found: /dist/images/profile-2.jpg
+2021-10-07 15:36:20,722: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674356987648, Not Found: /dist/images/preview-2.jpg
+2021-10-07 15:36:20,743: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Not Found: /dist/images/preview-15.jpg
+2021-10-07 15:36:20,753: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674347546368, Not Found: /dist/images/preview-5.jpg
+2021-10-07 15:36:20,806: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674129192704, Not Found: /dist/images/preview-1.jpg
+2021-10-07 15:36:20,876: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674120537856, Not Found: /dist/images/preview-9.jpg
+2021-10-07 15:36:20,933: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674112145152, Not Found: /dist/images/preview-11.jpg
+2021-10-07 15:36:21,057: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674356987648, Not Found: /dist/images/profile-14.jpg
+2021-10-07 15:36:21,119: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674120537856, Not Found: /dist/images/preview-8.jpg
+2021-10-07 15:36:21,121: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674103752448, Not Found: /dist/images/preview-13.jpg
+2021-10-07 15:36:21,202: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674347546368, Not Found: /dist/images/preview-3.jpg
+2021-10-07 15:36:21,093: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Not Found: /dist/images/profile-6.jpg
+2021-10-07 15:36:21,213: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674095097600, Not Found: /dist/images/preview-12.jpg
+2021-10-07 15:36:21,323: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674095097600, Not Found: /dist/images/profile-3.jpg
+2021-10-07 15:36:21,427: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Not Found: /dist/images/profile-4.jpg
+2021-10-07 15:36:22,025: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Not Found: /dist/json/location.json
+2021-10-07 15:36:23,960: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column departement.nom_depart does not exist
+LINE 1: ... "departement"."id" AS Col1, to_tsvector(COALESCE("departeme...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 256, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column departement.nom_depart does not exist
+LINE 1: ... "departement"."id" AS Col1, to_tsvector(COALESCE("departeme...
+                                                             ^
+
+2021-10-07 15:36:45,654: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:280], affaires.views, views, 4448, 140674137585408, Page list of Departements.
+2021-10-07 15:36:46,094: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:37:26,210: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:280], affaires.views, views, 4448, 140674137585408, Page list of Departements.
+2021-10-07 15:37:26,692: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4448, 140674137585408, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:38:25,088: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4448, 140674473899840, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:38:27,040: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4525, 139755699832640, Watching for file changes with StatReloader
+2021-10-07 15:38:28,284: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4525, 139755582920448, Page list of Departements.
+2021-10-07 15:38:28,710: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4525, 139755582920448, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:38:53,182: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4525, 139755699832640, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:38:54,722: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4540, 140339171022656, Watching for file changes with StatReloader
+2021-10-07 15:38:57,370: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:38:57,695: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:40:33,174: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:40:33,587: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:41:32,020: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:41:32,355: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:41:58,623: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:41:59,106: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:42:14,512: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:42:14,837: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:42:38,820: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:42:39,539: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:52:24,104: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:283], affaires.views, views, 4540, 140339053061888, Page list of Departements.
+2021-10-07 15:52:24,586: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:52:53,992: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4540, 140339053061888, Internal Server Error: /departements/create
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 316, in departement_form
+    print('form.is_valid(): ', form.is_valid())
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/parents/parent.py", line 103, in clean_nom
+    return self.cleaned_data['nom'].upper()
+AttributeError: 'NoneType' object has no attribute 'upper'
+2021-10-07 15:53:43,763: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4540, 140339171022656, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:53:44,998: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4713, 140076382197568, Watching for file changes with StatReloader
+2021-10-07 15:53:58,524: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4713, 140076382197568, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 15:53:59,937: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4718, 140020633847616, Watching for file changes with StatReloader
+2021-10-07 15:55:34,449: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4718, 140020515886848, Page list of Departements.
+2021-10-07 15:55:35,182: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4718, 140020279138048, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 15:55:45,621: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4718, 140020295923456, Internal Server Error: /departements/create
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 315, in departement_form
+    print('form.is_valid(): ', form.is_valid())
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/parents/parent.py", line 103, in clean_nom
+    return self.cleaned_data['nom'].upper()
+AttributeError: 'NoneType' object has no attribute 'upper'
+2021-10-07 16:01:18,749: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: trigger_reload:217], django.utils.autoreload, autoreload, 4718, 140020633847616, /home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py changed, reloading.
+2021-10-07 16:01:21,060: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 4798, 140656675841856, Watching for file changes with StatReloader
+2021-10-07 16:01:26,784: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4798, 140656487954176, Page list of Departements.
+2021-10-07 16:01:27,389: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 16:01:30,940: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departement_form:333], affaires.views, views, 4798, 140656479561472, 'Cabinet' Departement has been Created.
+2021-10-07 16:01:31,039: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4798, 140656479561472, Page list of Departements.
+2021-10-07 16:01:31,462: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 16:01:57,819: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4798, 140656479561472, Page list of Departements.
+2021-10-07 16:01:58,126: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 16:02:24,838: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4798, 140656479561472, Page list of Departements.
+2021-10-07 16:02:25,199: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 16:04:49,353: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4798, 140656479561472, Page list of Departements.
+2021-10-07 16:04:49,887: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-07 16:05:06,763: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departement_form:347], affaires.views, views, 4798, 140656479561472, Page Editing of 'Departement'
+2021-10-07 16:05:06,820: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 349, in departement_form
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: affaires/departements/form.html
+2021-10-07 16:05:12,148: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departement_form:347], affaires.views, views, 4798, 140656479561472, Page Editing of 'Departement'
+2021-10-07 16:05:12,183: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 349, in departement_form
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: affaires/departements/form.html
+2021-10-07 16:08:59,509: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departement_form:347], affaires.views, views, 4798, 140656479561472, Page Editing of 'Departement'
+2021-10-07 16:08:59,589: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 349, in departement_form
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: affaires/departements/form.html
+2021-10-07 16:09:02,221: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /dist/images/profile-12.jpg
+2021-10-07 16:09:02,256: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656471168768, Not Found: /dist/images/profile-2.jpg
+2021-10-07 16:09:02,267: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656462776064, Not Found: /dist/images/preview-2.jpg
+2021-10-07 16:09:02,286: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656454383360, Not Found: /dist/images/profile-9.jpg
+2021-10-07 16:09:02,270: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656487954176, Not Found: /dist/images/profile-11.jpg
+2021-10-07 16:09:02,476: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656487954176, Not Found: /dist/images/preview-5.jpg
+2021-10-07 16:09:02,504: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656487954176, Not Found: /dist/images/preview-15.jpg
+2021-10-07 16:09:02,518: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656454383360, Not Found: /dist/images/preview-1.jpg
+2021-10-07 16:09:02,584: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656462776064, Not Found: /dist/images/preview-8.jpg
+2021-10-07 16:09:02,532: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656487954176, Not Found: /dist/images/preview-9.jpg
+2021-10-07 16:09:02,601: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656471168768, Not Found: /dist/images/profile-14.jpg
+2021-10-07 16:09:02,621: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /dist/images/preview-11.jpg
+2021-10-07 16:09:02,659: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656454383360, Not Found: /dist/images/preview-13.jpg
+2021-10-07 16:09:02,757: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656454383360, Not Found: /dist/images/preview-3.jpg
+2021-10-07 16:09:02,776: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /dist/images/profile-3.jpg
+2021-10-07 16:09:02,810: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656462776064, Not Found: /dist/images/preview-12.jpg
+2021-10-07 16:09:02,820: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656479561472, Not Found: /dist/images/profile-4.jpg
+2021-10-07 16:09:02,789: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656471168768, Not Found: /dist/images/profile-6.jpg
+2021-10-07 16:09:03,590: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656471168768, Not Found: /dist/json/location.json
+2021-10-07 16:09:07,588: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 4798, 140656471168768, Page list of Departements.
+2021-10-07 16:09:07,883: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4798, 140656471168768, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-08 12:23:23,298: INFO [/usr/lib/python3/dist-packages/django/utils/autoreload.py: run_with_reloader:597], django.utils.autoreload, autoreload, 3235, 140009700575040, Watching for file changes with StatReloader
+2021-10-08 12:23:37,064: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009357178624, Not Found: /dist/images/profile-9.jpg
+2021-10-08 12:23:37,071: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009332000512, Not Found: /dist/images/preview-2.jpg
+2021-10-08 12:23:37,091: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009340393216, Not Found: /dist/images/profile-11.jpg
+2021-10-08 12:23:37,116: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009573172992, Not Found: /dist/images/profile-12.jpg
+2021-10-08 12:23:37,118: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009582876416, Not Found: /dist/images/profile-2.jpg
+2021-10-08 12:23:37,201: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009348785920, Not Found: /dist/images/preview-5.jpg
+2021-10-08 12:23:37,491: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009582876416, Not Found: /dist/images/profile-14.jpg
+2021-10-08 12:23:37,567: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009582876416, Not Found: /dist/images/preview-9.jpg
+2021-10-08 12:23:37,573: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009573172992, Not Found: /dist/images/preview-13.jpg
+2021-10-08 12:23:37,590: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009573172992, Not Found: /dist/images/profile-6.jpg
+2021-10-08 12:23:37,637: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009573172992, Not Found: /dist/images/preview-11.jpg
+2021-10-08 12:23:37,805: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009573172992, Not Found: /dist/images/preview-15.jpg
+2021-10-08 12:23:37,837: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009582876416, Not Found: /dist/images/preview-1.jpg
+2021-10-08 12:23:37,870: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009348785920, Not Found: /dist/images/preview-8.jpg
+2021-10-08 12:23:37,962: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009348785920, Not Found: /dist/images/preview-12.jpg
+2021-10-08 12:23:38,046: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009573172992, Not Found: /dist/images/preview-3.jpg
+2021-10-08 12:23:38,177: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009348785920, Not Found: /dist/images/profile-4.jpg
+2021-10-08 12:23:38,314: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009582876416, Not Found: /dist/images/profile-3.jpg
+2021-10-08 12:23:40,856: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009332000512, Not Found: /dist/json/location.json
+2021-10-08 12:23:41,347: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 3235, 140009332000512, Page list of Departements.
+2021-10-08 12:23:42,311: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009340393216, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-08 12:25:26,940: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 3235, 140009582876416, Page list of Departements.
+2021-10-08 12:25:27,243: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009582876416, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-08 12:25:59,807: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 3235, 140009582876416, Page list of Departements.
+2021-10-08 12:26:00,501: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009323607808, Not Found: /departements/page/1/search/dist/images/profile-9.jpg
+2021-10-08 12:27:32,623: INFO [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_views:282], affaires.views, views, 3235, 140009348785920, Page list of Departements.
+2021-10-08 12:27:32,995: WARNING [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3235, 140009323607808, Not Found: /departements/page/1/search/dist/images/profile-9.jpg

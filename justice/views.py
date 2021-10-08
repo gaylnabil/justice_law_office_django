@@ -6,8 +6,9 @@ from clients.forms import ClientForm
 def index(request):
 
     context = {
-        'active_page': 'home',
-        'breadcrumb': 'home',
+        'active_page': 1,
+        'breadcrumb': _('Tableau de bord'),
+        'url_link': 'home'
     }
     template_name = 'justice/index.html'
     return render(request=request, template_name=template_name, context=context)

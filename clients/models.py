@@ -30,7 +30,7 @@ class Client(PersonMixin):
     status_juridique = models.IntegerField(
         blank=True, null=True, choices=STATUS_JURIDIQUE)
 
-    observation = models.TextField(blank = True, null = True)
+    observation = models.TextField(blank=True, null=True, max_length=3000)
     
     slug = models.SlugField(blank=True, null=True)
     

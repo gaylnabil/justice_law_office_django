@@ -1,9 +1,40 @@
 from django import forms
 from django.forms.widgets import RadioSelect, Textarea
 from django.utils.translation import gettext_lazy as _
-from affaires.models import AvocatCharge
+from affaires.models import AvocatCharge, Departement
 from justice_law_office.constants import GENDERS, TYPE_PERSON
 from parents.parent import PersonMixinForm
+
+
+class DepartementForm(forms.ModelForm):
+    """Form definition for Adversaire."""
+
+    def __init__(self, *args, **kwargs):
+        super(DepartementForm, self).__init__(*args, **kwargs)
+
+        initials = kwargs.get("initial", {})
+
+        self.fields['nom_depart'].widget.attrs['id'] = 'nom-form-1'
+        self.fields['nom_depart'].widget.attrs['class'] = 'form-control w-full'
+
+    def clean_nom_depart(self):
+        return self.cleaned_data['nom_depart'].capitalize()
+
+    class Meta:
+        """Meta definition for DepartementForm."""
+        
+        model = Departement
+        fields = '__all__'
+        
+        labels = {
+            # TODO: Define fields here
+            'nom_depart': _('Nom de departement'),
+        }
+
+        widgets = {
+
+        }
+
 
 class AvocatChargeForm(PersonMixinForm):
     """Form definition for AvocatCharge."""

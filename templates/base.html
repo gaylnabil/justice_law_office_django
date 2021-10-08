@@ -49,7 +49,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <ul class="border-t border-theme-29 py-5 hidden">
                 <li class="menu__devider my-6"></li>
                 <li>
-                    <a href="{% url 'home' %}" class="menu {% if active_page == 'home' %} menu--active {% endif %}">
+                    <a href="{% url 'home' %}" class="menu {% if active_page == 1 %} menu--active {% endif %}">
                         <div class="menu__title"> home
                         <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i> </div>
                     </a>
@@ -57,22 +57,22 @@ License: You must have a valid license purchased only from themeforest(the above
                 </li>
                 
                 <li>
-                    <a href="javascript:;.html" class="menu {% if active_page in list_1 %}menu--active{% endif %}">
+                    <a href="javascript:;.html" class="menu {% if active_page == 2 or active_page == 3 or active_page == 4 %}menu--active{% endif %}">
                     <div class="menu__icon"> <i data-feather="users"></i> </div>
                         <div class="menu__title"> {{ trans_clients|title }} & {{ trans_opponents|title }}
                             <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i>
                         </div>
                     </a>
-                    <ul class="{% if active_page in list_1 %}menu__sub-open{% endif %}">
+                    <ul class="{% if active_page == 2 or active_page == 3 or active_page == 4 %}menu__sub-open{% endif %}">
                         <li>
-                            <a href="{% url 'justice_clients_all' %}" class="menu {% if active_page == list_1.0 %} menu--active {% endif %}">
+                            <a href="{% url 'justice_clients_all' %}" class="menu {% if active_page == 2 %} menu--active {% endif %}">
                             <div class="menu__icon"> <i data-feather="user"></i> </div>
                                 <div class="menu__title"> {{ trans_clients|title }}
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{% url 'justice_adversaires_all' %}" class="menu {% if active_page == list_1.1 %} menu--active {% endif %}">
+                            <a href="{% url 'justice_adversaires_all' %}" class="menu {% if active_page == 3 %} menu--active {% endif %}">
                                 <div class="menu__icon"> <i data-feather="user"></i> </div>
                                 <div class="menu__title"> {{ trans_opponents|title }}
                                 </div>
@@ -80,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                         
                         <li>
-                            <a href="{% url 'justice_avocats_adversaires_all' %}" class="menu {% if active_page == list_1.2 %} menu--active {% endif %}">
+                            <a href="{% url 'justice_avocats_adversaires_all' %}" class="menu {% if active_page == 4 %} menu--active {% endif %}">
                                 <div class="menu__icon"> <i data-feather="user"></i> </div>
                                 <div class="menu__title"> {{ trans_attorney|title }} {{ trans_opponents|title }}
                                 </div>
@@ -90,30 +90,36 @@ License: You must have a valid license purchased only from themeforest(the above
                 </li>
                 
                 <li>
-                    <a href="javascript:;.html" class="menu {% if active_page in list_2 %}menu--active{% endif %}">
+                    <a href="javascript:;.html" class="menu {% if active_page == 5 or active_page == 6 or active_page == 7 %}menu--active{% endif %}">
                         <div class="menu__icon"> <i data-feather="package"></i> </div>
                         <div class="menu__title"> {{ trans_files|title }}
                             <i data-feather="chevron-down" class="menu__sub-icon transform rotate-180"></i>
                         </div>
                     </a>
-                    <ul class="{% if active_page in list_2 %}menu__sub-open{% endif %}">
+                    <ul class="{% if active_page == 5 or active_page == 6 or active_page == 7 %}menu__sub-open{% endif %}">
                         <li>
-                            <a href="{% url 'justice_clients_all' %}"
-                                class="menu {% if active_page == list_2.0 %} menu--active {% endif %}">
+                            <a href="{% url 'home' %}" class="menu {% if active_page == 5 %} menu--active {% endif %}">
                                 <div class="menu__icon"> <i data-feather="folder"></i> </div>
                                 <div class="menu__title"> {{ trans_cases|title }}
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="{% url 'justice_avocats_charges_all' %}"
-                                class="menu {% if active_page == list_2.1 %} menu--active {% endif %}">
+                            <a href="{% url 'justice_avocats_charges_all' %}" class="menu {% if active_page == 6 %} menu--active {% endif %}">
                                 <div class="menu__icon"> <i data-feather="user"></i> </div>
                                 <div class="menu__title"> {{ trans_attroney_in_charge|title }}
                                 </div>
                             </a>
                         </li>
-                     
+                        
+                        <li>
+                            <a href="{% url 'justice_avocats_charges_all' %}" class="menu {% if active_page == 7 %} menu--active {% endif %}">
+                                <div class="menu__icon"> <i data-feather="box"></i> </div>
+                                <div class="menu__title"> {{ trans_departments|title }}
+                                </div>
+                            </a>
+                        </li>
+                    
                     </ul>
                 </li>
                 
@@ -130,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <ul>
                     <li class="side-nav__devider my-6"></li>
                     <li>
-                        <a href="{% url 'home' %}" class="side-menu {% if active_page == 'home' %} side-menu--active {% endif %}">
+                        <a href="{% url 'home' %}" class="side-menu {% if active_page == 1 %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
                             <div class="side-menu__title">
                                 Home
@@ -139,17 +145,17 @@ License: You must have a valid license purchased only from themeforest(the above
                     </li>
                     
                     <li>
-                        <a href="javascript:;" class="side-menu {% if active_page in list_1 %} side-menu--active {% endif %}">
+                        <a href="javascript:;" class="side-menu {% if active_page == 2 or active_page == 3 or active_page == 4 %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                             <div class="side-menu__title">
                                 {{ trans_clients|title }} & {{ trans_opponents|title }}
                                 <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
-                        <ul class="{% if active_page in list_1 %}side-menu__sub-open{% endif %}">
+                        <ul class="{% if active_page == 2 or active_page == 3 or active_page == 4 %}side-menu__sub-open{% endif %}">
                             <li>
                                 <a href="{% url 'justice_clients_all' %}"
-                                    class="side-menu {% if active_page == list_1.0 %} side-menu--active {% endif %}">
+                                    class="side-menu {% if active_page == 2 %} side-menu--active {% endif %}">
                                     <div class="side-menu__icon"> <i data-feather="user"></i> </div>
                                     <div class="side-menu__title">
                                         {{ trans_clients|title }}
@@ -159,7 +165,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li>
                                 <a href="{% url 'justice_adversaires_all' %}"
-                                    class="side-menu {% if active_page == list_1.1 %} side-menu--active {% endif %}">
+                                    class="side-menu {% if active_page == 3 %} side-menu--active {% endif %}">
                                     <div class="side-menu__icon"> <i data-feather="user"></i> </div>
                                     <div class="side-menu__title">
                                         {{ trans_opponents|title }}
@@ -168,7 +174,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li>
                                 <a href="{% url 'justice_avocats_adversaires_all' %}"
-                                    class="side-menu {% if active_page == list_1.2 %} side-menu--active {% endif %}">
+                                    class="side-menu {% if active_page == 4 %} side-menu--active {% endif %}">
                                     <div class="side-menu__icon"> <i data-feather="user"></i> </div>
                                     <div class="side-menu__title">
                                         {{ trans_attorney|title }} {{ trans_opponents|title }}
@@ -179,17 +185,17 @@ License: You must have a valid license purchased only from themeforest(the above
                     </li>
                     
                     <li>
-                        <a href="javascript:;" class="side-menu {% if active_page in list_2 %} side-menu--active {% endif %}">
+                        <a href="javascript:;" class="side-menu {% if active_page == 5 or active_page == 6 or active_page == 7 %} side-menu--active {% endif %}">
                             <div class="side-menu__icon"> <i data-feather="package"></i> </div>
                             <div class="side-menu__title">
                                 {{ trans_files|title }}
                                 <div class="side-menu__sub-icon "> <i data-feather="chevron-down"></i> </div>
                             </div>
                         </a>
-                        <ul class="{% if active_page in list_2 %}side-menu__sub-open{% endif %}">
+                        <ul class="{% if active_page == 5 or active_page == 6 or active_page == 7 %}side-menu__sub-open{% endif %}">
                             <li>
-                                <a href="{% url 'justice_adversaires_all' %}"
-                                    class="side-menu {% if active_page == list_2.0 %} side-menu--active {% endif %}">
+                                <a href="{% url 'home' %}"
+                                    class="side-menu {% if active_page == 5 %} side-menu--active {% endif %}">
                                     <div class="side-menu__icon"> <i data-feather="folder"></i> </div>
                                     <div class="side-menu__title">
                                         {{ trans_cases|title }}
@@ -198,13 +204,24 @@ License: You must have a valid license purchased only from themeforest(the above
                             </li>
                             <li>
                                 <a href="{% url 'justice_avocats_charges_all' %}"
-                                    class="side-menu {% if active_page == list_2.1 %} side-menu--active {% endif %}">
+                                    class="side-menu {% if active_page == 6 %} side-menu--active {% endif %}">
                                     <div class="side-menu__icon"> <i data-feather="user"></i> </div>
                                     <div class="side-menu__title">
                                         {{ trans_attroney_in_charge|title }}
                                     </div>
                                 </a>
                             </li>
+                            
+                            <li>
+                                <a href="{% url 'departements_all' %}"
+                                    class="side-menu {% if active_page == 7 %} side-menu--active {% endif %}">
+                                    <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                                    <div class="side-menu__title">
+                                        {{ trans_departments|title }}
+                                    </div>
+                                </a>
+                            </li>
+                            
                         </ul>
                     </li>
                     
@@ -218,7 +235,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <!-- BEGIN: Breadcrumb -->
                     <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> 
                     
-                    <a href="{% url url_link %} ">{{ active_page|title }}</a>
+                    <a href="{% url url_link %} ">{{ active_page|page_name|title }}</a>
                     
                     <i data-feather="chevron-right" class="breadcrumb__icon"></i> 
                     <a href="" class="breadcrumb--active">{{ breadcrumb|capfirst }}</a> </div>

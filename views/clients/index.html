@@ -82,7 +82,7 @@
                 <thead>
                     <tr>
                         <th class="whitespace-nowrap">{{ trans_id|upper }}</th>
-                        <th class="whitespace-nowrap">{{ trans_lastname|upper }}</th>
+                        <th class="whitespace-nowrap">{{ trans_name|upper }}</th>
                         <th class="whitespace-nowrap">{{ trans_firstname|upper }}</th>
                         <!-- <th class="whitespace-nowrap">{{ trans_genre|upper }}</th> -->
                         <th class="whitespace-nowrap">{{ trans_company|upper }}</th>
@@ -133,9 +133,12 @@
                             </a>
                         
                         </td>
-        
+       
                         <td class="table-report__action w-56">
                             <div class="flex justify-center items-center">
+                            <a class="flex items-center text-theme-6 mr-3 btn-delete" style="color: green;" href="javascript:;" >
+                                <i data-feather="folder" class="w-4 h-4 mr-1"></i> {{ trans_cases }}
+                            </a>
                                 <a class="flex items-center mr-3" href="{% url 'client_update' clt.pk %}"> <i data-feather="check-square"
                                         class="w-4 h-4 mr-1"></i> {{ trans_edit }} 
                                 </a>

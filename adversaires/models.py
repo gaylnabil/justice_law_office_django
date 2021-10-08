@@ -21,7 +21,7 @@ class Adversaire(PersonMixin):
     # representant_legal = models.CharField(
     #     max_length=255, blank=True, null=True)
 
-    observation = models.TextField(blank=True, null=True)
+    observation = models.TextField(blank=True, null=True, max_length=3000)
 
     slug = models.SlugField(blank=True, null=True)
 
@@ -53,7 +53,7 @@ class AvocatAdversaire(PersonMixin):
     
     slug = models.SlugField(blank=True, null=True)
 
-    observation = models.TextField(blank=True, null=True)
+    observation = models.TextField(blank=True, null=True, max_length=3000)
 
     class Meta:
         """Meta definition for Avocat Adversaire."""

@@ -24,6 +24,39 @@ CORRESPONDENCE = [
     ('apres', _('Aprés validation')),
 ]
 
+TYPE_AFFAIRES = [
+    ('civil', _('Civil')),
+    ('correctionnel', _('Correctionnel')),
+    ('commercial', _('Commercial')),
+    ('maritime', _('Maritime')),
+    ('administratif', _('Administratif')),
+    ('social', _('social')),
+    ('famille', _('Famille')),
+    ('conseil_juridique', _('Conseil Juridique')),
+]
+
+COMPLEMENTAIRES = [
+    ('standard', _('Standard')),
+    ('correctionnel', _('Correctionnel')),
+    ('commercial', _('Commercial')),
+    ('maritime', _('Maritime')),
+    ('expropriation', _('Expropriation')),
+    ('arbitage', _('Arbitage')),
+    ('conseil_juridique', _('Conseil Juridique')),
+    ('accident_travail', _('Accident de travail')),
+    ('accident_circulation', _('Accident de circulation')),
+]
+
+PAGES = {
+    1: _('accueil'),
+    2: _('clients'),
+    3: _('adversaires'),
+    4: _('avocats adversaires'),
+    5: _('affaires'),
+    6: _('avocats charges'),
+    7: _('departements'),
+}
+
 GENDERS = [
     ('M', _('Masculin')),
     ('F', _('Féminin'))
