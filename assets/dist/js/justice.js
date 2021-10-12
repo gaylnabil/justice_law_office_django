@@ -35,9 +35,34 @@ $(window).ready(function () {
   
   $('.btn-edit').on('click',function(e){
      
-    alert($(this).attr('id'));
-  });
+    var $form = $('#form-action');
+    
+    var url = $(this).attr('data-url');
+    $form.prop('action', url);
+    url = $form.attr('action');
+    const type = $form.attr('method');
+    var id = $form.attr('id');
+    // alert(` id= ${id}\n url= ${url}\n type= ${type}`);
+     
+    $.get(url, function (data) {
+            console.log(data);
+            $('input[name=nom_depart]').val(data.departement.nom_depart);
+    });
 
+  });
+  
+  $('#new-depart-id, .btn-edit').on("click", function (e) {
+      let $element = $(this);
+      if ($element.attr('id') === 'new-depart-id'){
+          $('input[name=nom_depart]').val('');
+      }
+      setTimeout(function() {
+          $('input[name=nom_depart]').focus();
+          $('input[name=nom_depart]').select();
+                                
+    }, 800);
+    
+  });
 
 }); 
 

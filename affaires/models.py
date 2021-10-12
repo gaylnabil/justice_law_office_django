@@ -2,9 +2,10 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils import timezone
 from justice_law_office.constants import TYPE_AFFAIRES
-from parents.parent import PersonMixin
+from parents.parent import PersonMixin, AutoDateTimeField
 from clients.models import Client
 from adversaires.models import Adversaire, AvocatAdversaire
+from django.utils.translation import gettext_lazy as _
 
 # Create your models here.
 # model Departement.
@@ -13,10 +14,16 @@ class Departement(models.Model):
 
     # TODO: Define fields here
     nom_depart = models.CharField(max_length=50, blank=False, null=False)
+    
+    created_at = models.DateTimeField(
+        _("Date de création"), default=timezone.now)
+
+    updated_at = AutoDateTimeField(
+        _("Date de modification"), default=timezone.now)
 
     def __str__(self):
         """Unicode representation of Departement."""
-        return self.nom_depart
+        return self.nom_depart.capitalize()
 
     class Meta:
         db_table = 'departement'
@@ -24,6 +31,8 @@ class Departement(models.Model):
         """Meta definition for Departement."""
         verbose_name = 'Departement'
         verbose_name_plural = 'Departements'
+        ordering = ('-created_at',)
+        
         
 # model AvocatCharge.
 class AvocatCharge(PersonMixin):
@@ -49,6 +58,7 @@ class AvocatCharge(PersonMixin):
         managed = True
         verbose_name = 'AvocatCharge'
         verbose_name_plural = 'AvocatCharges'
+        ordering = ('-created_at',)
 
 # model Affaire.
 class Affaire(models.Model):
@@ -71,6 +81,12 @@ class Affaire(models.Model):
     department_id = models.ForeignKey(Departement, blank=True, null=True, on_delete=models.PROTECT)
     charge_id = models.ForeignKey(AvocatCharge, blank=True, null=True, on_delete=models.PROTECT)
     
+    created_at = models.DateTimeField(
+        _("Date de création"), default=timezone.now)
+
+    updated_at = AutoDateTimeField(
+        _("Date de modification"), default=timezone.now)
+    
     def __str__(self):
         return self.reference
     class Meta:
@@ -78,6 +94,7 @@ class Affaire(models.Model):
         managed = True
         verbose_name = 'Affaire'
         verbose_name_plural = 'Affaires'
+        ordering = ('-created_at',)
         
         
 

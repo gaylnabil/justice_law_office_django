@@ -1,3 +1,4 @@
+from django.db.models import Value
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
@@ -7,7 +8,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from clients.models import Client
-from django.contrib.postgres.search import SearchVector, SearchQuery, TrigramSimilarity
+from django.contrib.postgres.search import SearchRank, SearchVector, SearchQuery, TrigramSimilarity
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q, Count
 from django.template.defaultfilters import slugify
@@ -37,7 +38,8 @@ def justice_clients_all(request):
         redirect_to = reverse('justice_clients', kwargs={
             'page': 1,
             'city': city,
-            'query': slugify(query)
+            'query': query
+            # 'query': slugify(query)
             }
         )
         
@@ -72,15 +74,40 @@ def justice_clients(request, page=1, city='all', query='all-list'):
     
     # print('justice_clients => ', query, "Results : ", search, " => City :", city)
     
-    q = Q(search__icontains=search) & Q(search__icontains=city)
-    if city == 'all':
-       q  = Q(search__icontains=search)
+    # q = Q(search__icontains=search) & Q(search__icontains=city) 
+    # if city == 'all':
+    #     q = Q(search__icontains=search)
     
-    # total = Client.objects.all().count()
-    clients = Client.objects.annotate(
-        search=SearchVector('nom', 'prenom', 'company','ville') 
-            ).filter(q)
+    query = SearchQuery(search, search_type='phrase')
+    for word in search.split(' '):
+        if query is None:
+            query = SearchQuery(word, search_type='phrase')
+        else:
+            query |= SearchQuery(word, search_type='phrase')
 
+    # query = SearchQuery(unquote(search))
+    
+    vector =    SearchVector('nom') + \
+                SearchVector('prenom') 
+        
+    if city != 'all':
+        query &= SearchQuery(city, search_type='phrase')
+        
+        vector += SearchVector('ville')
+        
+    
+
+    print("Query: ", query, " => search : ", search)
+    
+    print('vector: ', vector)
+
+    clients = Client.objects.annotate(rank=SearchRank(
+        vector, query)).filter().order_by('-rank')
+
+    # total = Client.objects.all().count()
+    if city == 'all' and search == '':
+        clients = Client.objects.annotate(search=vector)
+        
     # print('search : ', search)
     search = 'all-list' if search == '' else search
     
@@ -103,6 +130,7 @@ def justice_clients(request, page=1, city='all', query='all-list'):
         'breadcrumb': title,
         'clients': clients,
         'page': clients.number,
+        'url_pagination': 'justice_clients',
         'query': search,
         'cities': VILLES,
         'city':  city,

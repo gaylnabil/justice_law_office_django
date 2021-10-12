@@ -40,7 +40,7 @@ def justice_adversaires_all(request):
         redirect_to = reverse('justice_adversaires', kwargs={
             'page': 1,
             'city': city,
-            'query': slugify(query)
+            'query': query
         }
         )
     except:
@@ -73,13 +73,20 @@ def justice_adversaires(request, page=1, city='all', query='all-list'):
 
     # print('justice_adversaires => ', query, "Results : ", search, " => City :", city)
 
-    q = Q(search__icontains=search) & Q(search__icontains=city)
+    query = SearchQuery(search) & SearchQuery(city)
     if city == 'all':
-       q = Q(search__icontains=search)
+        query = SearchQuery(search)
+    vector = SearchVector('nom', 'prenom', 'company', 'ville')
 
-    adversaires = Adversaire.objects.annotate(
-        search=SearchVector('nom', 'prenom', 'company', 'ville')
-    ).filter(q)
+    print("Query: ", query, " => search : ", search)
+
+    print('vector: ', vector)
+    
+    adversaires = Adversaire.objects.annotate(search=vector).filter(search=query)
+
+    # total = Client.objects.all().count()
+    if city == 'all' and search == '':
+        adversaires = Adversaire.objects.annotate(search=vector)
 
     # print('search : ', search)
     search = 'all-list' if search == '' else search
@@ -100,6 +107,7 @@ def justice_adversaires(request, page=1, city='all', query='all-list'):
         'breadcrumb': title,
         'adversaires': adversaires,
         'page': adversaires.number,
+        'url_pagination': 'justice_adversaires',
         'query': search,
         'cities': VILLES,
         'city':  city,
@@ -209,7 +217,7 @@ def justice_avocats_adversaires_all(request):
         redirect_to = reverse('justice_avocats_adversaires', kwargs={
             'page': 1,
             'city': city,
-            'query': slugify(query)
+            'query': query
         }
         )
 
@@ -243,16 +251,23 @@ def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
 
     print('justice_avocats_adversaires => ', query,
           "Results : ", search, " => City :", city)
-
-    q = Q(search__icontains=search) & Q(search__icontains=city)
+          
+          
+    query = SearchQuery(search) & SearchQuery(city)
     if city == 'all':
-       q = Q(search__icontains=search)
+        query = SearchQuery(search)
+    vector = SearchVector('nom', 'prenom', 'cabinet', 'ville')
 
-    avocats_advs = AvocatAdversaire.objects.annotate(
-        search=SearchVector('nom', 'prenom', 'cabinet', 'ville')
-    ).filter(q)
+    print("Query: ", query, " => search : ", search)
 
-    print('search : ', search)
+    print('vector: ', vector)
+
+    avocats_advs = AvocatAdversaire.objects.annotate(search=vector).filter(search=query)
+    
+    # total = Client.objects.all().count()
+    if city == 'all' and search == '':
+        avocats_advs = AvocatAdversaire.objects.annotate(search=vector)
+
     search = 'all-list' if search == '' else search
 
     paginator = Paginator(avocats_advs, AVOCAT_ADVERSARIES_PER_PAGE)
@@ -271,6 +286,7 @@ def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
         'breadcrumb': title,
         'avocats_advs': avocats_advs,
         'page': avocats_advs.number,
+        'url_pagination': 'justice_avocats_adversaires',
         'query': search,
         'cities': VILLES,
         'city':  city,

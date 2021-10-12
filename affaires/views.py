@@ -4,13 +4,16 @@ from django.utils.translation import gettext_lazy as _
 from affaires.models import AvocatCharge, Departement
 from affaires.forms import AvocatChargeForm, DepartementForm
 from django.urls import reverse
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.postgres.search import SearchVector, SearchQuery, TrigramSimilarity
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from django.db.models import Q, Count
+from django.db.models import Q, Count, query_utils
 from django.template.defaultfilters import slugify
+from django.core import serializers
+from django.core.serializers.json import DjangoJSONEncoder
+from urllib.parse import unquote
 
 import string
 import re
@@ -73,14 +76,21 @@ def justice_avocats_charges(request, page=1, city='all', query='all-list'):
     print('justice_avocats_charges => ', query,
           "Results : ", search, " => City :", city)
 
-    q = Q(search__icontains=search) & Q(search__icontains=city)
+    query = SearchQuery(search) & SearchQuery(city)
     if city == 'all':
-       q = Q(search__icontains=search)
+        query = SearchQuery(search)
+    vector = SearchVector('nom', 'prenom', 'ville')
 
-    avocats_charges = AvocatCharge.objects.annotate(
-        search=SearchVector('nom', 'prenom', 'ville')
-    ).filter(q)
+    print("Query: ", query, " => search : ", search)
 
+    print('vector: ', vector)
+
+    # total = Client.objects.all().count()
+    if city == 'all' and search == '':
+        avocats_charges = AvocatCharge.objects.annotate(search=vector)
+    else:
+        avocats_charges = AvocatCharge.objects.annotate(search=vector).filter(search=query)
+    
     print('search : ', search)
     search = 'all-list' if search == '' else search
 
@@ -210,7 +220,7 @@ def departements_all(request):
 
         redirect_to = reverse('departements_views', kwargs={
             'page': 1,
-            'query': slugify(query)
+            'query': query
         })
 
     except:
@@ -220,7 +230,7 @@ def departements_all(request):
     return HttpResponseRedirect(redirect_to)
     
     
-def departements_views(request, page=1, city='all', query='all-list'):
+def departements_views(request, page=1, query='all-list'):
 
     # user = request.user
     # if user and user.is_authenticated:
@@ -237,14 +247,29 @@ def departements_views(request, page=1, city='all', query='all-list'):
     # Remove special characters from the string
     search = re.sub(pattern, ' ', search)
 
-    print('departements_views => ', query,
-          "Results : ", search)
+    print('departements_views => ', query, "; Results : ", search)
+    
+    vector = SearchVector('nom_depart')
+    
+    multi_search = None
+    for word in search.split(' '):
+        if multi_search is None:
+            multi_search = Q(search__contains=word)
+        else:
+            multi_search |= Q(search__contains=word)
+    
+    
+    # query = SearchQuery(unquote(search))
 
-    q = Q(search__icontains=search)
+    print("multi_search: ", multi_search,
+          " => search.split(' ') : ", search.split(' '))
 
-    departements = Departement.objects.annotate(
-        search=SearchVector('nom_depart')
-    ).filter(q)
+    print('vector: ', vector)
+
+    departements = Departement.objects.annotate(search=vector).filter(multi_search)
+    # total = Client.objects.all().count()
+    if search == '':
+        departements = Departement.objects.annotate(search=vector)
 
     print('search : ', search)
     search = 'all-list' if search == '' else search
@@ -272,6 +297,7 @@ def departements_views(request, page=1, city='all', query='all-list'):
         'breadcrumb': title,
         'departements': departements,
         'page': departements.number,
+        'url_pagination': 'departements_views',
         'query': search,
         'url_link': 'departements_all',
         'form': form,
@@ -283,7 +309,15 @@ def departements_views(request, page=1, city='all', query='all-list'):
 
     return render(request=request, template_name=template_name, context=context)
     
+
+def departement_data(request, id=0):
     
+    departement = Departement.objects.filter(pk=id).first()
+    if departement:
+        return departement
+
+    return None
+
 def departement_form(request, id=0):
     value = ""
     form = None
@@ -296,10 +330,15 @@ def departement_form(request, id=0):
             form = DepartementForm()
         else:
             value = _("Modification de Departement")
-            departement = AvocatCharge.objects.filter(pk=id).first()
-            form = DepartementForm(instance=departement)
+            departement = Departement.objects.filter(pk=id).first()
+            data = Departement.objects.filter(pk=id).values().first()
+            msg_log = f"Pop up Editing of 'Departement' {departement}"
+            logger.info(msg_log)
+            
+            print('data: ', data)
+            
+            return JsonResponse({'departement': data}, safe=False)
 
-            msg_log = "Page Editing of 'Departement'"
 
     print('request.method: ', request.method, " => id : ", id)
 
@@ -350,7 +389,7 @@ def departement_form(request, id=0):
 
 
 def departement_delete(request, id=0):
-    departement = AvocatCharge.objects.filter(pk=id).first()
+    departement = Departement.objects.filter(pk=id).first()
     value = _("Le Departement")
     success = _('a été supprimer avec succés ...')
 

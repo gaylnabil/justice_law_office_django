@@ -17,7 +17,7 @@
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
         <div class="flex mt-5 sm:mt-0">
-            <a href="javascript:;" data-toggle="modal" data-target="#header-footer-modal-preview"
+            <a href="javascript:;" data-toggle="modal" data-target="#header-footer-modal-preview" id="new-depart-id"
                 class="btn btn-primary shadow-md mr-2"> <i data-feather="box" class="w-4 h-4 mr-2"></i>
                 {{ trans_new_department|title }}
             </a>
@@ -77,7 +77,7 @@
         
                     <tr class="intro-x">
                         <td class="w-20">
-                            <a href="{% url 'departement_update' dept.pk %}" class="font-medium whitespace-nowrap text-theme-1">{% firstof dept.pk %}</a>
+                            <a href="javascript:;" class="font-medium whitespace-nowrap text-theme-1">{% firstof dept.pk %}</a>
                         </td>
                         <td class="text-center w-full">
                             <a href="#" class="font-medium whitespace-nowrap text-theme-1">{% firstof dept.nom_depart %}</a>
@@ -85,7 +85,7 @@
         
                         <td class="table-report__action w-56">
                             <div class="flex justify-center items-center">
-                                <a id="{{ dept.pk }}" class="flex items-center mr-3 btn-edit" data-url="{% url 'departement_update' dept.pk %"} href="javascript:;"> <i data-feather="check-square"
+                                <a id="{{ dept.pk }}" class="flex items-center mr-3 btn-edit" data-url="{% url 'departement_update' dept.pk %}" data-toggle="modal" data-target="#header-footer-modal-preview" href="javascript:;"> <i data-feather="check-square"
                                         class="w-4 h-4 mr-1"></i> {{ trans_edit }} 
                                 </a>
                                 <a class="flex items-center text-theme-6 btn-delete" href="javascript:;" data-toggle="modal"
@@ -101,7 +101,7 @@
         </div>
         <!-- END: Data List -->
         <!-- BEGIN: Pagination -->
-        {% include 'views_include/pagination.html' with objects=departements %}
+        {% include 'views_include/pagination_search.html' with url_pagination=url_pagination objects=departements %}
         <!-- END: Pagination -->
     </div>
 </div>
@@ -118,7 +118,7 @@
         <div id="header-footer-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <form action="{% url 'departement_create' %}" method="POST">
+                    <form id="form-action" action="{% url 'departement_create' %}" method="POST">
                         <!-- BEGIN: Modal Header -->
                         <div class="modal-header">
                             <h2 class="font-medium text-base mr-auto">

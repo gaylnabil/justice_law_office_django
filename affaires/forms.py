@@ -25,6 +25,7 @@ class DepartementForm(forms.ModelForm):
         
         model = Departement
         fields = '__all__'
+        exclude = ("created_at", "updated_at")
         
         labels = {
             # TODO: Define fields here

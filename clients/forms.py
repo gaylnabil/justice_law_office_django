@@ -44,7 +44,9 @@ class ClientForm(PersonMixinForm):
         
 
     def clean_company(self):
-        return self.cleaned_data['company'].upper()
+        value = self.cleaned_data['company']
+        if value:
+            return value.upper()
     class Meta:
         """Meta definition for Clientform."""
 

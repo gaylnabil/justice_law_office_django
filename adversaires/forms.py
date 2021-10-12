@@ -36,7 +36,6 @@ class AdversaireForm(PersonMixinForm):
         value = self.cleaned_data['company']
         if value:
             return value.upper()
-        return value
     class Meta:
         """Meta definition for Adversaireform."""
 
