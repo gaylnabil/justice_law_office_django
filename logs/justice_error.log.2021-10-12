@@ -1,0 +1,1576 @@
+2021-10-11 12:02:42,716: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3330, 140610518382336, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 349, in departement_form
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: affaires/departements/form.html
+2021-10-11 12:03:02,485: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3330, 140610518382336, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 349, in departement_form
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: affaires/departements/form.html
+2021-10-11 12:11:42,922: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3868, 140465312487168, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 96, in __call__
+    response = self.process_response(request, response)
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'AvocatCharge' object has no attribute 'get'
+2021-10-11 12:13:15,371: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3911, 140047981422336, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/utils/deprecation.py", line 96, in __call__
+    response = self.process_response(request, response)
+  File "/usr/lib/python3/dist-packages/django/middleware/clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'AvocatCharge' object has no attribute 'get'
+2021-10-11 13:16:24,174: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1679, 139877476460288, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 311, in departement_form
+    return JsonResponse({'departement': departement_data(request, id)})
+  File "/usr/lib/python3/dist-packages/django/http/response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/django/core/serializers/json.py", line 104, in default
+    return super().default(o)
+  File "/usr/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type AvocatCharge is not JSON serializable
+2021-10-11 13:20:22,405: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1758, 139769286883072, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 317, in departement_form
+    return JsonResponse({serialized_obj})
+  File "/usr/lib/python3/dist-packages/django/http/response.py", line 551, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2021-10-11 13:20:55,045: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 1812, 139625843341056, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 314, in departement_form
+    serialized = serializers.serialize(
+  File "/usr/lib/python3/dist-packages/django/core/serializers/__init__.py", line 128, in serialize
+    s.serialize(queryset, **options)
+  File "/usr/lib/python3/dist-packages/django/core/serializers/base.py", line 90, in serialize
+    for count, obj in enumerate(queryset, start=1):
+TypeError: 'Departement' object is not iterable
+2021-10-11 13:28:44,752: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2251, 140219116234496, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 314, in departement_form
+    serialized = serializers.serialize(
+TypeError: serialize() missing 1 required positional argument: 'queryset'
+2021-10-11 13:28:58,982: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2251, 140219105482496, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 314, in departement_form
+    serialized = serializers.serialize(
+TypeError: serialize() missing 1 required positional argument: 'queryset'
+2021-10-11 13:41:13,113: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2892, 139767505327872, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 313, in departement_form
+    serialized_obj = serializers.serialize(
+  File "/usr/lib/python3/dist-packages/django/core/serializers/__init__.py", line 127, in serialize
+    s = get_serializer(format)()
+  File "/usr/lib/python3/dist-packages/django/core/serializers/__init__.py", line 98, in get_serializer
+    raise SerializerDoesNotExist(format)
+django.core.serializers.base.SerializerDoesNotExist: 'JSONL'
+2021-10-11 13:45:53,875: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2982, 139935766796032, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 311, in departement_form
+    Departement.objects.filter(pk=id).first().values())
+AttributeError: 'Departement' object has no attribute 'values'
+2021-10-11 13:46:44,064: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2999, 140188803053312, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 319, in departement_form
+    return JsonResponse(values, safe=False)
+  File "/usr/lib/python3/dist-packages/django/http/response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/django/core/serializers/json.py", line 104, in default
+    return super().default(o)
+  File "/usr/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Departement is not JSON serializable
+2021-10-11 13:55:21,801: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3163, 140419446777600, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 316, in departement_form
+    "json", list(departement), fields=('pk', 'nom_depart'), ensure_ascii=True)
+TypeError: 'Departement' object is not iterable
+2021-10-11 13:55:48,998: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3178, 140017852081920, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 319, in departement_form
+    return JsonResponse(data)
+  File "/usr/lib/python3/dist-packages/django/http/response.py", line 551, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2021-10-11 13:59:25,028: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3228, 140260075894528, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 315, in departement_form
+    data = serializers.serialize(
+  File "/usr/lib/python3/dist-packages/django/core/serializers/__init__.py", line 128, in serialize
+    s.serialize(queryset, **options)
+  File "/usr/lib/python3/dist-packages/django/core/serializers/base.py", line 94, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'dict' object has no attribute '_meta'
+2021-10-11 14:00:11,574: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3273, 140041743369984, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 316, in departement_form
+    return JsonResponse(departement.__dict__, safe=False)
+  File "/usr/lib/python3/dist-packages/django/http/response.py", line 558, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+  File "/usr/lib/python3.9/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.9/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.9/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/django/core/serializers/json.py", line 104, in default
+    return super().default(o)
+  File "/usr/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ModelState is not JSON serializable
+2021-10-11 14:07:09,384: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3434, 140481182816000, Internal Server Error: /departements/1/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 320, in departement_form
+    print(departement.data)
+AttributeError: 'Departement' object has no attribute 'data'
+2021-10-11 15:22:19,442: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4901, 140490162419456, Internal Server Error: /clients/2/edit
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 147, in client_form
+    if form.is_valid():
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/usr/lib/python3/dist-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/forms.py", line 47, in clean_company
+    return self.cleaned_data['company'].upper()
+AttributeError: 'NoneType' object has no attribute 'upper'
+2021-10-11 15:36:30,388: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5149, 139977358612224, Internal Server Error: /clients/page/1/city/all/search/fadi-amine
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 82, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'startwith' for SearchVectorField or join on the field not permitted, perhaps you meant startswith or istartswith?
+2021-10-11 15:37:07,791: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5159, 140087848974080, Internal Server Error: /clients/page/1/city/all/search/fadi-amine
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 82, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'isstartwith' for SearchVectorField or join on the field not permitted, perhaps you meant istartswith or startswith or iendswith?
+2021-10-11 15:41:29,638: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5266, 140637041919744, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 83, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1101, in build_lookup
+    lhs = self.try_transform(lhs, name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'icontains' for SearchVectorField or join on the field not permitted, perhaps you meant icontains or contains?
+2021-10-11 15:41:54,582: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5302, 139920533268224, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 83, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'trigram_similar' for SearchVectorField or join on the field not permitted.
+2021-10-11 15:54:53,312: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5613, 140075112011520, Internal Server Error: /clients/page/1/city/all/search/amine
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 86, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'search' for SearchVectorField or join on the field not permitted.
+2021-10-11 15:59:46,867: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5740, 140628009793280, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 87, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1187, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable SearchQuery object
+2021-10-11 16:00:21,221: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5754, 140021503883008, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 87, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'search_icontains' into field. Choices are: adresse, affaire, company, correspondence, created_at, email, gsm, id, nom, observation, prenom, search, sexe, slug, status_juridique, tel, type_client, updated_at, ville
+2021-10-11 16:00:25,084: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5754, 140021503883008, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 87, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'search_icontains' into field. Choices are: adresse, affaire, company, correspondence, created_at, email, gsm, id, nom, observation, prenom, search, sexe, slug, status_juridique, tel, type_client, updated_at, ville
+2021-10-11 16:11:31,236: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5996, 139798559188736, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 85, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'nom_iscontains' into field. Choices are: adresse, affaire, company, correspondence, created_at, email, gsm, id, nom, observation, prenom, search, sexe, slug, status_juridique, tel, type_client, updated_at, ville
+2021-10-11 16:11:53,371: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6006, 140472419297024, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 85, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1251, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'iscontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2021-10-11 16:12:04,166: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6013, 140308009019136, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 85, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'iscontains' for SearchVectorField or join on the field not permitted, perhaps you meant icontains or contains?
+2021-10-11 16:12:38,492: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6029, 139723922310912, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 85, in justice_clients
+    clients = Client.objects.annotate(search=SearchVector(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1310, in _add_q
+    child_clause, needed_inner = self._add_q(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1207, in build_filter
+    condition = self.build_lookup(lookups, reffed_expression, value)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1110, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'iscontains' for SearchVectorField or join on the field not permitted, perhaps you meant icontains or contains?
+2021-10-11 16:26:51,342: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6320, 139630296606464, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 81, in justice_clients
+    query = SearchQuery()
+TypeError: __init__() missing 1 required positional argument: 'value'
+2021-10-11 16:33:14,544: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6352, 140283809875712, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 81, in justice_clients
+    query = SearchQuery(search)
+TypeError: __init__() missing 1 required positional argument: 'value'
+2021-10-11 16:33:25,622: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6362, 140270041159424, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1522, in transform
+    return self.try_transform(wrapped, name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'contains' for CharField or join on the field not permitted, perhaps you meant contains or icontains?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 89, in justice_clients
+    clients = Client.objects.annotate(search=vector).filter(search=query)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1056, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 999, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 62, in resolve_expression
+    resolved = super().resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 603, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 514, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize, simple_col)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1610, in resolve_ref
+    join_info.transform_function(targets[0], final_alias)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1526, in transform
+    raise last_field_exception
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1503, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1451, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'contains' into field. Join on 'nom' not permitted.
+2021-10-11 16:33:38,275: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6392, 140451438835456, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1522, in transform
+    return self.try_transform(wrapped, name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'icontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 89, in justice_clients
+    clients = Client.objects.annotate(search=vector).filter(search=query)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1056, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 999, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 62, in resolve_expression
+    resolved = super().resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 603, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 514, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize, simple_col)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1610, in resolve_ref
+    join_info.transform_function(targets[0], final_alias)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1526, in transform
+    raise last_field_exception
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1503, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1451, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'icontains' into field. Join on 'nom' not permitted.
+2021-10-11 16:39:32,677: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6484, 140370834687744, Internal Server Error: /clients/page/1/city/all/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...e", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 97, in justice_clients
+    clients = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...e", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2021-10-12 12:02:49,912: ERROR [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_all:227], affaires.views, views, 2329, 140384898381568, Error Avocats charges Page !!!
+Traceback (most recent call last):
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 220, in departements_all
+    redirect_to = reverse('departements_views', kwargs={
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'departements_views' with keyword arguments '{'page': 1, 'query': ''}' not found. 1 pattern(s) tried: ['departements/page/(?P<page>[0-9]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 12:02:50,000: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2329, 140384898381568, Internal Server Error: /departements/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 229, in departements_all
+    return HttpResponseRedirect(redirect_to)
+UnboundLocalError: local variable 'redirect_to' referenced before assignment
+2021-10-12 12:03:01,187: ERROR [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_all:227], affaires.views, views, 2329, 140384898381568, Error Avocats charges Page !!!
+Traceback (most recent call last):
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 220, in departements_all
+    redirect_to = reverse('departements_views', kwargs={
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'departements_views' with keyword arguments '{'page': 1, 'query': ''}' not found. 1 pattern(s) tried: ['departements/page/(?P<page>[0-9]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 12:03:01,234: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2329, 140384898381568, Internal Server Error: /departements/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 229, in departements_all
+    return HttpResponseRedirect(redirect_to)
+UnboundLocalError: local variable 'redirect_to' referenced before assignment
+2021-10-12 12:03:08,542: ERROR [/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py: departements_all:227], affaires.views, views, 2329, 140384898381568, Error Avocats charges Page !!!
+Traceback (most recent call last):
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 220, in departements_all
+    redirect_to = reverse('departements_views', kwargs={
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'departements_views' with keyword arguments '{'page': 1, 'query': ''}' not found. 1 pattern(s) tried: ['departements/page/(?P<page>[0-9]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 12:03:08,599: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2329, 140384898381568, Internal Server Error: /departements/
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 229, in departements_all
+    return HttpResponseRedirect(redirect_to)
+UnboundLocalError: local variable 'redirect_to' referenced before assignment
+2021-10-12 12:14:16,218: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6476, 140532324718336, Internal Server Error: /departements/create
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 377, in departement_form
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: affaires/departements/form.html
+2021-10-12 12:15:27,164: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6655, 140617753470720, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 299, in departements_views
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 188, in render
+    return template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_clients' with arguments '(2, '', 'all-list')' not found. 1 pattern(s) tried: ['clients/page/(?P<page>[0-9]+)/city/(?P<city>[^/]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 12:15:46,669: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6655, 140617742718720, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 299, in departements_views
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 188, in render
+    return template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'justice_clients' with arguments '(2, '', 'all-list')' not found. 1 pattern(s) tried: ['clients/page/(?P<page>[0-9]+)/city/(?P<city>[^/]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 12:20:22,363: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6799, 140514744104704, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 300, in departements_views
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 188, in render
+    return template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'departements_views' with arguments '(2, '', 'all-list')' not found. 1 pattern(s) tried: ['departements/page/(?P<page>[0-9]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 12:21:07,967: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 6799, 140514744104704, Internal Server Error: /departements/page/1/search/all-list
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 300, in departements_views
+    return render(request=request, template_name=template_name, context=context)
+  File "/usr/lib/python3/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/lib/python3/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/lib/python3/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/loader_tags.py", line 188, in render
+    return template.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/usr/lib/python3/dist-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/usr/lib/python3/dist-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/lib/python3/dist-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'departements_views' with arguments '(2, '', 'all-list')' not found. 1 pattern(s) tried: ['departements/page/(?P<page>[0-9]+)/search/(?P<query>[-a-zA-Z0-9_]+)$']
+2021-10-12 14:03:44,208: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2112, 140015818032896, Internal Server Error: /departements/page/1/search/pré
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 270, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2021-10-12 14:04:03,594: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2112, 140015818032896, Internal Server Error: /departements/page/1/search/pre
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 270, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2021-10-12 14:07:16,752: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 2318, 140394069993216, Internal Server Error: /departements/page/1/search/Précontentieux n
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 271, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function replace(tsquery, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE((p...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2021-10-12 14:59:48,962: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3054, 140327855847168, Internal Server Error: /departements/page/1/search/Précontentieux nab
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1522, in transform
+    return self.try_transform(wrapped, name)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1149, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'icontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 261, in departements_views
+    departements = Departement.objects.annotate(search=vector).filter(search=search)
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1056, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 999, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 62, in resolve_expression
+    resolved = super().resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 603, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 514, in resolve_expression
+    return query.resolve_ref(self.name, allow_joins, reuse, summarize, simple_col)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1610, in resolve_ref
+    join_info.transform_function(targets[0], final_alias)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1526, in transform
+    raise last_field_exception
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1503, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1451, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'icontains' into field. Join on 'nom_depart' not permitted.
+2021-10-12 15:03:02,982: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3177, 139921976264448, Internal Server Error: /departements/page/1/search/nab
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 255, in departements_views
+    query = SearchQuery(search, search_type='websearch')
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 143, in __init__
+    raise ValueError("Unknown search_type argument '%s'." % search_type)
+ValueError: Unknown search_type argument 'websearch'.
+2021-10-12 15:03:36,376: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3197, 140445291226880, Internal Server Error: /departements/page/1/search/nab
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 255, in departements_views
+    query = SearchQuery(search, search_type='websearch')
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 143, in __init__
+    raise ValueError("Unknown search_type argument '%s'." % search_type)
+ValueError: Unknown search_type argument 'websearch'.
+2021-10-12 15:05:01,783: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3311, 140367711864576, Internal Server Error: /departements/page/1/search/Précontentieux n
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.SyntaxError: syntax error in tsquery: "Précontentieux n"
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 273, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: syntax error in tsquery: "Précontentieux n"
+
+2021-10-12 15:25:10,468: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 3905, 140394002802432, Internal Server Error: /departements/page/1/search/Précontentieux n
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: function replace(boolean, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE(((...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/affaires/views.py", line 281, in departements_views
+    departements = paginator.page(page)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 70, in page
+    number = self.validate_number(number)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 48, in validate_number
+    if number > self.num_pages:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 97, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/usr/lib/python3/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/lib/python3/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/compiler.py", line 1142, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: function replace(boolean, unknown, unknown) does not exist
+LINE 1: ...t", ''))::text) LIKE '%' || UPPER(REPLACE(REPLACE(REPLACE(((...
+                                                             ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+2021-10-12 16:18:46,874: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4853, 139652459783936, Internal Server Error: /clients/page/1/city/all/search/fadi am
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 95, in justice_clients
+    clients = Client.objects.annotate(rank=SearchRank(vector, query)).order_by('-rank')
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1056, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 999, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 603, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/query_utils.py", line 93, in resolve_expression
+    clause, joins = query._add_q(self, reuse, allow_joins=allow_joins, split_subq=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'search' into field. Choices are: adresse, affaire, company, correspondence, created_at, email, gsm, id, nom, observation, prenom, sexe, slug, status_juridique, tel, type_client, updated_at, ville
+2021-10-12 16:19:36,938: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4897, 140154502592256, Internal Server Error: /clients/page/1/city/all/search/fadi am
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 95, in justice_clients
+    clients = Client.objects.annotate(rank=SearchRank(vector, query)).order_by('-rank')
+  File "/usr/lib/python3/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 1056, in annotate
+    clone.query.add_annotation(annotation, alias, is_summary=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 999, in add_annotation
+    annotation = annotation.resolve_expression(self, allow_joins=True, reuse=None,
+  File "/usr/lib/python3/dist-packages/django/db/models/expressions.py", line 603, in resolve_expression
+    c.source_expressions[pos] = arg.resolve_expression(query, allow_joins, reuse, summarize, for_save)
+  File "/usr/lib/python3/dist-packages/django/db/models/query_utils.py", line 93, in resolve_expression
+    clause, joins = query._add_q(self, reuse, allow_joins=allow_joins, split_subq=False)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'search' into field. Choices are: adresse, affaire, company, correspondence, created_at, email, gsm, id, nom, observation, prenom, sexe, slug, status_juridique, tel, type_client, updated_at, ville
+2021-10-12 16:21:09,211: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 4980, 140584713103104, Internal Server Error: /clients/page/1/city/all/search/samir
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 82, in justice_clients
+    query |= SearchQuery(word)
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 122, in __ror__
+    return self._combine(other, self.BITOR, True)
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 170, in _combine
+    combined = super()._combine(other, connector, reversed)
+  File "/usr/lib/python3/dist-packages/django/contrib/postgres/search.py", line 107, in _combine
+    raise TypeError(
+TypeError: SearchQuery can only be combined with other SearchQuerys, got <class 'NoneType'>.
+2021-10-12 16:36:37,107: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5646, 140248309835520, Internal Server Error: /clients/page/1/city/all/search/fadi amine
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 104, in justice_clients
+    clients = Client.objects.annotate(rank=SearchRank(
+TypeError: __init__() missing 1 required positional argument: 'query'
+2021-10-12 16:37:04,042: ERROR [/usr/lib/python3/dist-packages/django/utils/log.py: log_response:222], django.request, log, 5661, 140182028285696, Internal Server Error: /clients/page/1/city/all/search/fadi amine
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kali/Projects/Python_Projects/justice_law_office_django/clients/views.py", line 104, in justice_clients
+    clients = Client.objects.annotate(rank=SearchRank(
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/usr/lib/python3/dist-packages/django/db/models/sql/query.py", line 1187, in build_filter
+    arg, value = filter_expr
+TypeError: cannot unpack non-iterable CombinedSearchQuery object

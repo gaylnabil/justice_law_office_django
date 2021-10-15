@@ -5,8 +5,7 @@ from clients import views
 
 urlpatterns = [
     path('clients/',  include([
-         path('', views.justice_clients_all, name='justice_clients_all'),
-         path('page/<int:page>/city/<str:city>/search/<str:query>', views.justice_clients, name='justice_clients'),
+         path('', views.justice_clients, name='justice_clients'),
          path('create', views.client_form, name='client_create'),
          path('<int:id>/edit', views.client_form, name='client_update'),
          path('<int:id>/delete', views.client_delete, name='client_delete'),

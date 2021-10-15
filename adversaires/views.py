@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from adversaires.models import Adversaire, AvocatAdversaire
-from django.contrib.postgres.search import SearchVector, SearchQuery, TrigramSimilarity
+from django.contrib.postgres.search import SearchRank, SearchVector, SearchQuery, TrigramSimilarity
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q, Count
 from django.template.defaultfilters import slugify
@@ -72,7 +72,45 @@ def justice_adversaires(request, page=1, city='all', query='all-list'):
     search = re.sub(pattern, ' ', search)
 
     # print('justice_adversaires => ', query, "Results : ", search, " => City :", city)
+    
+    vector = SearchVector('nom_depart')
+    
+    multi_search = SearchQuery(search)
+    
+    for word in search.split(' '):
+        if multi_search is type(None):
+            multi_search = SearchQuery(word)
+        else:
+            multi_search |= SearchQuery(word)
+                
+    if multi_search is type(None):
+        if city != 'all':
+            multi_search = SearchQuery(city)
+    else:
+        if city != 'all':
+            multi_search &= SearchQuery(city)
+    
+    if multi_search is type(None) and city == 'all':
+       adversaires = Adversaire.objects.all()
+    else:
+        adversaires=Adversaire.objects.annotate(search=vector, 
+                                                rank=SearchRank(
+                                                                vector, 
+                                                                multi_search
+                                                                )).filter(search=multi_search).order_by("-rank")
+    
 
+    # query = SearchQuery(unquote(search))
+    print("multi_search: ", multi_search,
+          " => search.split(' ') : ", search.split(' '))
+    
+    if multi_search is None and city == 'all':
+        adversaires = Adversaire.objects.all()
+    else:
+        if city != 'all':
+            multi_search &= SearchQuery(search)
+        
+        
     query = SearchQuery(search) & SearchQuery(city)
     if city == 'all':
         query = SearchQuery(search)

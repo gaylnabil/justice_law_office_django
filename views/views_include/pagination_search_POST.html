@@ -5,24 +5,22 @@
         {% if objects.has_previous %}
     
             <li>
-            
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page=1"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
+                <a class="pagination__link" href="{% url url_pagination 1 query %}"> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
             </li>
             <li>
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.previous_page_number }}"> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
+                <a class="pagination__link" href="{% url url_pagination objects.previous_page_number  query %}"> <i class="w-4 h-4" data-feather="chevron-left"></i> </a>
             </li>
             <!-- <li> <a class="pagination__link" href="">...</a> </li> -->
             {% if objects.number|add:'-2' > 0 %}
                 <li> 
-                    <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.number|add:'-2' }}">
-                    
+                    <a class="pagination__link" href="{% url url_pagination objects.number|add:'-2'  query %}">
                     {{objects.number|add:'-2' }}
                     </a>
                 </li>
             {% endif %}
     
             <li>
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.previous_page_number }}">
+                <a class="pagination__link" href="{% url url_pagination objects.previous_page_number  query %}">
                     {{ objects.previous_page_number }}
                 </a>
             </li>
@@ -34,28 +32,26 @@
         {% if objects.has_next %}
         
             <li>
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.next_page_number }}">
+                <a class="pagination__link" href="{% url url_pagination objects.next_page_number  query %}">
                     {{ objects.next_page_number }}
                 </a>
             </li>
             
             {% if objects.number|add:'2' <= objects.paginator.num_pages %} 
             <li>
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.number|add:'2' }}">
+                <a class="pagination__link" href="{% url url_pagination  objects.number|add:'2'  query %}">
                     {{ objects.number|add:'2' }}
                 </a>
             </li>
             {% endif %}
                 
             <li>
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.next_page_number }}">
-                
+                <a class="pagination__link" href="{% url url_pagination objects.next_page_number  query %}">
                     <i class="w-4 h-4" data-feather="chevron-right"></i>
                 </a>
             </li>
             <li>
-                <a class="pagination__link" href="?{% if query %}query={{ query }}&{% endif %}{% if city %}city={{ city }}&{% endif %}page={{ objects.paginator.num_pages }}">
-                
+                <a class="pagination__link" href="{% url url_pagination objects.paginator.num_pages  query %}">
                     <i class="w-4 h-4" data-feather="chevrons-right"></i>
                 </a>
             </li>

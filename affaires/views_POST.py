@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.postgres.search import SearchRank, SearchVector, SearchQuery, TrigramSimilarity
+from django.contrib.postgres.search import SearchVector, SearchQuery, TrigramSimilarity
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q, Count, query_utils
 from django.template.defaultfilters import slugify
@@ -156,7 +156,7 @@ def avocat_charge_form(request, id=0):
         if form.is_valid():
             avocat_charge = form.save(commit=True)
 
-            redirect_to = reverse('justice_avocats_charges', kwargs={
+            redirect_to = reverse('departements_views', kwargs={
                 'page': 1,
                 'city': 'all',
                 'query': slugify(avocat_charge.nom)}
@@ -178,7 +178,7 @@ def avocat_charge_form(request, id=0):
         'active_page': 5,
         'breadcrumb': value,
         'form': form,
-        'url_link': 'departements_views'
+        'url_link': 'departements_all'
     }
     template_name = 'affaires/avocats_charges/form.html'
 
@@ -199,14 +199,38 @@ def avocat_charge_delete(request, id=0):
 
     avocat_charge.delete()
 
-    redirect_to = reverse('justice_avocats_charges')
+    redirect_to = reverse('departements_all')
 
     return HttpResponseRedirect(redirect_to)
     
     
 # Departments Views *************************************
+
+
+# Attorney Charge Views *************************************
+def departements_all(request):
+
+    try:
+        query = 'all-list'
+        
+        if request.method == 'POST':
+            query = request.POST.get('query', default='all-list')
+        
+        query = 'all-list' if query == '' else query
+
+        redirect_to = reverse('departements_views', kwargs={
+            'page': 1,
+            'query': query
+        })
+
+    except:
+      # logger.error(f"Error charges Page; %s", traceback.format_exc())
+      logger.error(f"Error Avocats charges Page !!!", exc_info=True)
+
+    return HttpResponseRedirect(redirect_to)
     
-def departements_views(request):
+    
+def departements_views(request, page=1, query='all-list'):
 
     # user = request.user
     # if user and user.is_authenticated:
@@ -215,10 +239,6 @@ def departements_views(request):
     # query = request.GET.get('query', 'all')
 
     # page = request.GET.get('page', 1)
-    # try:
-    
-    query = request.GET.get('query', default='all-list')
-    page = request.GET.get('page', 1)
 
     query = query.strip()
     search = query if query != 'all-list' else ''
@@ -230,45 +250,26 @@ def departements_views(request):
     print('departements_views => ', query, "; Results : ", search)
     
     vector = SearchVector('nom_depart')
-    multi_search = None
-    if search != '':
-        multi_search = SearchQuery(search)
     
-        for word in search.split(' '):
-            if multi_search is type(None):
-                multi_search = SearchQuery(word)
-            else:
-                multi_search |= SearchQuery(word)
-
-    if multi_search is None:
-       departements = Departement.objects.all()
-    else:
-        departements = Departement.objects.annotate(search=vector,
-                                                  rank=SearchRank(
-                                                      vector,
-                                                      multi_search
-                                                  )).filter(search=multi_search).order_by("-rank")
-
-    # vector = SearchVector('nom_depart')
-    # multi_search = None
-    # for word in search.split(' '):
-    #     if multi_search is None:
-    #         multi_search = Q(search__icontains=word)
-    #     else:
-    #         multi_search |= Q(search__icontains=word)
+    multi_search = Q(search__icontains=search)
+    for word in search.split(' '):
+        if multi_search is None:
+            multi_search = Q(search__icontains=word)
+        else:
+            multi_search |= Q(search__icontains=word)
     
     
-    # # query = SearchQuery(unquote(search))
+    # query = SearchQuery(unquote(search))
 
-    # print("multi_search: ", multi_search,
-    #       " => search.split(' ') : ", search.split(' '))
+    print("multi_search: ", multi_search,
+          " => search.split(' ') : ", search.split(' '))
 
-    # print('vector: ', vector)
+    print('vector: ', vector)
 
-    # departements = Departement.objects.annotate(search=vector).filter(multi_search)
-    # # total = Client.objects.all().count()
-    # if search == '':
-    #     departements = Departement.objects.annotate(search=vector)
+    departements = Departement.objects.annotate(search=vector).filter(multi_search)
+    # total = Client.objects.all().count()
+    if search == '':
+        departements = Departement.objects.annotate(search=vector)
 
     print('search : ', search)
     search = 'all-list' if search == '' else search
@@ -298,7 +299,7 @@ def departements_views(request):
         'page': departements.number,
         'url_pagination': 'departements_views',
         'query': search,
-        'url_link': 'departements_views',
+        'url_link': 'departements_all',
         'form': form,
         'add_title': _("information de departement"),
         
@@ -307,8 +308,6 @@ def departements_views(request):
     logger.info("Page list of Departements.")
 
     return render(request=request, template_name=template_name, context=context)
-    # except:
-    #     return logger.error(f"Error Departements Page !!!", exc_info=True)
     
 
 def departement_data(request, id=0):
@@ -358,7 +357,10 @@ def departement_form(request, id=0):
         if form.is_valid():
             departement = form.save(commit=True)
 
-            redirect_to = f"{reverse('departements_views')}?query={departement}"
+            redirect_to = reverse('departements_views', kwargs={
+                'page': 1,
+                'query': slugify(departement.nom_depart)}
+            )
 
             value = _("Le Departement")
 
@@ -376,7 +378,7 @@ def departement_form(request, id=0):
         'active_page': 5,
         'breadcrumb': value,
         'form': form,
-        'url_link': 'departements_views',
+        'url_link': 'departements_all',
      
     }
     template_name = 'affaires/departements/form.html'
@@ -398,6 +400,6 @@ def departement_delete(request, id=0):
 
     departement.delete()
 
-    redirect_to = reverse('departements_views')
+    redirect_to = reverse('departements_all')
 
     return HttpResponseRedirect(redirect_to)
