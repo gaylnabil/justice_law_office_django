@@ -146,11 +146,7 @@ def client_form(request, id=0):
             # user = form.save()
             # redirect_to = reverse('justice_clients')
             
-            redirect_to = reverse('justice_clients', kwargs={
-                'page': 1,
-                'city': 'all',
-                'query': client.nom}
-                )
+            redirect_to = reverse('justice_clients')
                 
             value = _('Le Client')
             

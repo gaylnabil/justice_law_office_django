@@ -29,33 +29,8 @@ AVOCAT_CHARGE_PER_PAGE = 3
 DEPARTEMENT_PER_PAGE = 3
 
 # Attorney Charge Views *************************************
-def justice_avocats_charges_all(request):
 
-    try:
-        query = 'all-list'
-        city = 'all'
-        if request.method == 'POST':
-
-            query = request.POST.get('query', default='all-list')
-            city = request.POST.get('city', default='all')
-
-        query = 'all-list' if query == '' else query
-
-        redirect_to = reverse('justice_avocats_charges', kwargs={
-            'page': 1,
-            'city': city,
-            'query': slugify(query)
-        }
-        )
-
-    except:
-      # logger.error(f"Error charges Page; %s", traceback.format_exc())
-      logger.error(f"Error Avocats charges Page !!!", exc_info=True)
-
-    return HttpResponseRedirect(redirect_to)
-
-
-def justice_avocats_charges(request, page=1, city='all', query='all-list'):
+def justice_avocats_charges(request):
 
     # user = request.user
     # if user and user.is_authenticated:
@@ -64,63 +39,82 @@ def justice_avocats_charges(request, page=1, city='all', query='all-list'):
     # query = request.GET.get('query', 'all')
 
     # page = request.GET.get('page', 1)
-
-    query = query.strip()
-    search = query if query != 'all-list' else ''
-    print(" 2- City :", city)
-    # Create a regex pattern to match all special characters in string
-    pattern = r'[' + string.punctuation + ']'
-    # Remove special characters from the string
-    search = re.sub(pattern, ' ', search)
-
-    print('justice_avocats_charges => ', query,
-          "Results : ", search, " => City :", city)
-
-    query = SearchQuery(search) & SearchQuery(city)
-    if city == 'all':
-        query = SearchQuery(search)
-    vector = SearchVector('nom', 'prenom', 'ville')
-
-    print("Query: ", query, " => search : ", search)
-
-    print('vector: ', vector)
-
-    # total = Client.objects.all().count()
-    if city == 'all' and search == '':
-        avocats_charges = AvocatCharge.objects.annotate(search=vector)
-    else:
-        avocats_charges = AvocatCharge.objects.annotate(search=vector).filter(search=query)
-    
-    print('search : ', search)
-    search = 'all-list' if search == '' else search
-
-    paginator = Paginator(avocats_charges, AVOCAT_CHARGE_PER_PAGE)
-
     try:
-        avocats_charges = paginator.page(page)
-    except PageNotAnInteger:
-        avocats_charges = paginator.page(page)
-    except EmptyPage:
-        avocats_charges = paginator.page(page)
-
-    title = _('list des avocats charges')
-    context = {
-        'title': title + f' ({page})',
-        'active_page': 5,
-        'breadcrumb': title,
-        'avocats_charges': avocats_charges,
-        'page': avocats_charges.number,
-        'query': search,
-        'cities': VILLES,
-        'city':  city,
-        'url_link': 'justice_avocats_charges_all'
-    }
-    template_name = 'affaires/avocats_charges/index.html'
-
-    logger.info("Page list of Avocats charges.")
-
-    return render(request=request, template_name=template_name, context=context)
-
+        query = request.GET.get('query', default='all-list')
+        city = request.GET.get('city', default='all')
+        page = request.GET.get('page', 1)
+        
+        query = query.strip()
+        search = query if query != 'all-list' else ''
+        print(" 2- City :", city)
+        # Create a regex pattern to match all special characters in string
+        pattern = r'[' + string.punctuation + ']'
+        # Remove special characters from the string
+        search = re.sub(pattern, ' ', search)
+    
+        print('justice_avocats_charges => ', query,
+              "Results : ", search, " => City :", city)
+    
+    
+        vector = SearchVector('nom', 'prenom')
+        multi_search = None
+        if search != '':
+            multi_search = SearchQuery(search)
+        
+            for word in search.split(' '):
+                if multi_search is type(None):
+                    multi_search = SearchQuery(word)
+                else:
+                    multi_search |= SearchQuery(word)
+    
+        if multi_search is None:
+            if city != 'all':
+                multi_search = SearchQuery(city)
+                vector += SearchVector('ville')
+        else:
+            if city != 'all':
+                multi_search &= SearchQuery(city)
+                vector += SearchVector('ville')
+    
+        if multi_search is None and city == 'all':
+           avocats_charges = AvocatCharge.objects.all()
+        else:
+            avocats_charges = AvocatCharge.objects.annotate(search=vector,
+                                                      rank=SearchRank(
+                                                          vector,
+                                                          multi_search
+                                                      )).filter(search=multi_search).order_by("-rank")
+        search = 'all-list' if search == '' else search
+    
+        paginator = Paginator(avocats_charges, AVOCAT_CHARGE_PER_PAGE)
+    
+        try:
+            avocats_charges = paginator.page(page)
+        except PageNotAnInteger:
+            avocats_charges = paginator.page(page)
+        except EmptyPage:
+            avocats_charges = paginator.page(page)
+    
+        title = _('list des avocats charges')
+        context = {
+            'title': title + f' ({page})',
+            'active_page': 6,
+            'breadcrumb': title,
+            'avocats_charges': avocats_charges,
+            'page': avocats_charges.number,
+            'query': search,
+            'cities': VILLES,
+            'city':  city,
+            'url_link': 'justice_avocats_charges'
+        }
+        template_name = 'affaires/avocats_charges/index.html'
+    
+        logger.info("Page list of Avocats charges.")
+    
+        return render(request=request, template_name=template_name, context=context)
+    except:
+      # logger.error(f"Error charges Page; %s", traceback.format_exc())
+      logger.error(f"Error Avocats charges Page !!!", exc_info=True)
 
 def avocat_charge_form(request, id=0):
     value = ""
@@ -156,11 +150,7 @@ def avocat_charge_form(request, id=0):
         if form.is_valid():
             avocat_charge = form.save(commit=True)
 
-            redirect_to = reverse('justice_avocats_charges', kwargs={
-                'page': 1,
-                'city': 'all',
-                'query': slugify(avocat_charge.nom)}
-            )
+            redirect_to = reverse('justice_avocats_charges')
 
             value = _("L'avocat chargé")
 
@@ -175,10 +165,10 @@ def avocat_charge_form(request, id=0):
 
     context = {
         'title': value,
-        'active_page': 5,
+        'active_page': 6,
         'breadcrumb': value,
         'form': form,
-        'url_link': 'departements_views'
+        'url_link': 'justice_avocats_charges'
     }
     template_name = 'affaires/avocats_charges/form.html'
 

@@ -25,137 +25,92 @@ ADVERSAIRE_PER_PAGE = 3
 AVOCAT_ADVERSARIES_PER_PAGE = 3
 
 
-def justice_adversaires_all(request):
+def justice_adversaires(request):
 
-    try:
-        query = 'all-list'
-        city = 'all'
-        if request.method == 'POST':
-            query = request.POST.get('query', default='all-list')
-            city = request.POST.get('city', default='all')
-            print(" => request.method => City :", city)
-
-        query = 'all-list' if query == '' else query
-
-        redirect_to = reverse('justice_adversaires', kwargs={
-            'page': 1,
-            'city': city,
-            'query': query
-        }
-        )
-    except:
-      # logger.error(f"Error Adversaires Page; %s", traceback.format_exc())
-      logger.error(f"Error Adversaires Page !!!", exc_info=True)
-
-    return HttpResponseRedirect(redirect_to)
-
-
-def justice_adversaires(request, page=1, city='all', query='all-list'):
 
     # user = request.user
     # if user and user.is_authenticated:
     #     return HttpResponseRedirect(reverse('home'))
-
-    # query = request.GET.get('query', 'all')
-
-    # page = request.GET.get('page', 1)
-
-    query = query.strip()
-    print(" 1- City :", city)
-    search = query if query != 'all-list' else ''
-    # city = get_key_dict(dict(VILLES), city)
-
-    print(" 2- City :", city)
-    # Create a regex pattern to match all special characters in string
-    pattern = r'[' + string.punctuation + ']'
-    # Remove special characters from the string
-    search = re.sub(pattern, ' ', search)
-
-    # print('justice_adversaires => ', query, "Results : ", search, " => City :", city)
-    
-    vector = SearchVector('nom_depart')
-    
-    multi_search = SearchQuery(search)
-    
-    for word in search.split(' '):
-        if multi_search is type(None):
-            multi_search = SearchQuery(word)
-        else:
-            multi_search |= SearchQuery(word)
-                
-    if multi_search is type(None):
-        if city != 'all':
-            multi_search = SearchQuery(city)
-    else:
-        if city != 'all':
-            multi_search &= SearchQuery(city)
-    
-    if multi_search is type(None) and city == 'all':
-       adversaires = Adversaire.objects.all()
-    else:
-        adversaires=Adversaire.objects.annotate(search=vector, 
-                                                rank=SearchRank(
-                                                                vector, 
-                                                                multi_search
-                                                                )).filter(search=multi_search).order_by("-rank")
-    
-
-    # query = SearchQuery(unquote(search))
-    print("multi_search: ", multi_search,
-          " => search.split(' ') : ", search.split(' '))
-    
-    if multi_search is None and city == 'all':
-        adversaires = Adversaire.objects.all()
-    else:
-        if city != 'all':
-            multi_search &= SearchQuery(search)
-        
-        
-    query = SearchQuery(search) & SearchQuery(city)
-    if city == 'all':
-        query = SearchQuery(search)
-    vector = SearchVector('nom', 'prenom', 'company', 'ville')
-
-    print("Query: ", query, " => search : ", search)
-
-    print('vector: ', vector)
-    
-    adversaires = Adversaire.objects.annotate(search=vector).filter(search=query)
-
-    # total = Client.objects.all().count()
-    if city == 'all' and search == '':
-        adversaires = Adversaire.objects.annotate(search=vector)
-
-    # print('search : ', search)
-    search = 'all-list' if search == '' else search
-
-    paginator = Paginator(adversaires, ADVERSAIRE_PER_PAGE)
-
     try:
-        adversaires = paginator.page(page)
-    except PageNotAnInteger:
-        adversaires = paginator.page(page)
-    except EmptyPage:
-        adversaires = paginator.page(page)
-
-    title = _('list des adversaires')
-    context = {
-        'title': title + f' ({page})',
-        'active_page': 3,
-        'breadcrumb': title,
-        'adversaires': adversaires,
-        'page': adversaires.number,
-        'url_pagination': 'justice_adversaires',
-        'query': search,
-        'cities': VILLES,
-        'city':  city,
-        'url_link': 'justice_adversaires_all'
-    }
-    template_name = 'adversaires/index.html'
-
-
-    logger.info("Page list of 'Adversaires'.")
-    return render(request=request, template_name=template_name, context=context)
+        query = request.GET.get('query', default='all-list')
+        city = request.GET.get('city', default='all')
+        page = request.GET.get('page', 1)
+    
+        query = query.strip()
+        print(" 1- City :", city)
+        search = query if query != 'all-list' else ''
+        # city = get_key_dict(dict(VILLES), city)
+    
+        print(" 2- City :", city)
+        # Create a regex pattern to match all special characters in string
+        pattern = r'[' + string.punctuation + ']'
+        # Remove special characters from the string
+        search = re.sub(pattern, ' ', search)
+    
+        # print('justice_adversaires => ', query, "Results : ", search, " => City :", city)
+        
+        vector = SearchVector('nom', 'prenom')
+        multi_search = None
+        if search != '':
+            multi_search = SearchQuery(search)
+        
+            for word in search.split(' '):
+                if multi_search is type(None):
+                    multi_search = SearchQuery(word)
+                else:
+                    multi_search |= SearchQuery(word)
+    
+        if multi_search is None:
+            if city != 'all':
+                multi_search = SearchQuery(city)
+                vector += SearchVector('ville')
+        else:
+            if city != 'all':
+                multi_search &= SearchQuery(city)
+                vector += SearchVector('ville')
+    
+        if multi_search is None and city == 'all':
+           adversaires = Adversaire.objects.all()
+        else:
+            adversaires = Adversaire.objects.annotate(search=vector,
+                                                      rank=SearchRank(
+                                                          vector,
+                                                          multi_search
+                                                      )).filter(search=multi_search).order_by("-rank")
+    
+        # print('search : ', search)
+        search = 'all-list' if search == '' else search
+    
+        paginator = Paginator(adversaires, ADVERSAIRE_PER_PAGE)
+    
+        try:
+            adversaires = paginator.page(page)
+        except PageNotAnInteger:
+            adversaires = paginator.page(page)
+        except EmptyPage:
+            adversaires = paginator.page(page)
+    
+        title = _('list des adversaires')
+        context = {
+            'title': title + f' ({page})',
+            'active_page': 3,
+            'breadcrumb': title,
+            'adversaires': adversaires,
+            'page': adversaires.number,
+            'url_pagination': 'justice_adversaires',
+            'query': search,
+            'cities': VILLES,
+            'city':  city,
+            'url_link': 'justice_adversaires'
+        }
+        template_name = 'adversaires/index.html'
+    
+    
+        logger.info("Page list of 'Adversaires'.")
+        return render(request=request, template_name=template_name, context=context)
+    except:
+      # logger.error(f"Error Adversaires Page; %s", traceback.format_exc())
+      logger.error(f"Error Adversaires Page !!!", exc_info=True)
 
 
 def adversaire_form(request, id=0):
@@ -192,11 +147,7 @@ def adversaire_form(request, id=0):
             # user = form.save()
             # redirect_to = reverse('justice_adversaires')
 
-            redirect_to = reverse('justice_adversaires', kwargs={
-                'page': 1,
-                'city': 'all',
-                'query': slugify(adversaire.nom)}
-            )
+            redirect_to = reverse('justice_adversaires')
 
             value = _("L'adversaire")
 
@@ -213,7 +164,7 @@ def adversaire_form(request, id=0):
         'active_page': 3,
         'breadcrumb': value,
         'form': form,
-        'url_link': 'justice_adversaires_all'
+        'url_link': 'justice_adversaires'
     }
     template_name = 'adversaires/form.html'
     
@@ -234,107 +185,98 @@ def adversaire_delete(request, id=0):
 
     adversaire.delete()
 
-    redirect_to = reverse('justice_adversaires_all')
+    redirect_to = reverse('justice_adversaires')
 
     return HttpResponseRedirect(redirect_to)
     
     
 # Attorney Opponents Views *************************************
-def justice_avocats_adversaires_all(request):
-
-    try:
-        query = 'all-list'
-        city = 'all'
-        if request.method == 'POST':
-            
-            query = request.POST.get('query', default='all-list')
-            city = request.POST.get('city', default='all')
-        
-        query = 'all-list' if query == '' else query
-
-        redirect_to = reverse('justice_avocats_adversaires', kwargs={
-            'page': 1,
-            'city': city,
-            'query': query
-        }
-        )
-
-    except:
-      # logger.error(f"Error Adversaires Page; %s", traceback.format_exc())
-      logger.error(f"Error Avocats adversaires Page !!!", exc_info=True)
-
-    return HttpResponseRedirect(redirect_to)
-
-
-def justice_avocats_adversaires(request, page=1, city='all', query='all-list'):
+def justice_avocats_adversaires(request):
 
     # user = request.user
     # if user and user.is_authenticated:
     #     return HttpResponseRedirect(reverse('home'))
 
-    # query = request.GET.get('query', 'all')
-
-    # page = request.GET.get('page', 1)
-
-    query = query.strip()
-    print(" 1- City :", city)
-    search = query if query != 'all-list' else ''
-    # city = get_key_dict(dict(VILLES), city)
-
-    print(" 2- City :", city)
-    # Create a regex pattern to match all special characters in string
-    pattern = r'[' + string.punctuation + ']'
-    # Remove special characters from the string
-    search = re.sub(pattern, ' ', search)
-
-    print('justice_avocats_adversaires => ', query,
-          "Results : ", search, " => City :", city)
-          
-          
-    query = SearchQuery(search) & SearchQuery(city)
-    if city == 'all':
-        query = SearchQuery(search)
-    vector = SearchVector('nom', 'prenom', 'cabinet', 'ville')
-
-    print("Query: ", query, " => search : ", search)
-
-    print('vector: ', vector)
-
-    avocats_advs = AvocatAdversaire.objects.annotate(search=vector).filter(search=query)
-    
-    # total = Client.objects.all().count()
-    if city == 'all' and search == '':
-        avocats_advs = AvocatAdversaire.objects.annotate(search=vector)
-
-    search = 'all-list' if search == '' else search
-
-    paginator = Paginator(avocats_advs, AVOCAT_ADVERSARIES_PER_PAGE)
-
     try:
-        avocats_advs = paginator.page(page)
-    except PageNotAnInteger:
-        avocats_advs = paginator.page(page)
-    except EmptyPage:
-        avocats_advs = paginator.page(page)
-
-    title = _('list des avocats adversaires')
-    context = {
-        'title': title + f' ({page})',
-        'active_page': 4,
-        'breadcrumb': title,
-        'avocats_advs': avocats_advs,
-        'page': avocats_advs.number,
-        'url_pagination': 'justice_avocats_adversaires',
-        'query': search,
-        'cities': VILLES,
-        'city':  city,
-        'url_link': 'justice_avocats_adversaires_all'
-    }
-    template_name = 'avocats_adversaires/index.html'
+        query = request.GET.get('query', default='all-list')
+        city = request.GET.get('city', default='all')
+        page = request.GET.get('page', 1)
     
-    logger.info("Page list of Avocats adversaires.")
-
-    return render(request=request, template_name=template_name, context=context)
+        query = query.strip()
+        print(" 1- City :", city)
+        search = query if query != 'all-list' else ''
+        # city = get_key_dict(dict(VILLES), city)
+    
+        print(" 2- City :", city)
+        # Create a regex pattern to match all special characters in string
+        pattern = r'[' + string.punctuation + ']'
+        # Remove special characters from the string
+        search = re.sub(pattern, ' ', search)
+    
+        print('justice_avocats_adversaires => ', query,
+              "Results : ", search, " => City :", city)
+              
+        vector = SearchVector('nom', 'prenom')
+        multi_search = None
+        if search != '':
+            multi_search = SearchQuery(search)
+    
+            for word in search.split(' '):
+                if multi_search is type(None):
+                    multi_search = SearchQuery(word)
+                else:
+                    multi_search |= SearchQuery(word)
+    
+        if multi_search is None:
+            if city != 'all':
+                multi_search = SearchQuery(city)
+                vector += SearchVector('ville')
+        else:
+            if city != 'all':
+                multi_search &= SearchQuery(city)
+                vector += SearchVector('ville')
+    
+        if multi_search is None and city == 'all':
+           avocats_advs = AvocatAdversaire.objects.all()
+        else:
+            avocats_advs = AvocatAdversaire.objects.annotate(search=vector,
+                                                      rank=SearchRank(
+                                                          vector,
+                                                          multi_search
+                                                      )).filter(search=multi_search).order_by("-rank")
+    
+        search = 'all-list' if search == '' else search
+    
+        paginator = Paginator(avocats_advs, AVOCAT_ADVERSARIES_PER_PAGE)
+    
+        try:
+            avocats_advs = paginator.page(page)
+        except PageNotAnInteger:
+            avocats_advs = paginator.page(page)
+        except EmptyPage:
+            avocats_advs = paginator.page(page)
+    
+        title = _('list des avocats adversaires')
+        context = {
+            'title': title + f' ({page})',
+            'active_page': 4,
+            'breadcrumb': title,
+            'avocats_advs': avocats_advs,
+            'page': avocats_advs.number,
+            'url_pagination': 'justice_avocats_adversaires',
+            'query': search,
+            'cities': VILLES,
+            'city':  city,
+            'url_link': 'justice_avocats_adversaires'
+        }
+        template_name = 'avocats_adversaires/index.html'
+        
+        logger.info("Page list of Avocats adversaires.")
+    
+        return render(request=request, template_name=template_name, context=context)
+    except:
+      # logger.error(f"Error Adversaires Page; %s", traceback.format_exc())
+      logger.error(f"Error Avocats adversaires Page !!!", exc_info=True)
 
 
 def avocat_adversaire_form(request, id=0):
@@ -375,11 +317,7 @@ def avocat_adversaire_form(request, id=0):
             # user = form.save()
             # redirect_to = reverse('justice_avocat_adversaires')
 
-            redirect_to = reverse('justice_avocats_adversaires', kwargs={
-                'page': 1,
-                'city': 'all',
-                'query': slugify(avocat_adv.nom)}
-            )
+            redirect_to = reverse('justice_avocats_adversaires')
 
             value = _("L'avocat adversaire")
 
@@ -397,7 +335,7 @@ def avocat_adversaire_form(request, id=0):
         'active_page': 4,
         'breadcrumb': value,
         'form': form,
-        'url_link': 'justice_avocats_adversaires_all'
+        'url_link': 'justice_avocats_adversaires'
     }
     template_name = 'avocats_adversaires/form.html'
     
@@ -418,6 +356,6 @@ def avocat_adversaire_delete(request, id=0):
 
     avocat_adv.delete()
     
-    redirect_to = reverse('justice_avocats_adversaires_all')
+    redirect_to = reverse('justice_avocats_adversaires')
 
     return HttpResponseRedirect(redirect_to)

@@ -49,8 +49,7 @@
             </div>
             <div class="hidden md:block mx-auto text-gray-600"> {{ trans_showing|capfirst }} {{adversaires.start_index}} {{ trans_to }} {{ adversaires.end_index }} {{ trans_of }} {{ adversaires.paginator.count }} {{ trans_entries }}</div>
             <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
-                <form id='form-search' action="{% url 'justice_adversaires_all' %}" method="POST" >
-                    {% csrf_token %}
+                <form id='form-search' action="{% url 'justice_adversaires' %}" method="GET" >
                     <div class="w-auto relative text-gray-700 dark:text-gray-300">
                         <input name="query" type="text" 
                         value="{% if query is not None and query != 'all-list' and query != '' %}{{ query }}{% endif %}" class="form-control pr-10 placeholder-theme-13" placeholder="{{ trans_search|capfirst }}...">
